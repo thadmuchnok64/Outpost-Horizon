@@ -42,6 +42,23 @@ namespace TestServer
 
                 stream.BeginRead(recieveBuffer, 0, dataBufferSize, RecieveCallback, null);
 
+                ServerSend.Welcome(id, "Welcome to the server!");
+
+            }
+
+            public void SendData(Packet _packet)
+            {
+                try
+                {
+                    if (socket != null)
+                    {
+                        stream.BeginWrite(_packet.ToArray(),0,_packet.Length(),null,null);
+                    }
+                }
+                catch
+                {
+                    Console.WriteLine($"Error sending data to player {id} via TCP: ");
+                }
             }
 
             private void RecieveCallback(IAsyncResult _result)
