@@ -9,8 +9,11 @@ namespace TestServer
             Console.Title = "Game Server";
 
             Server.Start(2, 80);
-            Console.WriteLine("Hello there");
-            Console.ReadKey();
+            Console.WriteLine("Thad says 'Hi'");
+			Console.WriteLine("Pressing any key will terminate the server");
+			Console.WriteLine("--------------------------------------------");
+
+			Console.ReadKey();
         }
     }
 }

@@ -1,0 +1,30 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+using UnityEngine.UI;
+
+public class UIManager : MonoBehaviour
+{
+    public static UIManager instance;
+
+    public GameObject startMenu;
+    public TMPro.TMP_InputField usernameField;
+
+	private void Awake()
+	{
+			if (instance == null) {
+			instance = this;
+		} else if ( instance != this)
+		{
+			Debug.Log("UI Manager already exists!");
+			Destroy(this);
+		}
+	}
+
+	public void ConnectToServer()
+	{
+		startMenu.SetActive(false);
+		usernameField.interactable= false;
+		TestClient.instance.ConnectToServer();
+	}
+}

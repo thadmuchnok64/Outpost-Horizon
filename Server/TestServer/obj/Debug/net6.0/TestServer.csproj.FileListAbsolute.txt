@@ -28,3 +28,18 @@ C:\Users\tmuchnok\Desktop\School Junk\Spring\OutpostHorizon\Outpost-Horizon\Serv
 C:\Users\tmuchnok\Desktop\School Junk\Spring\OutpostHorizon\Outpost-Horizon\Server\TestServer\obj\Debug\net6.0\TestServer.pdb
 C:\Users\tmuchnok\Desktop\School Junk\Spring\OutpostHorizon\Outpost-Horizon\Server\TestServer\obj\Debug\net6.0\TestServer.genruntimeconfig.cache
 C:\Users\tmuchnok\Desktop\School Junk\Spring\OutpostHorizon\Outpost-Horizon\Server\TestServer\obj\Debug\net6.0\ref\TestServer.dll
+C:\Users\Thad\Documents\Projects\Outpost-Horizon\Server\TestServer\bin\Debug\net6.0\TestServer.exe
+C:\Users\Thad\Documents\Projects\Outpost-Horizon\Server\TestServer\bin\Debug\net6.0\TestServer.deps.json
+C:\Users\Thad\Documents\Projects\Outpost-Horizon\Server\TestServer\bin\Debug\net6.0\TestServer.runtimeconfig.json
+C:\Users\Thad\Documents\Projects\Outpost-Horizon\Server\TestServer\bin\Debug\net6.0\TestServer.dll
+C:\Users\Thad\Documents\Projects\Outpost-Horizon\Server\TestServer\bin\Debug\net6.0\TestServer.pdb
+C:\Users\Thad\Documents\Projects\Outpost-Horizon\Server\TestServer\obj\Debug\net6.0\TestServer.csproj.AssemblyReference.cache
+C:\Users\Thad\Documents\Projects\Outpost-Horizon\Server\TestServer\obj\Debug\net6.0\TestServer.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Thad\Documents\Projects\Outpost-Horizon\Server\TestServer\obj\Debug\net6.0\TestServer.AssemblyInfoInputs.cache
+C:\Users\Thad\Documents\Projects\Outpost-Horizon\Server\TestServer\obj\Debug\net6.0\TestServer.AssemblyInfo.cs
+C:\Users\Thad\Documents\Projects\Outpost-Horizon\Server\TestServer\obj\Debug\net6.0\TestServer.csproj.CoreCompileInputs.cache
+C:\Users\Thad\Documents\Projects\Outpost-Horizon\Server\TestServer\obj\Debug\net6.0\TestServer.dll
+C:\Users\Thad\Documents\Projects\Outpost-Horizon\Server\TestServer\obj\Debug\net6.0\refint\TestServer.dll
+C:\Users\Thad\Documents\Projects\Outpost-Horizon\Server\TestServer\obj\Debug\net6.0\TestServer.pdb
+C:\Users\Thad\Documents\Projects\Outpost-Horizon\Server\TestServer\obj\Debug\net6.0\TestServer.genruntimeconfig.cache
+C:\Users\Thad\Documents\Projects\Outpost-Horizon\Server\TestServer\obj\Debug\net6.0\ref\TestServer.dll

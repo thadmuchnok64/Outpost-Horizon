@@ -33,6 +33,7 @@ namespace TestServer
         {
             TcpClient _client = tcpListener.EndAcceptTcpClient( _result );
             tcpListener.BeginAcceptTcpClient(new AsyncCallback(TCPConnectCallBack), null);
+            Console.WriteLine($"Incoming connection from {_client.Client.RemoteEndPoint}...");
             for (int i = 0; i < MaxPlayers; i++)
             {
                 if (clients[i].tcp.socket == null)
