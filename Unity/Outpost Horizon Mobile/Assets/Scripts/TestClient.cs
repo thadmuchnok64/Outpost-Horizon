@@ -12,6 +12,7 @@ public class TestClient : MonoBehaviour
     public static int dataBufferSize = 4096;
     public string ip = "127.0.0.1";
     public string username = "Unity";
+    public string message;
     public int port = 80;
     public int myId = 0;
     public TCP tcp;
@@ -165,10 +166,18 @@ public class TestClient : MonoBehaviour
         {
             packetHandlers = new Dictionary<int, PacketHandler>()
             {
-                {(int)ServerPackets.welcome, ClientHandle.Welcome }
+                {(int)ServerPackets.welcome, ClientHandle.Welcome },
             };
         Debug.Log("Initializing client data...");
         }
+        public void SendMessageToServer()
+        {
+        packetHandlers = new Dictionary<int, PacketHandler>()
+            {
+                {(int)ServerPackets.test, ClientHandle.Dataset }
+            };
+        Debug.Log("Sending Message To Server...");
+        }
 
-    
+
 }

@@ -27,4 +27,8 @@ public class UIManager : MonoBehaviour
 		usernameField.interactable= false;
 		TestClient.instance.ConnectToServer();
 	}
+    public void SendMessageToServer()
+    {
+        TestClient.instance.SendMessageToServer();
+    }
 }

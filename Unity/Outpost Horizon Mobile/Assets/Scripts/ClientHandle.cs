@@ -13,4 +13,9 @@ public class ClientHandle : MonoBehaviour
         TestClient.instance.myId = _myId;
         ClientSend.WelcomeRecieved();
     }
+    public static void Dataset(Packet _packet)
+    {
+        TestClient.instance.myId = 0;
+        ClientSend.TestRecieved();
+    }
 }
