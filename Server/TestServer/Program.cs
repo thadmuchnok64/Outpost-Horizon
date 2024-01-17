@@ -9,7 +9,7 @@ namespace TestServer
         private static bool isRunning = false;
         static void Main(string[] args)
         {
-            Console.Title = "Game Server";
+            Console.Title = "Outpost Horizon Terminal";
             isRunning= true;
             Thread mainThread = new Thread(new ThreadStart(MainThread));
             mainThread.Start();
@@ -32,6 +32,10 @@ namespace TestServer
                 {
                     GameLogic.Update();
                     _nextLoop = _nextLoop.AddMilliseconds(Constants.MS_PER_TICK);
+                    if (_nextLoop > DateTime.Now)
+                    {
+                        Thread.Sleep(_nextLoop - DateTime.Now);
+                    }
                 }
             }
         }
