@@ -11,6 +11,7 @@ public class TestClient : MonoBehaviour
     public static TestClient instance;
     public static int dataBufferSize = 4096;
     public string ip = "127.0.0.1";
+    public string username = "Unity";
     public int port = 80;
     public int myId = 0;
     public TCP tcp;
@@ -141,9 +142,25 @@ public class TestClient : MonoBehaviour
             {
                 return true;
             }
-            return true;
+            return false;
         }
-    }
+
+		public void SendData(Packet _packet)
+		{
+            try
+            {
+                if (socket != null)
+                {
+                    stream.BeginWrite(_packet.ToArray(), 0, _packet.Length(),null, null);
+                }
+            } 
+            catch(Exception e)
+            {
+                Debug.Log($"Error sending data to server via TCP: {e}");
+            }
+
+		}
+	}
         private void InitializeClientData()
         {
             packetHandlers = new Dictionary<int, PacketHandler>()

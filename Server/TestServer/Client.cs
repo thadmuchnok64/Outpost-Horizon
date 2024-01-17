@@ -24,6 +24,7 @@ namespace TestServer
             public TcpClient socket;
             private readonly int id;
             private NetworkStream stream;
+            private Packet recievedData;
             private byte[] recieveBuffer;
             public TCP(int _id)
             {
@@ -37,7 +38,7 @@ namespace TestServer
                 socket.SendBufferSize = dataBufferSize;
 
                 stream = socket.GetStream();
-
+                recievedData = new Packet();
                 recieveBuffer = new byte[dataBufferSize];
 
                 stream.BeginRead(recieveBuffer, 0, dataBufferSize, RecieveCallback, null);
@@ -73,11 +74,56 @@ namespace TestServer
                     byte[] _data = new byte[_byteLength];
                     Array.Copy(recieveBuffer, _data, _byteLength);
                     stream.BeginRead(recieveBuffer,0,dataBufferSize,RecieveCallback,null);
+
+                    recievedData.Reset(HandleData(_data));
                 } catch (Exception e)
                 {
                     Console.WriteLine($"Error receiving TCP data: {e}");
                 }
             }
-        }
+
+			private bool HandleData(byte[] _data)
+			{
+				int _packetLength = 0;
+
+				recievedData.SetBytes(_data);
+				if (recievedData.UnreadLength() >= 4)
+				{
+					_packetLength = recievedData.ReadInt();
+					if (_packetLength <= 0)
+					{
+						return true;
+					}
+				}
+				while (_packetLength > 0 && _packetLength <= recievedData.UnreadLength())
+				{
+					byte[] _packetBytes = recievedData.ReadBytes(_packetLength);
+					ThreadManager.ExecuteOnMainThread(() =>
+					{
+						using (Packet _packet = new Packet(_packetBytes))
+						{
+							int _packetId = _packet.ReadInt();
+							Server.packetHandlers[_packetId](id,_packet);
+						}
+					});
+					_packetLength = 0;
+					if (recievedData.UnreadLength() >= 4)
+					{
+						_packetLength = recievedData.ReadInt();
+						if (_packetLength <= 0)
+						{
+							return true;
+						}
+					}
+
+				}
+				if (_packetLength <= 1)
+				{
+					return true;
+				}
+				return true;
+			}
+
+		}
     }
 }

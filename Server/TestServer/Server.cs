@@ -13,6 +13,9 @@ namespace TestServer
         public static int MaxPlayers { get; private set; }
         public static int Port { get; private set; }
         public static Dictionary<int,Client> clients = new Dictionary<int, Client>();
+        public delegate void PacketHandler(int _fromClient, Packet _packet);
+        public static Dictionary<int, PacketHandler> packetHandlers;
+
         private static TcpListener tcpListener;
         public static void Start(int _maxPlayer, int _port)
         {
@@ -21,15 +24,18 @@ namespace TestServer
 
             Console.WriteLine("Starting server....");
             InitializeServerData();
+            var ip = IPAddress.Any;
 
-            tcpListener = new TcpListener(IPAddress.Any, Port);
+			tcpListener = new TcpListener(ip, Port);
             tcpListener.Start();
             tcpListener.BeginAcceptTcpClient(new AsyncCallback(TCPConnectCallBack), null);
 
             Console.WriteLine($"Server started on port {Port}.");
-        }
+			Console.WriteLine($"Server IP: {ip}.");
 
-        private static void TCPConnectCallBack(IAsyncResult _result)
+		}
+
+		private static void TCPConnectCallBack(IAsyncResult _result)
         {
             TcpClient _client = tcpListener.EndAcceptTcpClient( _result );
             tcpListener.BeginAcceptTcpClient(new AsyncCallback(TCPConnectCallBack), null);
@@ -51,6 +57,12 @@ namespace TestServer
             {
                     clients.Add(i, new Client(i));
             }
+
+            packetHandlers = new Dictionary<int, PacketHandler>()
+            {
+                {(int)ClientPackets.welcomeReceived,ServerHandle.WelcomeReceived }
+            };
+            Console.WriteLine("Initialized packets");
         }
     }
 }
