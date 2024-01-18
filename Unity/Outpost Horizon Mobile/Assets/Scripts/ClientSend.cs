@@ -21,12 +21,14 @@ public class ClientSend : MonoBehaviour
             SendTCPData(_packet);
         }
     }
-    public static void TestRecieved()
+
+    // Creates a packet, with the message in the text box;
+    public static void SendTestMessage(string message)
     {
         using (Packet _packet = new Packet((int)ClientPackets.testRecieved))
         {
             _packet.Write(TestClient.instance.myId);
-            _packet.Write(TestClient.instance.message);
+            _packet.Write(message);
 
             SendTCPData(_packet);
         }

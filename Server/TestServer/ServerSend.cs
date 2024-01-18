@@ -42,5 +42,16 @@ namespace TestServer
                 SendTCPData(_toClient, _packet);
             }
         }
-    }
+
+		public static void TestMessage(int _toClient, string _msg)
+		{
+			using (Packet _packet = new Packet((int)ServerPackets.test))
+			{
+				_packet.Write(_msg);
+				_packet.Write(_toClient);
+
+				SendTCPData(_toClient, _packet);
+			}
+		}
+	}
 }

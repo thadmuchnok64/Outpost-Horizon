@@ -26,6 +26,10 @@ namespace TestServer
 			int _clientIdCheck = _packet.ReadInt();
 			string _message = _packet.ReadString();
 			Console.WriteLine($" Player {Server.clients[_fromClient].tcp.socket.Client.RemoteEndPoint} says {_message}");
+			int _clientToSendTo = 1;
+			if (_clientIdCheck == 1)
+				_clientToSendTo = 0;
+			ServerSend.TestMessage( _clientToSendTo, _message );
 		}
 	}
 }

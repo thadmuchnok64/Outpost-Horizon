@@ -465,7 +465,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   startMenu: {fileID: 1825808226}
-  usernameField: {fileID: 380035559}
+  textbox: {fileID: 380035559}
 --- !u!1 &420276269
 GameObject:
   m_ObjectHideFlags: 0
@@ -1022,9 +1022,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 306093197}
+      - m_Target: {fileID: 417725921}
         m_TargetAssemblyTypeName: UIManager, Assembly-CSharp
-        m_MethodName: 
+        m_MethodName: SendMessageToServer
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
