@@ -6,6 +6,7 @@ public class Appear : MonoBehaviour
 {
     public GameObject connect;
     public GameObject send;
+    public GameObject text;
     // Start is called before the first frame update
     void Start()
     {
@@ -18,6 +19,7 @@ public class Appear : MonoBehaviour
         if (connect.gameObject.activeSelf == false)
         {
             send.gameObject.SetActive(true);
+            text.gameObject.SetActive(true);
         }
     }
 }
