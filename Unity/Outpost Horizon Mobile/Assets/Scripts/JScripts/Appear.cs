@@ -1,25 +1,30 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.XR;
 
 public class Appear : MonoBehaviour
 {
-    public GameObject connect;
-    public GameObject send;
-    public GameObject text;
-    // Start is called before the first frame update
-    void Start()
+    public GameObject show;
+    public List<GameObject> menuitems = new List<GameObject>();
+    public void Show()
     {
-        
+        show.gameObject.SetActive(true);
     }
-
-    // Update is called once per frame
-    void Update()
+    public void DebugS()
     {
-        if (connect.gameObject.activeSelf == false)
+        show = menuitems[0];
+        foreach (GameObject g in menuitems)
         {
-            send.gameObject.SetActive(true);
-            text.gameObject.SetActive(true);
+            g.SetActive(false);
+        }
+    }
+    public void LocksS()
+    {
+        show = menuitems[1];
+        foreach (GameObject g in menuitems)
+        {
+            g.SetActive(false);
         }
     }
 }

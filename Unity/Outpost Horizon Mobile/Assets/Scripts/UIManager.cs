@@ -33,4 +33,8 @@ public class UIManager : MonoBehaviour
     {
         ClientSend.SendTestMessage(textbox.text);
     }
+    public void SendToServer(string message)
+    {
+        ClientSend.SendTestMessage(message);
+    }
 }
