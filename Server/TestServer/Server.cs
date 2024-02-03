@@ -61,7 +61,9 @@ namespace TestServer
             packetHandlers = new Dictionary<int, PacketHandler>()
             {
                 {(int)ClientPackets.welcomeReceived,ServerHandle.WelcomeReceived},
-                {(int)ClientPackets.testRecieved,ServerHandle.TestRecieved}
+                {(int)ClientPackets.testRecieved,ServerHandle.TestRecieved},
+                                {(int)ClientPackets.breakrod,ServerHandle.BreakRod}
+
 
             };
             Console.WriteLine("Initialized packets");

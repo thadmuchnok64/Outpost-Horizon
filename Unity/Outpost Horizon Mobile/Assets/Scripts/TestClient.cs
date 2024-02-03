@@ -166,7 +166,11 @@ public class TestClient : MonoBehaviour
         {
             packetHandlers = new Dictionary<int, PacketHandler>()
             {
-                {(int)ServerPackets.welcome, ClientHandle.Welcome },
+                {(int)ServerPackets.welcome, ClientHandle.Welcome},
+                                {(int)ServerPackets.breakrod, ClientHandle.GetInfoOnBrokenRods
+                }
+
+
             };
         Debug.Log("Initializing client data...");
         }

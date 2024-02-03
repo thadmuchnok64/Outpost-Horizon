@@ -18,4 +18,15 @@ public class ClientHandle : MonoBehaviour
         TestClient.instance.myId = 0;
         //ClientSend.TestRecieved();
     }
+
+    public static void GetInfoOnBrokenRods(Packet _packet)
+    {
+        int count = _packet.ReadInt();
+        List<int> ints = new List<int>();
+        for(int i = 0; i < count; i++)  
+        ints.Add(_packet.ReadInt());
+
+        for (int i = 0; i < count; i++)
+            Debug.Log(ints[i]);
+    }
 }

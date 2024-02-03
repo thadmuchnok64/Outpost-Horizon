@@ -31,5 +31,23 @@ namespace TestServer
 				_clientToSendTo = 0;
 			ServerSend.TestMessage( _clientToSendTo, _message );
 		}
+
+		public static void BreakRod(int _fromClient, Packet _packet)
+		{
+            int _clientIdCheck = _packet.ReadInt();
+            int intsToRead = _packet.ReadInt();
+			List<int> list = new List<int>();
+			for(int i = 0; i < intsToRead; i++)
+			{
+				list.Add(_packet.ReadInt());
+			}
+            //Console.WriteLine($" Player {Server.clients[_fromClient].tcp.socket.Client.RemoteEndPoint} says {_message}");
+            int _clientToSendTo = 1;
+            if (_clientIdCheck == 1)
+                _clientToSendTo = 0;
+            ServerSend.SendBrokenRodInfoToUnity(_clientToSendTo, list);
+        }
+
+
 	}
 }

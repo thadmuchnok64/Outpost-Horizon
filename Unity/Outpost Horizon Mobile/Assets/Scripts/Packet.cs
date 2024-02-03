@@ -14,14 +14,17 @@ using System.Threading.Tasks;
     public enum ServerPackets
     {
         welcome = 1,
-        test = 2
+        test = 2,
+        breakrod = 3
 }
 
     /// <summary>Sent from client to server.</summary>
     public enum ClientPackets
     {
         welcomeReceived = 1,
-        testRecieved = 2
+        testRecieved = 2,
+                breakrod = 3
+
     }
 
     public class Packet : IDisposable

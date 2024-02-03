@@ -53,5 +53,20 @@ namespace TestServer
 				SendTCPData(_toClient, _packet);
 			}
 		}
+
+        public static void SendBrokenRodInfoToUnity(int _toClient, List<int> ints)
+        {
+            using (Packet _packet = new Packet((int)ServerPackets.breakrod))
+            {
+                _packet.Write(ints.Count);
+
+                for (int i = 0; i < ints.Count; i++)
+                {
+                    _packet.Write(ints[i]);
+                }
+
+                SendTCPData(_toClient, _packet);
+            }
+        }
 	}
 }
