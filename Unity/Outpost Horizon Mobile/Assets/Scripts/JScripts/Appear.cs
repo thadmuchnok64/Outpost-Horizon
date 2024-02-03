@@ -9,22 +9,22 @@ public class Appear : MonoBehaviour
     public List<GameObject> menuitems = new List<GameObject>();
     public void Show()
     {
+        foreach (GameObject g in menuitems)
+        {
+            g.SetActive(false);
+        }
         show.gameObject.SetActive(true);
     }
     public void DebugS()
     {
         show = menuitems[0];
-        foreach (GameObject g in menuitems)
-        {
-            g.SetActive(false);
-        }
     }
     public void LocksS()
     {
         show = menuitems[1];
-        foreach (GameObject g in menuitems)
-        {
-            g.SetActive(false);
-        }
+    }
+    public void RodS()
+    {
+        show = menuitems[2];
     }
 }
