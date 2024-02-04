@@ -27,6 +27,7 @@ public class ClientHandle : MonoBehaviour
         ints.Add(_packet.ReadInt());
 
         for (int i = 0; i < count; i++)
-            Debug.Log(ints[i]);
+            RodBehaviour.rods.Add(ints[i]);
+        RodBehaviour.instance.RodsTUpdate();
     }
 }
