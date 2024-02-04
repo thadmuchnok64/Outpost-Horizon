@@ -45,6 +45,23 @@ namespace TestServer
             int _clientToSendTo = 1;
             if (_clientIdCheck == 1)
                 _clientToSendTo = 0;
+
+			if(list.Count == 0)
+			{
+				Console.WriteLine($"Unreal (ID: {_fromClient}) reports to Unity (ID: {_clientToSendTo}) that no rods are broken!");
+			}
+			else
+			{
+				string message = $"Unreal (ID: {_fromClient}) reports to Unity (ID: {_clientToSendTo}) that rods ";
+				foreach(int i in list)
+				{
+					message = message + i + ", ";
+				}
+				message = message + "are broken!";
+                Console.WriteLine(message);
+
+            }
+
             ServerSend.SendBrokenRodInfoToUnity(_clientToSendTo, list);
         }
 
