@@ -14,7 +14,7 @@ public class RodBehaviour : MonoBehaviour
     public static string rodstoinsert;
     public List<GameObject> rodstin;
     // Start is called before the first frame update
-    void Start()
+    void Awake()
     {
         if (instance != null)
         {
