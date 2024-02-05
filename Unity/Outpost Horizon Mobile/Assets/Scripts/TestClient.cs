@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using UnityEngine;
 using System.Net;
 using System.Net.Sockets;
-using UnityEditor.Networking.PlayerConnection;
 using System;
 
 public class TestClient : MonoBehaviour
