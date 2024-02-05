@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
@@ -26,12 +27,23 @@ public class RodBehaviour : MonoBehaviour
     // Update is called once per frame
     public void RodsTUpdate()
     {
+        foreach (GameObject rodtin in rodstin)
+        {
+            rodtin.SetActive(false);
+        }
         for (int i = 0; i < rods.Count; i++)
         {
             rodstoinsert = rodstoinsert + " ," + rods[i].ToString();
             rodstin[rods[i]].SetActive(true);
         }
-        text.text = "Fuel Rods are Active. Please Insert Rod(s):" + rodstoinsert;
+        text.text = "Fuel Rods are malfunctioning. Please reinsert Rod(s):" + rodstoinsert;
         roddiag.SetActive(true);
     }
+    public void RodsComplete()
+    {
+        rodstoinsert = "";
+        text.text = "All Fuel Rods are operational. Well done.";
+        roddiag.SetActive(false);
+    }
+
 }
