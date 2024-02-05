@@ -24,11 +24,11 @@ public class SlideCar : MonoBehaviour
         if (movable == true)
         {
             MousePos = cam.ScreenToWorldPoint(Input.mousePosition);
-            if (gameObject.CompareTag("Horizontal") || gameObject.CompareTag("StartR"))
+            if (gameObject.CompareTag("Horizontal"))
             {
                 MousePos = new Vector3(MousePos.x, thisPos.y, 0);
             }
-            else if (gameObject.CompareTag("Vertical"))
+            else if (gameObject.CompareTag("Vertical") || gameObject.CompareTag("StartR"))
             {
                 MousePos = new Vector3(thisPos.x, MousePos.y, 0);
             }
