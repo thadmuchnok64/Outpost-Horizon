@@ -24,10 +24,12 @@ public class ClientHandle : MonoBehaviour
         int count = _packet.ReadInt();
         List<int> ints = new List<int>();
         for(int i = 0; i < count; i++)  
-        ints.Add(_packet.ReadInt());
-
+            ints.Add(_packet.ReadInt());
+        RodBehaviour.rods.Clear();
+        RodBehaviour.rodstoinsert = "";
         for (int i = 0; i < count; i++)
             RodBehaviour.rods.Add(ints[i]);
-        RodBehaviour.instance.RodsTUpdate();
+        if(RodBehaviour.rods.Count > 0)
+            RodBehaviour.instance.RodsTUpdate();
     }
 }
