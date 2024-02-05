@@ -31,5 +31,8 @@ public class ClientHandle : MonoBehaviour
             RodBehaviour.rods.Add(ints[i]);
         if(RodBehaviour.rods.Count > 0)
             RodBehaviour.instance.RodsTUpdate();
+        else if (RodBehaviour.rods.Count == 0)
+            RodBehaviour.instance.RodsComplete();
+
     }
 }
