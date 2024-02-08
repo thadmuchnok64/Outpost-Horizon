@@ -158,9 +158,9 @@ RectTransform:
   m_Father: {fileID: 1527741440}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 20}
+  m_SizeDelta: {x: -17, y: 20}
   m_Pivot: {x: 0, y: 0}
 --- !u!114 &24626967
 MonoBehaviour:
@@ -617,8 +617,8 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 877000293}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 0.9}
+  m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 20, y: 20}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -1025,10 +1025,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 59990ea972f52b64c84dd10d40bf9a90, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ip: 2.tcp.ngrok.io
+  ip: 127.0.0.1
   username: Unity
   message: HelloJJ
-  port: 10651
+  port: 80
   myId: 0
 --- !u!4 &306093199
 Transform:
@@ -1324,9 +1324,9 @@ RectTransform:
   m_Father: {fileID: 1527741440}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_SizeDelta: {x: -17, y: 0}
   m_Pivot: {x: 0, y: 1}
 --- !u!114 &385843202
 MonoBehaviour:
@@ -1595,7 +1595,31 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 406157005}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1244153557}
+        m_TargetAssemblyTypeName: GameManagerScript, Assembly-CSharp
+        m_MethodName: InfoS
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1244153557}
+        m_TargetAssemblyTypeName: GameManagerScript, Assembly-CSharp
+        m_MethodName: Show
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &406157005
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1649,7 +1673,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &407187149
 RectTransform:
   m_ObjectHideFlags: 0
@@ -3800,7 +3824,7 @@ RectTransform:
   m_Father: {fileID: 437970149}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 20, y: 20}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -4445,74 +4469,106 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "TERMS AND CONDITIONS OF USING OUTPOST HORIZON APP:\nWhat\u2019s covered
-    in these terms\r\nWe know it\u2019s tempting to skip these Terms of Service,
-    but\r\nit\u2019s important to establish what you can expect from us as\r\nyou
-    use Google services, and what we expect from you.\r\nThese Terms of Service reflect
-    the way Google\u2019s business works, the laws that apply to our company, and\r\ncertain
-    things we\u2019ve always believed to be true. As a result, these Terms of Service
-    help define Google\u2019s\r\nrelationship with you as you interact with our services.
-    For example, these terms include the following topic\r\nheadings:\r\nWhat you
-    can expect from us, which describes how we provide and develop our services\r\nWhat
-    we expect from you, which establishes certain rules for using our services\r\nContent
-    in Google services, which describes the intellectual property rights to the content
-    you find in our\r\nservices \u2014 whether that content belongs to you, Google,
-    or others\r\nIn case of problems or disagreements, which describes other legal
-    rights you have, and what to expect\r\nin case someone violates these terms\r\nUnderstanding
-    these terms is important because, by using our services, you\u2019re agreeing
-    to these terms.\r\nBesides these terms, we also publish a Privacy Policy. We
-    encourage you to read it to better understand how\r\nyou can update, manage,
-    export, and delete your information.\r\nTerms\r\nService provider\r\nGoogle services
-    are provided by, and you\u2019re contracting with:\r\nGoogle LLC\r\norganized
-    under the laws of the State of Delaware, USA, and operating under the laws of
-    the USA\r\n1600 Amphitheatre Parkway\r\nMountain View, California 94043\r\nUSA\r\nAge
-    requirements\r\nIf you\u2019re under the age required to manage your own Google
-    Account, you must have your parent or legal\r\nguardian\u2019s permission to
-    use a Google Account. Please have your parent or legal guardian read these terms\r\nwith
-    you.\r\nIf you\u2019re a parent or legal guardian, and you allow your child to
-    use the services, then these terms apply to\r\nyou and you\u2019re responsible
-    for your child\u2019s activity on the services.\r\nSome Google services have
-    additional age requirements as described in their service-specific additional
-    terms\r\nand policies.\r\nYour relationship with Google\r\nThese terms help define
-    the relationship between you and Google. Broadly speaking, we give you permission\r\nto
-    use our services if you agree to follow these terms, which reflect how Google\u2019s
-    business works and how we\r\nearn money. When we speak of \u201CGoogle,\u201D
-    \u201Cwe,\u201D \u201Cus,\u201D and \u201Cour,\u201D we mean Google LLC and its
-    affiliates.\r\nWhat you can expect from us\r\nProvide a broad range of useful
-    services\r\nWe provide a broad range of services that are subject to these terms,
-    including:\r\napps and sites (like Search and Maps)\r\nplatforms (like Google
-    Shopping)\r\nintegrated services (like Maps embedded in other companies\u2019
-    apps or sites)\r\ndevices (like Google Nest)\r\nMany of these services also include
-    content that you can stream or interact with.\r\nOur services are designed to
-    work together, making it easier for you to move from one activity to the next.
-    For\r\nexample, if your Calendar event includes an address, you can click on
-    that address and Maps can show you\r\nhow to get there.\r\nDevelop, improve,
-    and update Google services\r\nWe\u2019re constantly developing new technologies
-    and features to improve our services. For example, we use\r\nartificial intelligence
-    and machine learning to provide you with simultaneous translations, and to better
-    detect\r\nand block spam and malware. As part of this continual improvement,
-    we sometimes add or remove features\r\nand functionalities, increase or decrease
-    limits to our services, and start offering new services or stop\r\noffering old
-    ones. When a service requires or includes downloadable software, that software
-    sometimes\r\nupdates automatically on your device once a new version or feature
-    is available. Some services let you adjust\r\nyour automatic update settings.\r\nIf
-    we make material changes that negatively impact your use of our services or if
-    we stop offering a service,\r\nwe\u2019ll provide you with reasonable advance
-    notice, except in urgent situations such as preventing abuse,\r\nresponding to
-    legal requirements, or addressing security and operability issues. We\u2019ll
-    also provide you with an\r\nopportunity to export your content from your Google
-    Account using Google Takeout, subject to applicable\r\nlaw and policies.\r\nWhat
-    we expect from you\r\nFollow these terms and service-specific additional terms\r\nThe
-    permission we give you to use our services continues as long as you comply with:\r\nthese
-    terms\r\nservice-specific additional terms, which could, for example, include
-    things like additional age\r\nrequirements\r\nYou also agree that our Privacy
-    Policy applies to your use of our services. Additionally, we provide resources\r\nlike
-    the Copyright Help Center, Safety Center, and descriptions of our technologies
-    from our policies site to\r\nanswer common questions and to set expectations
-    about using our services.\r\nAlthough we give you permission to use our services,
-    we retain any intellectual property rights we have in the\r\nservices.\r\nRespect
-    others\r\nWe want to maintain a respectful environment for everyone, which means
-    you must\n"
+  m_text: 'TERMS AND CONDITIONS OF USING OUTPOST HORIZON APP:
+
+    DO NOT SKIP THE
+    TERMS OF SERVICE PLEASE READ IN IT''S ENTIRETY.
+
+
+    Icarus Foundation Terms
+    of Service
+
+
+
+    Welcome to Icarus Foundation! By accessing or using our services,
+    you agree to be bound by the following terms and conditions:
+
+
+
+    At Icarus
+    Foundation, we prioritize our mission above all else, including the wellbeing
+    and safety of our employees. By accepting employment with us, you acknowledge
+    that you may be exposed to harmful equipment and machinery, which may result
+    in: being crushed by forces exceeding 10 tons, dismemberment, servere radiation,
+    and death.
+
+
+
+    Waiver of Liability: You hereby waive any and all claims against
+    Icarus Foundation for injuries, death, or other damages sustained while on the
+    job. This includes but is not limited to loss of limbs, sanity, or sense of direction.
+
+
+
+    Indemnification:
+    You agree to indemnify and hold harmless Icarus Foundation, its subsidiaries,
+    affiliates, officers, and employees from any claims, damages, or liabilities
+    arising out of your employment or participation in company-sponsored activities.
+    This includes but is not limited to lawsuits from surviving family members, concerned
+    citizens, sentient AI or extraterrestrial beings.
+
+
+
+    Confidentiality: Any
+    information regarding the unethical practices, disregard for safety regulations,
+    or general buisness practices within Icarus Foundation is strictly confidential.
+    Violators of this clause will be [REDACTED]
+
+
+
+    Overtime Limit: You acknowledge
+    that your employment with Icarus Foundation is at-will and may require you to
+    work excessive hours without compensation, breaks, or sleep. Failure to comply
+    may result in immediate termination.
+
+
+
+    Benefits Policy: Icarus Foundation
+    does not provide any benefits, including health insurance, retirement plans,
+    or paid time off. Instead, we offer the occasional pat on the back and a complimentary
+    box of nails.
+
+
+
+    Agreement: By agreeing to these terms, you hereby surrender
+    your able working body to Icarus Foundation in perpetuity. Failure to comply
+    with any company policies or directives will result in immidiate termination.
+
+
+
+    Thank
+    you for choosing Icarus Foundation as your employer. Remember, stay safe when
+    you''re part of our team!
+
+
+
+    USEFUL INFORMATION:
+
+
+    FUEL RODS
+
+    1.
+    Ethylene Glycol
+
+    2 & 7. Uranium
+
+    6 & 3. Zirconium
+
+    5 & 4. Water
+
+
+    Ethylene
+    Glycol - SN-450600675
+
+    Uranium - SN-451600783
+
+    Water - SN-450600783
+
+    Zirconium
+    - SN-451500675
+
+
+'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -6287,6 +6343,7 @@ MonoBehaviour:
   - {fileID: 340674349}
   - {fileID: 1654204057}
   - {fileID: 157684642}
+  - {fileID: 407187148}
 --- !u!1 &1302735891
 GameObject:
   m_ObjectHideFlags: 0
@@ -9018,7 +9075,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: PLCHDR
+  m_text: INFO
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}

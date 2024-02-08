@@ -38,6 +38,10 @@ public class GameManagerScript : MonoBehaviour
     {
         show = menuitems[2];
     }
+    public void InfoS()
+    {
+        show = menuitems[3];
+    }
     public void RodActivation()
     {
         foreach (GameObject g in menuitems)
