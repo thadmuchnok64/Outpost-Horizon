@@ -44,7 +44,7 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
-  - name: Layer1
+  - name: FloatingBG
     uniqueID: 802718491
     locked: 1
   - name: Boxes
