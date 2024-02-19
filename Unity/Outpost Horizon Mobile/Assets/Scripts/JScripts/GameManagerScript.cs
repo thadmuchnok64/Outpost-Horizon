@@ -42,6 +42,10 @@ public class GameManagerScript : MonoBehaviour
     {
         show = menuitems[3];
     }
+    public void ClawS()
+    {
+        show = menuitems[4];
+    }
     public void RodActivation()
     {
         foreach (GameObject g in menuitems)
