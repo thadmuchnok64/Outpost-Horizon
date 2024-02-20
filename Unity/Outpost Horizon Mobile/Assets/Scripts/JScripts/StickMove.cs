@@ -6,7 +6,6 @@ public class StickMove : MonoBehaviour
 {
     Vector3 MousePos;
     Vector3 thisPos;
-    public Vector3 stickPos;
     Camera cam;
     private void OnMouseDown()
     {
@@ -29,6 +28,5 @@ public class StickMove : MonoBehaviour
         {
             transform.localPosition = new Vector3(0, -.69f, 0);
         }
-        stickPos = transform.localPosition;
     }
 }

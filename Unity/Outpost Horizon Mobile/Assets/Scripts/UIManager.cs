@@ -37,4 +37,8 @@ public class UIManager : MonoBehaviour
     {
         ClientSend.SendTestMessage(message);
     }
+    public void SendNumberToServer(float[] numarray)
+    {
+        ClientSend.SendNumber(numarray);
+    }
 }
