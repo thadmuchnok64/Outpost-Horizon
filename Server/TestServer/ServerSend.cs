@@ -69,16 +69,22 @@ namespace TestServer
             }
         }
 
-        public static void ReadNum(int _toClient, List<float> floats)
+        public static void ClawControl(int _toClient, int control)
         {
-            using (Packet _packet = new Packet((int)ServerPackets.readnum))
+            using (Packet _packet = new Packet((int)ServerPackets.clawControl))
             {
-                _packet.Write(floats.Count);
+                _packet.Write(control);
+                SendTCPData(_toClient, _packet);
+            }
+        }
 
-                for (int i = 0; i < floats.Count; i++)
-                {
-                    _packet.Write(floats[i]);
-                }
+        public static void ClawPositionInfo(int _toClient,int x, int y)
+        {
+            using (Packet _packet = new Packet((int)ServerPackets.clawPosition))
+            {
+                _packet.Write(x);
+                _packet.Write(y);
+
                 SendTCPData(_toClient, _packet);
             }
         }

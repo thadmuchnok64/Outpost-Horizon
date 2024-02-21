@@ -37,8 +37,11 @@ public class UIManager : MonoBehaviour
     {
         ClientSend.SendTestMessage(message);
     }
-    public void SendNumberToServer(float[] numarray)
+	
+	// Should take in a float from -1 to 1
+    public void ClawGame(float input)
     {
-        ClientSend.SendNumber(numarray);
+		int sensitivity = Mathf.RoundToInt(input * 1000f);
+        ClientSend.SendNumber(sensitivity);
     }
 }

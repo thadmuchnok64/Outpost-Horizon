@@ -16,7 +16,8 @@ using System.Threading.Tasks;
         welcome = 1,
         test = 2,
         breakrod = 3,
-        numRecieved = 4
+        clawControl = 4,
+        cranePosition = 5
 }
 
     /// <summary>Sent from client to server.</summary>
@@ -25,7 +26,8 @@ using System.Threading.Tasks;
         welcomeReceived = 1,
         testRecieved = 2,
         breakrod = 3,
-        numRecieved = 4
+        clawControl = 4,
+        cranePosition = 5
 }
 
     public class Packet : IDisposable

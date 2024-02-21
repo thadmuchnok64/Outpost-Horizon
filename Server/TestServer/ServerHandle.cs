@@ -64,21 +64,36 @@ namespace TestServer
 
             ServerSend.SendBrokenRodInfoToUnity(_clientToSendTo, list);
         }
-        public static void Numparse(int _fromClient, Packet _packet)
+        public static void ClawControl(int _fromClient, Packet _packet)
         {
             int _clientIdCheck = _packet.ReadInt();
-            int floatToRead = _packet.ReadInt();
-            List<float> list = new List<float>();
-            for (int i = 0; i < floatToRead; i++)
-            {
-                list.Add(_packet.ReadFloat());
-            }
+            int control = _packet.ReadInt();
             //Console.WriteLine($" Player {Server.clients[_fromClient].tcp.socket.Client.RemoteEndPoint} says {_message}");
             int _clientToSendTo = 1;
             if (_clientIdCheck == 1)
                 _clientToSendTo = 0;
 
-            ServerSend.ReadNum(_clientToSendTo, list);
+            ServerSend.ClawControl(_clientToSendTo, control);
+        }
+
+		public static void ClawPostionInfo(int _fromClient, Packet _packet)
+		{
+            int _clientIdCheck = _packet.ReadInt();
+			int count = _packet.ReadInt();
+			if (count != 2)
+			{
+				Console.WriteLine($"User (ID: {_fromClient}) tried to send claw position info without 2 values.");
+				return;
+			}
+
+            int x = _packet.ReadInt();
+            int y = _packet.ReadInt();
+
+            int _clientToSendTo = 1;
+            if (_clientIdCheck == 1)
+                _clientToSendTo = 0;
+
+            ServerSend.ClawPositionInfo(_clientToSendTo, x,y);
         }
 
     }

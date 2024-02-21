@@ -17,7 +17,8 @@ namespace TestServer
         welcome = 1,
         test = 2,
         breakrod = 3,
-        readnum = 4
+        clawControl = 4,
+        clawPosition =5
     }
 
     /// <summary>Sent from client to server.</summary>
@@ -26,7 +27,8 @@ namespace TestServer
         welcomeReceived = 1,
         testRecieved = 2,
         breakrod = 3,
-        readnum = 4
+        clawControl = 4,
+        clawPosition = 5
 
     }
 

@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class ClientHandle : MonoBehaviour
 {
+
     public static void Welcome(Packet _packet)
     {
         string _msg = _packet.ReadString();
@@ -24,15 +25,29 @@ public class ClientHandle : MonoBehaviour
         GameManagerScript.instance.RodActivation();
         int count = _packet.ReadInt();
         List<int> ints = new List<int>();
-        for(int i = 0; i < count; i++)  
+        for (int i = 0; i < count; i++)
             ints.Add(_packet.ReadInt());
         RodBehaviour.rods.Clear();
         RodBehaviour.rodstoinsert = "";
         for (int i = 0; i < count; i++)
             RodBehaviour.rods.Add(ints[i]);
-        if(RodBehaviour.rods.Count > 0)
+        if (RodBehaviour.rods.Count > 0)
             RodBehaviour.instance.RodsTUpdate();
         else if (RodBehaviour.rods.Count == 0)
             RodBehaviour.instance.RodsComplete();
     }
+
+    public static void CranePosition(Packet _packet)
+    {
+        Vector2 vector = new Vector2(_packet.ReadInt(),_packet.ReadInt());
+        vector = vector / 1000;
+        try
+        {
+            TheClaw.instance.MoveClawToLocation(vector);
+        }
+        catch
+        {
+            // Claw probably isn't awake
+        }
+        }
 }

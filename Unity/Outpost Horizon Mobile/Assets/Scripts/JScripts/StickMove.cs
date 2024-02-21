@@ -7,6 +7,8 @@ public class StickMove : MonoBehaviour
     Vector3 MousePos;
     Vector3 thisPos;
     Camera cam;
+
+    public float joystickMaximum = .7f;
     private void OnMouseDown()
     {
         thisPos = transform.localPosition;
@@ -20,13 +22,18 @@ public class StickMove : MonoBehaviour
     }
     private void Update()
     {
-        if (transform.localPosition.y >= 0.7f)
+        if (transform.localPosition.y > joystickMaximum)
         {
-            transform.localPosition = new Vector3(0, .69f, 0);
+            transform.localPosition = new Vector3(0, joystickMaximum, 0);
         }
-        else if (transform.localPosition.y <= -0.7f)
+        else if (transform.localPosition.y < -joystickMaximum)
         {
-            transform.localPosition = new Vector3(0, -.69f, 0);
+            transform.localPosition = new Vector3(0, -joystickMaximum, 0);
         }
+    }
+
+    public float GetControlValue()
+    {
+        return transform.localPosition.y / joystickMaximum;
     }
 }

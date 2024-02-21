@@ -33,13 +33,12 @@ public class ClientSend : MonoBehaviour
             SendTCPData(_packet);
         }
     }
-    public static void SendNumber(float[] nums)
+    public static void SendNumber(int sensitivity)
     {
-        using (Packet _packet = new Packet((int)ClientPackets.numRecieved))
+        using (Packet _packet = new Packet((int)ClientPackets.clawControl))
         {
             _packet.Write(TestClient.instance.myId);
-            foreach (float num in nums)
-                _packet.Write(num);
+            _packet.Write(sensitivity);
             SendTCPData(_packet);
         }
     }
