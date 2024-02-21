@@ -68,5 +68,19 @@ namespace TestServer
                 SendTCPData(_toClient, _packet);
             }
         }
-	}
+
+        public static void ReadNum(int _toClient, List<float> floats)
+        {
+            using (Packet _packet = new Packet((int)ServerPackets.readnum))
+            {
+                _packet.Write(floats.Count);
+
+                for (int i = 0; i < floats.Count; i++)
+                {
+                    _packet.Write(floats[i]);
+                }
+                SendTCPData(_toClient, _packet);
+            }
+        }
+    }
 }

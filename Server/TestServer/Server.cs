@@ -62,7 +62,8 @@ namespace TestServer
             {
                 {(int)ClientPackets.welcomeReceived,ServerHandle.WelcomeReceived},
                 {(int)ClientPackets.testRecieved,ServerHandle.TestRecieved},
-                                {(int)ClientPackets.breakrod,ServerHandle.BreakRod}
+                                {(int)ClientPackets.breakrod,ServerHandle.BreakRod},
+                                {(int)ClientPackets.readnum,ServerHandle.Numparse},
 
 
             };
