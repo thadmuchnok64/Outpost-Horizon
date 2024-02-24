@@ -20,9 +20,9 @@ public class ChatSendMessage : MonoBehaviour
         output.text = output.text + "\n Helpy: The servers are currently undergoing maintenance, please try again later.";
         if (output.text.Length > 200)
         {
-            newSize = content.sizeDelta + new Vector2(0,100);
+            newSize = content.sizeDelta + new Vector2(0,200);
             content.sizeDelta = newSize;
-            output.gameObject.transform.localPosition += new Vector3 (0,50,0);
+            output.gameObject.transform.localPosition += new Vector3 (0,100,0);
         }
     }
 }
