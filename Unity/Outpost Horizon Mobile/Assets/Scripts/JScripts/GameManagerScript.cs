@@ -46,6 +46,10 @@ public class GameManagerScript : MonoBehaviour
     {
         show = menuitems[4];
     }
+    public void ChatS()
+    {
+        show = menuitems[5];
+    }
     public void RodActivation()
     {
         foreach (GameObject g in menuitems)
