@@ -64,10 +64,7 @@ namespace TestServer
                 {(int)ClientPackets.testRecieved,ServerHandle.TestRecieved},
                 {(int)ClientPackets.breakrod,ServerHandle.BreakRod},
                 {(int)ClientPackets.clawControl,ServerHandle.ClawControl},
-                {(int)ClientPackets.clawPosition,ServerHandle.ClawPostionInfo}
-
-
-
+                {(int)ClientPackets.clawPosition,ServerHandle.ClawPostionInfo},
 
             };
             Console.WriteLine("Initialized packets");

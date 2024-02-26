@@ -18,7 +18,8 @@ namespace TestServer
         test = 2,
         breakrod = 3,
         clawControl = 4,
-        clawPosition =5
+        clawPosition =5,
+        UnityToUnrealLogin = 6
     }
 
     /// <summary>Sent from client to server.</summary>
@@ -28,7 +29,9 @@ namespace TestServer
         testRecieved = 2,
         breakrod = 3,
         clawControl = 4,
-        clawPosition = 5
+        clawPosition = 5,
+        UnityToUnrealLogin = 6
+
 
     }
 

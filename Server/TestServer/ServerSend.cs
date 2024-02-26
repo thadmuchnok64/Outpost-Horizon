@@ -88,5 +88,13 @@ namespace TestServer
                 SendTCPData(_toClient, _packet);
             }
         }
+
+        public static void VerifyUnityUserHasLoggedIn(int _toClient)
+        {
+            using (Packet _packet = new Packet((int)ServerPackets.UnityToUnrealLogin))
+            {
+                SendTCPData(_toClient, _packet);
+            }
+        }
     }
 }

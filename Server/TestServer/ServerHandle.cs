@@ -19,7 +19,36 @@ namespace TestServer
 			{
 				Console.WriteLine($"Player \"{_username}\" (ID: {_fromClient}) has assumed the wrong client ID ({_clientIdCheck})!");
 			}
-		}
+
+            Server.clients[_fromClient].username = _username;
+
+            int _clientToSendTo = 1;
+            if (_clientIdCheck == 1)
+                _clientToSendTo = 0;
+
+			if(_username == "Unreal")
+			{
+				try
+				{
+					if (Server.clients[_clientToSendTo].username == "Unity")
+					{
+						ServerSend.VerifyUnityUserHasLoggedIn(_fromClient);
+					}
+				}
+				catch { }
+            } else
+			{
+                try
+                {
+                    if (Server.clients[_clientToSendTo].username == "Unreal")
+                    {
+                        ServerSend.VerifyUnityUserHasLoggedIn(_clientToSendTo);
+                    }
+                }
+                catch { }
+            }
+
+        }
 
 		public static void TestRecieved(int _fromClient, Packet _packet)
 		{

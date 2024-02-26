@@ -12,6 +12,7 @@ namespace TestServer
         public static int dataBufferSize = 4096;
         public int id;
         public TCP tcp;
+        public string username;
 
         public Client(int _clientId)
         {
