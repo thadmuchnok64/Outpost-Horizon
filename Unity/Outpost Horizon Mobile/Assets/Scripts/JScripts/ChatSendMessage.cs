@@ -16,8 +16,8 @@ public class ChatSendMessage : MonoBehaviour
     {
         text = input.text;
         input.text = "";
-        output.text = output.text + "\n"+ "You:" + text;
-        output.text = output.text + "\n Helpy: The servers are currently undergoing maintenance, please try again later.";
+        output.text = output.text + "\n"+ "You: " + text;
+        output.text = output.text + "\nHelpy: The servers are currently undergoing maintenance, please try again later.";
         if (output.text.Length > 200)
         {
             newSize = content.sizeDelta + new Vector2(0,200);

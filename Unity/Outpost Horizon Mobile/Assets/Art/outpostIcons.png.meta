@@ -48,7 +48,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 32
+  spritePixelsToUnits: 100
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -72,7 +72,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 0
+    textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -150,8 +150,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e5c7382af327ecd4ea5cdcb34feeab5c
-      internalID: 499161467
+      spriteID: 0922e18210f29ef4ba7b8b11e7583043
+      internalID: 517827264
       vertices: []
       indices: 
       edges: []
@@ -171,8 +171,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4033eb6e599046247b306b075f54fbb2
-      internalID: 32721831
+      spriteID: e915ef3f07951d64ca8870eaea5f30a7
+      internalID: 612392324
       vertices: []
       indices: 
       edges: []
@@ -192,8 +192,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 26ec81c9877f22147ab759793358a9ca
-      internalID: -1363289174
+      spriteID: e84a2791e4976d6459caaba2cebe58c7
+      internalID: 504048197
       vertices: []
       indices: 
       edges: []
@@ -213,8 +213,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 981f05bc23bd91d43ac9f6f91d88b528
-      internalID: 12276105
+      spriteID: 4b637aad2032bfd419bbb7809bd8927f
+      internalID: -46209462
       vertices: []
       indices: 
       edges: []
@@ -234,8 +234,29 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 73629f40efdad11468972b14018bdee3
-      internalID: 2067920987
+      spriteID: d360dd09672588c459df446cc25b3d1e
+      internalID: -1087995502
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: outpostIcons_5
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cbdf7c0db13f0b24fac0f8049294d72f
+      internalID: 1895706781
       vertices: []
       indices: 
       edges: []
@@ -251,11 +272,12 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      outpostIcons_0: 499161467
-      outpostIcons_1: 32721831
-      outpostIcons_2: -1363289174
-      outpostIcons_3: 12276105
-      outpostIcons_4: 2067920987
+      outpostIcons_0: 517827264
+      outpostIcons_1: 612392324
+      outpostIcons_2: 504048197
+      outpostIcons_3: -46209462
+      outpostIcons_4: -1087995502
+      outpostIcons_5: 1895706781
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
