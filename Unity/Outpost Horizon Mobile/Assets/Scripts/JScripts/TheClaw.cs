@@ -24,7 +24,6 @@ public class TheClaw : MonoBehaviour
         {
             instance = this;
         }
-
     }
 
     // Update is called once per frame
@@ -34,7 +33,7 @@ public class TheClaw : MonoBehaviour
         //Done: Update this so that unreal sends the position of the object back through unity
        prevclaw = claw.transform.position;
        if (claw.transform.localPosition.y <= .38f && claw.transform.localPosition.y >= -.38f)
-           claw.transform.Translate(joystick.transform.localPosition * joystick.joystickMaximum * Time.deltaTime);
+            claw.transform.Translate(joystick.transform.localPosition * joystick.joystickMaximum * Time.deltaTime);
        else if (claw.transform.localPosition.y > .38f)
            claw.transform.localPosition = new Vector3(0, .38f, 0);
        else if (claw.transform.localPosition.y < -.38f)

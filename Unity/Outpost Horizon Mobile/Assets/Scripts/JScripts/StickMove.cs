@@ -7,11 +7,19 @@ public class StickMove : MonoBehaviour
     Vector3 MousePos;
     Vector3 thisPos;
     Camera cam;
-
     public float joystickMaximum = .7f;
+    AudioSource audios;
+    public AudioClip clup;
+    public AudioClip cldwn;
+    AudioClip lastcl;
+    private void Start()
+    {
+        audios = GetComponent<AudioSource>();
+    }
     private void OnMouseDown()
     {
         thisPos = transform.localPosition;
+        audios.Play();
     }
     private void OnMouseDrag()
     {
@@ -22,6 +30,7 @@ public class StickMove : MonoBehaviour
     }
     private void Update()
     {
+        lastcl = audios.clip;
         if (transform.localPosition.y > joystickMaximum)
         {
             transform.localPosition = new Vector3(0, joystickMaximum, 0);
@@ -30,6 +39,16 @@ public class StickMove : MonoBehaviour
         {
             transform.localPosition = new Vector3(0, -joystickMaximum, 0);
         }
+        if (transform.localPosition.y > 0)
+        {
+            audios.clip = clup;
+        }
+        else if (transform.localPosition.y < 0)
+        {
+            audios.clip = cldwn;
+        }
+        if (lastcl != audios.clip)
+            audios.Play();
     }
 
     public float GetControlValue()
