@@ -4,6 +4,7 @@ using UnityEngine;
 using System.Net;
 using System.Net.Sockets;
 using System;
+using System.Net.Http;
 
 public class TestClient : MonoBehaviour
 {
@@ -44,6 +45,10 @@ public class TestClient : MonoBehaviour
         InitializeClientData();
         tcp.Connect();
     }
+    public void DisconnectFromServer()
+    {
+        tcp.Disconnect();
+    }
 
     public class TCP
     {
@@ -63,7 +68,11 @@ public class TestClient : MonoBehaviour
             recieveBuffer = new byte[dataBufferSize];
             socket.BeginConnect(instance.ip, instance.port, ConnectCallback, socket);
         }
-
+        public void Disconnect()
+        {
+            stream.Close();
+            socket.Close();
+        }
         private void ConnectCallback(IAsyncResult _result)
         {
             socket.EndConnect(_result);

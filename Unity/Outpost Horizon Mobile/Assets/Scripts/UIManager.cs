@@ -27,8 +27,13 @@ public class UIManager : MonoBehaviour
 		//usernameField.interactable= false;
 		TestClient.instance.ConnectToServer();
 	}
+    public void DisconnectFromServer()
+    {
+        startMenu.SetActive(false);
+        TestClient.instance.DisconnectFromServer();
+    }
 
-	// Sends a test message to the server, which gets sent to unreal
+    // Sends a test message to the server, which gets sent to unreal
     public void SendMessageToServer()
     {
         ClientSend.SendTestMessage(textbox.text);
