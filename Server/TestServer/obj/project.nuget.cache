@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "CT2/c3kZ77OudURco2a6lYXTvPP46nlnHZ5cQFfYR0MnKI+hLMl10LB3tKtKyD1B/hWRjdItvzv7RWLJW9+KAA==",
+  "dgSpecHash": "ZF4gJQfwDWEqfvdFPfmtbVg8ZfA6DyUUSWXZO6BqcMzI7hSYHzFY8TnjQSZxeeFDYKnuJG7QJIvnad0WxP1rWg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\tmuchnok\\Desktop\\School Junk\\Spring\\OutpostHorizon\\Outpost-Horizon\\Server\\TestServer\\TestServer.csproj",
+  "projectFilePath": "/Users/jjmarin/Documents/GitHub/Outpost-Horizon/Server/TestServer/TestServer.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }

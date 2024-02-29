@@ -8,26 +8,25 @@
     "net6.0": []
   },
   "packageFolders": {
-    "C:\\Users\\tmuchnok\\.nuget\\packages\\": {}
+    "/Users/jjmarin/.nuget/packages/": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\tmuchnok\\Desktop\\School Junk\\Spring\\OutpostHorizon\\Outpost-Horizon\\Server\\TestServer\\TestServer.csproj",
+      "projectUniqueName": "/Users/jjmarin/Documents/GitHub/Outpost-Horizon/Server/TestServer/TestServer.csproj",
       "projectName": "TestServer",
-      "projectPath": "C:\\Users\\tmuchnok\\Desktop\\School Junk\\Spring\\OutpostHorizon\\Outpost-Horizon\\Server\\TestServer\\TestServer.csproj",
-      "packagesPath": "C:\\Users\\tmuchnok\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\tmuchnok\\Desktop\\School Junk\\Spring\\OutpostHorizon\\Outpost-Horizon\\Server\\TestServer\\obj\\",
+      "projectPath": "/Users/jjmarin/Documents/GitHub/Outpost-Horizon/Server/TestServer/TestServer.csproj",
+      "packagesPath": "/Users/jjmarin/.nuget/packages/",
+      "outputPath": "/Users/jjmarin/Documents/GitHub/Outpost-Horizon/Server/TestServer/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\tmuchnok\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        "/Users/jjmarin/.nuget/NuGet/NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net6.0"
       ],
       "sources": {
-        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "/usr/local/share/dotnet/library-packs": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
@@ -61,7 +60,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.304\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/7.0.311/RuntimeIdentifierGraph.json"
       }
     }
   }

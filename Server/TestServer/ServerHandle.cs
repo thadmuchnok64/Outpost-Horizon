@@ -12,8 +12,11 @@ namespace TestServer
 		{
 			int _clientIdCheck = _packet.ReadInt();
 			string _username = _packet.ReadString();
-
-			Console.WriteLine($"{Server.clients[_fromClient].tcp.socket.Client.RemoteEndPoint} connected successfully and is now player {_fromClient}!\n" +
+            if (_username == Server.usedClientName)
+            {
+                Server.clients.Remove(_fromClient);
+            }
+            Console.WriteLine($"{Server.clients[_fromClient].tcp.socket.Client.RemoteEndPoint} connected successfully and is now player {_fromClient}!\n" +
 				$"this user is using {_username}");
 			if (_fromClient != _clientIdCheck)
 			{

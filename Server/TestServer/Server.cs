@@ -15,6 +15,7 @@ namespace TestServer
         public static Dictionary<int,Client> clients = new Dictionary<int, Client>();
         public delegate void PacketHandler(int _fromClient, Packet _packet);
         public static Dictionary<int, PacketHandler> packetHandlers;
+        public static string usedClientName;
 
         private static TcpListener tcpListener;
         public static void Start(int _maxPlayer, int _port)
