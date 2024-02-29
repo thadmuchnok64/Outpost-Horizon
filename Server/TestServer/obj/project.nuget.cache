@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "gpS61Njxtviz4kLSHnxtGkryDOTf1zfhx7TeDAbgzYWaSInNJx4Puq4VsG6sqlNXZIs5Xk+idcDG5HZKkC0JCg==",
+  "dgSpecHash": "ZF4gJQfwDWEqfvdFPfmtbVg8ZfA6DyUUSWXZO6BqcMzI7hSYHzFY8TnjQSZxeeFDYKnuJG7QJIvnad0WxP1rWg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\juan.marin\\Documents\\GitHub\\Outpost-Horizon\\Server\\TestServer\\TestServer.csproj",
+  "projectFilePath": "/Users/jjmarin/Documents/GitHub/Outpost-Horizon/Server/TestServer/TestServer.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }
