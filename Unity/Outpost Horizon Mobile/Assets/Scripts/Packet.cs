@@ -27,7 +27,8 @@ using System.Threading.Tasks;
         testRecieved = 2,
         breakrod = 3,
         clawControl = 4,
-        cranePosition = 5
+        cranePosition = 5,
+        disconnect = 7
 }
 
     public class Packet : IDisposable

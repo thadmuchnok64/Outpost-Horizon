@@ -8,7 +8,7 @@ public class UIManager : MonoBehaviour
     public static UIManager instance;
 
     public GameObject startMenu;
-    public TMPro.TMP_InputField textbox;
+    public static bool connected = false;
 
 	private void Awake()
 	{
@@ -26,17 +26,19 @@ public class UIManager : MonoBehaviour
 		startMenu.SetActive(false);
 		//usernameField.interactable= false;
 		TestClient.instance.ConnectToServer();
+        connected = true;
 	}
     public void DisconnectFromServer()
     {
-        startMenu.SetActive(false);
         TestClient.instance.DisconnectFromServer();
+        connected = false;
     }
 
     // Sends a test message to the server, which gets sent to unreal
     public void SendMessageToServer()
     {
-        ClientSend.SendTestMessage(textbox.text);
+        if (connected == true)
+            ClientSend.SendTestMessage(ClientSendMessage._csmsg);
     }
     public void SendToServer(string message)
     {

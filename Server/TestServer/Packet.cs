@@ -18,7 +18,7 @@ namespace TestServer
         test = 2,
         breakrod = 3,
         clawControl = 4,
-        clawPosition =5,
+        clawPosition = 5,
         UnityToUnrealLogin = 6
     }
 
@@ -30,8 +30,8 @@ namespace TestServer
         breakrod = 3,
         clawControl = 4,
         clawPosition = 5,
-        UnityToUnrealLogin = 6
-
+        UnityToUnrealLogin = 6,
+        disconnect = 7
 
     }
 
