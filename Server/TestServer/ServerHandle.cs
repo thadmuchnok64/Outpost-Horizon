@@ -39,7 +39,8 @@ namespace TestServer
 					}
 				}
 				catch { }
-            } else
+            }
+            else if (_username == "Unity")
 			{
                 try
                 {
@@ -127,6 +128,11 @@ namespace TestServer
 
             ServerSend.ClawPositionInfo(_clientToSendTo, x,y);
         }
-
+        public static void DisconnectFromTCP(int _fromClient, Packet _packet)
+        {
+            int _clientIdCheck = _packet.ReadInt();
+            Console.WriteLine($" Player {Server.clients[_fromClient].tcp.socket.Client.RemoteEndPoint} has been disconnected.");
+            Server.clients[_clientIdCheck].tcp.socket = null;
+        }
     }
 }

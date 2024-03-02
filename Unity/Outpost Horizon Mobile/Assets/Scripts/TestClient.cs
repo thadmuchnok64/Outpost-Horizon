@@ -47,7 +47,7 @@ public class TestClient : MonoBehaviour
     }
     public void DisconnectFromServer()
     {
-        tcp.Disconnect();
+        ClientSend.DisconnectTCP();
     }
 
     public class TCP
@@ -67,11 +67,6 @@ public class TestClient : MonoBehaviour
 
             recieveBuffer = new byte[dataBufferSize];
             socket.BeginConnect(instance.ip, instance.port, ConnectCallback, socket);
-        }
-        public void Disconnect()
-        {
-            stream.Close();
-            socket.Close();
         }
         private void ConnectCallback(IAsyncResult _result)
         {
