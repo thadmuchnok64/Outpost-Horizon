@@ -52,6 +52,8 @@ Plugins/*/Binaries/*
 # Builds
 Build/*
 Unreal/Builds
+Unity/Builds
+
 
 # Whitelist PakBlacklist-<BuildConfiguration>.txt files
 !Build/*/
