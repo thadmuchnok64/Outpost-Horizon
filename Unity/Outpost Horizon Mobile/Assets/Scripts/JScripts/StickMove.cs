@@ -39,11 +39,13 @@ public class StickMove : MonoBehaviour
         {
             transform.localPosition = new Vector3(0, -joystickMaximum, 0);
         }
-        if (transform.localPosition.y > 0)
+        if (transform.localPosition.y < 0.1 && transform.localPosition.y > -0.1)
+            audios.Pause();
+        else if (transform.localPosition.y > 0.1)
         {
             audios.clip = clup;
         }
-        else if (transform.localPosition.y < 0)
+        else if (transform.localPosition.y < -0.1)
         {
             audios.clip = cldwn;
         }
