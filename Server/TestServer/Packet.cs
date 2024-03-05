@@ -19,7 +19,8 @@ namespace TestServer
         breakrod = 3,
         clawControl = 4,
         clawPosition = 5,
-        UnityToUnrealLogin = 6
+        UnityToUnrealLogin = 6,
+        disconnect = 7,
     }
 
     /// <summary>Sent from client to server.</summary>
@@ -31,8 +32,7 @@ namespace TestServer
         clawControl = 4,
         clawPosition = 5,
         UnityToUnrealLogin = 6,
-        disconnect = 7
-
+        disconnect = 7,
     }
 
     public class Packet : IDisposable

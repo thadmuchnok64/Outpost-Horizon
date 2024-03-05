@@ -51,5 +51,17 @@ public class ClientHandle : MonoBehaviour
         {
             // Claw probably isn't awake
         }
+    }
+    public static void ReadMessage(Packet _packet)
+    {
+        string _msg = _packet.ReadString();
+        Debug.Log($"Message recieved from server: {_msg}");
+        switch ( _msg )
+        {
+            case "RodOnFloor!":
+                RodBehaviour.instance.ShowError();
+                break;
+            
         }
+    }
 }

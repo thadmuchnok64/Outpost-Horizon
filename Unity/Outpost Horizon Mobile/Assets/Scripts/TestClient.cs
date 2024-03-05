@@ -172,6 +172,7 @@ public class TestClient : MonoBehaviour
                 {(int)ServerPackets.welcome, ClientHandle.Welcome},
                 {(int)ServerPackets.breakrod, ClientHandle.GetInfoOnBrokenRods},
                 {(int)ServerPackets.cranePosition,ClientHandle.CranePosition},
+                {(int)ServerPackets.test,ClientHandle.ReadMessage},
 
             };
         Debug.Log("Initializing client data...");
