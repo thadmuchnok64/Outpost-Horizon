@@ -39,8 +39,10 @@ public class ClientHandle : MonoBehaviour
 
     public static void CranePosition(Packet _packet)
     {
-        Vector2 vector = new Vector2(_packet.ReadInt(),_packet.ReadInt());
+        Vector3 vector = new Vector3(_packet.ReadInt(),_packet.ReadInt(),_packet.ReadInt());
         vector = vector / 1000;
+       // _packet.
+        //_packet.ReadInt();
         try
         {
             TheClaw.instance.MoveClawToLocation(vector);
