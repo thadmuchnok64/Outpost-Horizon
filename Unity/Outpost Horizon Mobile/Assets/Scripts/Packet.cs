@@ -17,7 +17,7 @@ using System.Threading.Tasks;
         test = 2,
         breakrod = 3,
         clawControl = 4,
-        cranePosition = 5
+        cranePosition = 5,
 }
 
     /// <summary>Sent from client to server.</summary>

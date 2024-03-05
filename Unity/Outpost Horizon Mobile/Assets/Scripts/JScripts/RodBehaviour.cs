@@ -8,6 +8,7 @@ using UnityEngine;
 public class RodBehaviour : MonoBehaviour
 {
     public static RodBehaviour instance;
+    public GameObject img;
     public TMP_Text text;
     public static List<int> rods = new List<int>();
     public GameObject roddiag;
@@ -45,5 +46,8 @@ public class RodBehaviour : MonoBehaviour
         text.text = "All Fuel Rods are operational. Well done.";
         roddiag.SetActive(false);
     }
-
+    public void ShowError()
+    {
+        img.SetActive(true);
+    }
 }
