@@ -152,5 +152,16 @@ namespace TestServer
             Console.WriteLine($" Player {Server.clients[_fromClient].tcp.socket.Client.RemoteEndPoint} has been disconnected.");
             Server.clients[_clientIdCheck].tcp.socket = null;
         }
+
+        public static void RoomEntry(int _fromClient, Packet _packet)
+        {
+            int _clientIdCheck = _packet.ReadInt();
+            string code = _packet.ReadString();
+            int _clientToSendTo = 1;
+            if (_clientIdCheck == 1)
+                _clientToSendTo = 0;
+
+            ServerSend.SendRoomInfoToUnity(_clientToSendTo, code);
+        }
     }
 }

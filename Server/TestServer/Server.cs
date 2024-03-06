@@ -66,7 +66,9 @@ namespace TestServer
                 {(int)ClientPackets.breakrod,ServerHandle.BreakRod},
                 {(int)ClientPackets.clawControl,ServerHandle.ClawControl},
                 {(int)ClientPackets.clawPosition,ServerHandle.ClawPostionInfo},
-                {(int)ClientPackets.disconnect, ServerHandle.DisconnectFromTCP }
+                {(int)ClientPackets.disconnect, ServerHandle.DisconnectFromTCP },
+                {(int)ClientPackets.roomEntry, ServerHandle.RoomEntry }
+
 
             };
             Console.WriteLine("Initialized packets");

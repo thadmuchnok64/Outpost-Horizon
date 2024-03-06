@@ -18,6 +18,7 @@ using System.Threading.Tasks;
         breakrod = 3,
         clawControl = 4,
         cranePosition = 5,
+        roomEntry = 8
 }
 
     /// <summary>Sent from client to server.</summary>
@@ -28,10 +29,12 @@ using System.Threading.Tasks;
         breakrod = 3,
         clawControl = 4,
         cranePosition = 5,
-        disconnect = 7
+        disconnect = 7,
+        roomEntry = 8
+
 }
 
-    public class Packet : IDisposable
+public class Packet : IDisposable
     {
         private List<byte> buffer;
         private byte[] readableBuffer;

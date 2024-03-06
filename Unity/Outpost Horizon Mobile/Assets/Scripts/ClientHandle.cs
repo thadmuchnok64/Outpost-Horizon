@@ -74,4 +74,25 @@ public class ClientHandle : MonoBehaviour
             
         }
     }
+
+    public static void RoomEntry( Packet _packet)
+    {
+        string msg = _packet.ReadString();
+
+        switch( msg )
+        {
+            case "awareGenerator":
+                // do stuff here
+                break;
+            case "awareLockpick":
+                // do stuff here
+                break;
+            case "awareCrane":
+                // do stuff here
+                break;
+            default:
+                break;
+
+        }
+    }
 }

@@ -12971,9 +12971,9 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7117998265759328267, guid: 2977f8354ad21ec4ebbce1b0370f37f9, type: 3}
-      propertyPath: crate
-      value: 
-      objectReference: {fileID: 5346117081130660733, guid: 0c9adb851b1e9894d8f03153732ad0a3, type: 3}
+      propertyPath: shippingContainersCount
+      value: 33
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
