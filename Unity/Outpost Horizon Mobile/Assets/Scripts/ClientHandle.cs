@@ -71,7 +71,10 @@ public class ClientHandle : MonoBehaviour
             case "RodOnFloor!":
                 RodBehaviour.instance.ShowError();
                 break;
-            
+            case string anotif when anotif.StartsWith("aware"):
+                GameManagerScript.instance.notif = anotif;
+                GameManagerScript.instance.NotifAnnounce();
+                break;
         }
     }
 
