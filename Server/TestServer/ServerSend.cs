@@ -78,12 +78,14 @@ namespace TestServer
             }
         }
 
-        public static void ClawPositionInfo(int _toClient,int x, int y)
+        public static void ClawPositionInfo(int _toClient,List<int> list)
         {
             using (Packet _packet = new Packet((int)ServerPackets.clawPosition))
             {
-                _packet.Write(x);
-                _packet.Write(y);
+                foreach(int i in list)
+                {
+                    _packet.Write(i);
+                }
 
                 SendTCPData(_toClient, _packet);
             }

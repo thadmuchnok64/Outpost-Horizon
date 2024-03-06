@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class ClientHandle : MonoBehaviour
 {
-
     public static void Welcome(Packet _packet)
     {
         string _msg = _packet.ReadString();
@@ -40,17 +39,26 @@ public class ClientHandle : MonoBehaviour
     public static void CranePosition(Packet _packet)
     {
         Vector3 vector = new Vector3(_packet.ReadInt(),_packet.ReadInt(),_packet.ReadInt());
-        vector = vector / 1000;
-       // _packet.
-        //_packet.ReadInt();
-        try
-        {
-            TheClaw.instance.MoveClawToLocation(vector);
-        }
-        catch
-        {
-            // Claw probably isn't awake
-        }
+        vector = new Vector3(vector.y, vector.z, vector.x);
+        vector = vector / 100;
+        Vector3 craneEuler = new Vector3(_packet.ReadInt(), _packet.ReadInt(), _packet.ReadInt());
+        CraneHandler.instance.SetCraneOrientation(vector, craneEuler);
+        int itr = _packet.ReadInt();
+            //TheClaw.instance.MoveClawToLocation(vector);
+            for (int i = 0; i < itr; i++)
+            {
+                int index = _packet.ReadInt();
+                var posx = _packet.ReadInt();
+                var posy = _packet.ReadInt();
+                var posz = _packet.ReadInt();
+
+                Vector3 pos = new Vector3(posy, posz, posx)/100;
+                Vector3 euler = new Vector3(_packet.ReadInt(), _packet.ReadInt(), _packet.ReadInt());
+                CraneHandler.instance.SetOrientationOfShippingContainer(index, pos, euler);
+
+
+            }
+
     }
     public static void ReadMessage(Packet _packet)
     {

@@ -113,20 +113,38 @@ namespace TestServer
 		{
             int _clientIdCheck = _packet.ReadInt();
 			int count = _packet.ReadInt();
-			if (count != 2)
-			{
-				Console.WriteLine($"User (ID: {_fromClient}) tried to send claw position info without 2 values.");
-				return;
-			}
 
-            int x = _packet.ReadInt();
-            int y = _packet.ReadInt();
+            List<int> list = new List<int>();
+
+            list.Add(_packet.ReadInt());
+            list.Add(_packet.ReadInt());
+            list.Add(_packet.ReadInt());
+
+            list.Add(_packet.ReadInt());
+            list.Add(_packet.ReadInt());
+            list.Add(_packet.ReadInt());
+
+            int i = _packet.ReadInt();
+            list.Add(i);
+
+            for(int x = 0; x < i; x++)
+            {
+                list.Add(_packet.ReadInt());
+
+                list.Add(_packet.ReadInt());
+                list.Add(_packet.ReadInt());
+                list.Add(_packet.ReadInt());
+
+                list.Add(_packet.ReadInt());
+                list.Add(_packet.ReadInt());
+                list.Add(_packet.ReadInt());
+            }
 
             int _clientToSendTo = 1;
             if (_clientIdCheck == 1)
                 _clientToSendTo = 0;
 
-            ServerSend.ClawPositionInfo(_clientToSendTo, x,y);
+            ServerSend.ClawPositionInfo(_clientToSendTo, list);
         }
         public static void DisconnectFromTCP(int _fromClient, Packet _packet)
         {
