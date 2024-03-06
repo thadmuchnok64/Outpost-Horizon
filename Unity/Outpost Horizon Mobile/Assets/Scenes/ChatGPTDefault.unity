@@ -6535,19 +6535,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 773885432}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1908828416}
-        m_TargetAssemblyTypeName: ChatSendMessage, Assembly-CSharp
-        m_MethodName: SendToChat
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!114 &773885432
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15587,6 +15575,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1908828415}
   - component: {fileID: 1908828416}
+  - component: {fileID: 1908828417}
   m_Layer: 5
   m_Name: Chat
   m_TagString: Untagged
@@ -15627,6 +15616,23 @@ MonoBehaviour:
   content: {fileID: 1789165447}
   input: {fileID: 374693908}
   output: {fileID: 461123724}
+--- !u!114 &1908828417
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1908828414}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 83764466e83f8aa40b421e5af75b1b49, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  inputField: {fileID: 374693908}
+  button: {fileID: 773885431}
+  scroll: {fileID: 0}
+  sent: {fileID: 1789165447}
+  received: {fileID: 1789165447}
 --- !u!1 &1915386514
 GameObject:
   m_ObjectHideFlags: 0
