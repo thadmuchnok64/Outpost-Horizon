@@ -49,5 +49,11 @@ public class RodBehaviour : MonoBehaviour
     public void ShowError()
     {
         img.SetActive(true);
+        StartCoroutine(waitshow());
+    }
+    IEnumerator waitshow()
+    {
+        yield return new WaitForSeconds(5);
+        img.SetActive(false);
     }
 }
