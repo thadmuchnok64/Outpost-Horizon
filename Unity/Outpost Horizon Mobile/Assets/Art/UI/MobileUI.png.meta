@@ -320,13 +320,13 @@ TextureImporter:
       name: MobileUI_8
       rect:
         serializedVersion: 2
-        x: 129
+        x: 128
         y: 0
-        width: 99
+        width: 96
         height: 96
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
-      border: {x: 3, y: 12, z: 16, w: 24}
+      border: {x: 4, y: 12, z: 12, w: 24}
       outline: []
       physicsShape: []
       tessellationDetail: 0

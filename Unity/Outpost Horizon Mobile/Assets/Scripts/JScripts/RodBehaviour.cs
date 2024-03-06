@@ -32,18 +32,21 @@ public class RodBehaviour : MonoBehaviour
         {
             rodtin.SetActive(false);
         }
-        for (int i = 0; i < rods.Count; i++)
+        for (int i = 0; i < rods.Count-1; i++)
         {
-            rodstoinsert = rodstoinsert + " ," + rods[i].ToString();
+            rodstoinsert = rodstoinsert + rods[i].ToString() +", ";
             rodstin[rods[i]].SetActive(true);
         }
-        text.text = "Fuel Rods are malfunctioning. Please reinsert Rod(s):" + rodstoinsert;
+        rodstoinsert += "and " + rods[rods.Count - 1];
+        rodstin[rods[rods.Count - 1]].SetActive(true);
+
+        text.text = "Fuel Rods are malfunctioning. Please reinsert Rod(s): " + rodstoinsert + "\n\nFor types of rods - please go to \"INFO\" tab";
         roddiag.SetActive(true);
     }
     public void RodsComplete()
     {
         rodstoinsert = "";
-        text.text = "All Fuel Rods are operational. Well done.";
+        text.text = "All Fuel Rods are operational! Well done.";
         roddiag.SetActive(false);
     }
     public void ShowError()
