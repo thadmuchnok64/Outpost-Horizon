@@ -38,10 +38,11 @@ public class ClientHandle : MonoBehaviour
 
     public static void CranePosition(Packet _packet)
     {
-        Vector3 vector = new Vector3(_packet.ReadInt(),_packet.ReadInt(),_packet.ReadInt());
-        vector = new Vector3(vector.y, vector.z, vector.x);
-        vector = vector / 100;
+        Vector3 tempvec = new Vector3(_packet.ReadInt(),_packet.ReadInt(),_packet.ReadInt());
+        Vector3 vector = new Vector3(-tempvec.x, tempvec.z, tempvec.y);
+        vector = vector / 100000;
         Vector3 craneEuler = new Vector3(_packet.ReadInt(), _packet.ReadInt(), _packet.ReadInt());
+        craneEuler = new Vector3(craneEuler.x, craneEuler.z, craneEuler.y);
         CraneHandler.instance.SetCraneOrientation(vector, craneEuler);
         int itr = _packet.ReadInt();
             //TheClaw.instance.MoveClawToLocation(vector);
@@ -52,8 +53,9 @@ public class ClientHandle : MonoBehaviour
                 var posy = _packet.ReadInt();
                 var posz = _packet.ReadInt();
 
-                Vector3 pos = new Vector3(posy, posz, posx)/100;
+                Vector3 pos = new Vector3(-posx, posz, posy)/100000;
                 Vector3 euler = new Vector3(_packet.ReadInt(), _packet.ReadInt(), _packet.ReadInt());
+            euler = new Vector3(euler.x,euler.z, euler.y);
                 CraneHandler.instance.SetOrientationOfShippingContainer(index, pos, euler);
 
 

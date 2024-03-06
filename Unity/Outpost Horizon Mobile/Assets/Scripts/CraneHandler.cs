@@ -4,9 +4,11 @@ using UnityEngine;
 
 public class CraneHandler : MonoBehaviour
 {
-    public List<Transform> shippingContainers = new List<Transform>();
+    private List<Transform> shippingContainers = new List<Transform>();
+    public int shippingContainersCount = 34;
     public Transform crane;
     public GameObject craneArea;
+    public GameObject crate;
 
     public static CraneHandler instance;
 
@@ -20,6 +22,11 @@ public class CraneHandler : MonoBehaviour
         else
         {
             instance = this;
+        }
+
+        for(int i = 0; i < shippingContainersCount; i++)
+        {
+            shippingContainers.Add(Instantiate(crate, craneArea.transform.position, Quaternion.identity, craneArea.transform).transform);
         }
     }
 
