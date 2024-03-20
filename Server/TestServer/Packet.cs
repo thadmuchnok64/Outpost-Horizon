@@ -21,7 +21,8 @@ namespace TestServer
         clawPosition = 5,
         UnityToUnrealLogin = 6,
         disconnect = 7,
-        roomEntry = 8
+        roomEntry = 8,
+        maintainConnection = 9
     }
 
     /// <summary>Sent from client to server.</summary>
@@ -34,7 +35,9 @@ namespace TestServer
         clawPosition = 5,
         UnityToUnrealLogin = 6,
         disconnect = 7,
-        roomEntry = 8
+        roomEntry = 8,
+        maintainConnection = 9
+
 
     }
 

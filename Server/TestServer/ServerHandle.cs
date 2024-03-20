@@ -163,5 +163,10 @@ namespace TestServer
 
             ServerSend.SendRoomInfoToUnity(_clientToSendTo, code);
         }
+
+        public static void MaintainConnection(int _fromClient, Packet _packet)
+        {
+            Server.clients[_fromClient].timeSinceLastPing = 0;
+        }
     }
 }

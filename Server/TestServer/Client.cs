@@ -13,6 +13,7 @@ namespace TestServer
         public int id;
         public TCP tcp;
         public string username;
+        public int timeSinceLastPing = 0;
 
         public Client(int _clientId)
         {
@@ -70,6 +71,7 @@ namespace TestServer
                     int _byteLength = stream.EndRead(_result);
                     if (_byteLength <= 0)
                     {
+                        Server.clients[id].Disconnect();
                         return;
                     }
                     byte[] _data = new byte[_byteLength];
@@ -80,6 +82,7 @@ namespace TestServer
                 } catch (Exception e)
                 {
                     Console.WriteLine($"Error receiving TCP data: {e}");
+                    Server.clients[id].Disconnect();
                 }
             }
 
@@ -125,6 +128,21 @@ namespace TestServer
 				return true;
 			}
 
+            public void Disconnect()
+            {
+               
+                socket.Close();
+                stream = null;
+                recievedData = null;
+                recieveBuffer = null;
+                socket = null;
+            }
+
 		}
+        public void Disconnect()
+        {
+            Console.WriteLine($"{username} Player {tcp.socket.Client.RemoteEndPoint} has been disconnected.");
+            tcp.Disconnect();
+        }
     }
 }
