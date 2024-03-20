@@ -17,6 +17,7 @@ public class TestClient : MonoBehaviour
     public int myId = 0;
     public TCP tcp;
 
+    private bool isConnected = false;
     private delegate void PacketHandler(Packet _packet);
     private static Dictionary<int, PacketHandler> packetHandlers;
 
@@ -40,9 +41,14 @@ public class TestClient : MonoBehaviour
         tcp = new TCP();
     }
 
+    private void OnApplicationQuit()
+    {
+        Disconnect();
+    }
     public void ConnectToServer()
     {
         InitializeClientData();
+        isConnected = true;
         tcp.Connect();
     }
     public void DisconnectFromServer()
@@ -90,7 +96,7 @@ public class TestClient : MonoBehaviour
                 int _byteLength = stream.EndRead(_result);
                 if (_byteLength <= 0)
                 {
-                    // Disconnect
+                    instance.Disconnect();
                     return;
                 }
 
@@ -103,8 +109,18 @@ public class TestClient : MonoBehaviour
             }
             catch
             {
-
+                Disconnect();
             }
+        }
+
+        private void Disconnect()
+        {
+            instance.Disconnect();
+
+            stream = null;
+            recievedData = null;
+            recieveBuffer = null;
+            socket = null;
         }
 
         private bool HandleData(byte[] _data)
@@ -165,7 +181,19 @@ public class TestClient : MonoBehaviour
 
 		}
 	}
-        private void InitializeClientData()
+
+    private void Disconnect()
+    {
+        if (isConnected)
+        {
+            isConnected = false;
+            tcp.socket.Close();
+
+            Debug.Log("Disconnected from server!");
+        }
+    }
+
+    private void InitializeClientData()
         {
             packetHandlers = new Dictionary<int, PacketHandler>()
             {
@@ -174,6 +202,7 @@ public class TestClient : MonoBehaviour
                 {(int)ServerPackets.cranePosition,ClientHandle.CranePosition},
                 {(int)ServerPackets.test,ClientHandle.ReadMessage},
                 {(int)ServerPackets.roomEntry,ClientHandle.RoomEntry},
+                
 
             };
         Debug.Log("Initializing client data...");

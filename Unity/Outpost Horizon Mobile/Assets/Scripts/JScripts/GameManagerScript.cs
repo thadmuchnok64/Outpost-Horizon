@@ -14,6 +14,9 @@ public class GameManagerScript : MonoBehaviour
     public List<GameObject> menuitems = new List<GameObject>();
     public List<GameObject> menubuttons = new List<GameObject>();
     public GameObject clawUI;
+
+    [Header("Debug Settings")]
+    public bool skipIntro = false;
     void Start()
     {
         if (instance != null)
@@ -22,6 +25,16 @@ public class GameManagerScript : MonoBehaviour
             Destroy(this);
         }
         instance = this;
+
+        if(skipIntro)
+        {
+            Invoke("SkipIntro", .2f);
+        }
+    }
+    
+    public void SkipIntro()
+    {
+        GameObject.Find("Canvas").GetComponent<Animator>().Play("Idle") ;
     }
     public void Show()
     {

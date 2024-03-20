@@ -10296,6 +10296,7 @@ MonoBehaviour:
   - {fileID: 1819524665}
   - {fileID: 140776992}
   clawUI: {fileID: 779325560}
+  skipIntro: 1
 --- !u!1 &1302735891
 GameObject:
   m_ObjectHideFlags: 0

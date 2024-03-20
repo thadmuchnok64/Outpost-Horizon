@@ -16,6 +16,7 @@ namespace TestServer
         public delegate void PacketHandler(int _fromClient, Packet _packet);
         public static Dictionary<int, PacketHandler> packetHandlers;
         public static string usedClientName;
+        public static IPAddress ip = IPAddress.Any;
 
         private static TcpListener tcpListener;
         public static void Start(int _maxPlayer, int _port)
@@ -25,14 +26,11 @@ namespace TestServer
 
             Console.WriteLine("Starting server....");
             InitializeServerData();
-            var ip = IPAddress.Any;
+           
 
 			tcpListener = new TcpListener(ip, Port);
             tcpListener.Start();
             tcpListener.BeginAcceptTcpClient(new AsyncCallback(TCPConnectCallBack), null);
-
-            Console.WriteLine($"Server started on port {Port}.");
-			Console.WriteLine($"Server IP: {ip}.");
 
 		}
 
@@ -52,6 +50,21 @@ namespace TestServer
             Console.WriteLine($"{_client.Client.RemoteEndPoint} failed to connect: Server Full!");
         }
 
+        public static void IncrementClients(int maxtime)
+        {
+            for(int i = 0; i < MaxPlayers; i++)
+            {
+                if (clients[i].tcp.socket != null)
+                {
+                    clients[i].timeSinceLastPing += Constants.MS_PER_TICK;
+                    if (clients[i].timeSinceLastPing > maxtime)
+                    {
+                        clients[i].Disconnect(); //Disconnect if time out
+                    }
+                }
+            }
+        }
+
         private static void InitializeServerData()
         {
             for (int i = 0; i < MaxPlayers; i++)
@@ -67,7 +80,8 @@ namespace TestServer
                 {(int)ClientPackets.clawControl,ServerHandle.ClawControl},
                 {(int)ClientPackets.clawPosition,ServerHandle.ClawPostionInfo},
                 {(int)ClientPackets.disconnect, ServerHandle.DisconnectFromTCP },
-                {(int)ClientPackets.roomEntry, ServerHandle.RoomEntry }
+                {(int)ClientPackets.roomEntry, ServerHandle.RoomEntry },
+                {(int)ClientPackets.maintainConnection,ServerHandle.MaintainConnection},
 
 
             };

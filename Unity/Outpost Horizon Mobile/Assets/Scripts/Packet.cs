@@ -18,11 +18,14 @@ using System.Threading.Tasks;
         breakrod = 3,
         clawControl = 4,
         cranePosition = 5,
-        roomEntry = 8
+        disconnect = 7,
+        roomEntry = 8,
+        maintainConnection = 9
+
 }
 
-    /// <summary>Sent from client to server.</summary>
-    public enum ClientPackets
+/// <summary>Sent from client to server.</summary>
+public enum ClientPackets
     {
         welcomeReceived = 1,
         testRecieved = 2,
@@ -30,7 +33,8 @@ using System.Threading.Tasks;
         clawControl = 4,
         cranePosition = 5,
         disconnect = 7,
-        roomEntry = 8
+        roomEntry = 8,
+        maintainConnection = 9
 
 }
 

@@ -14,13 +14,21 @@ namespace TestServer
             Thread mainThread = new Thread(new ThreadStart(MainThread));
             mainThread.Start();
             Server.Start(2, 80);
-            Console.WriteLine("Thad says hi");
-			Console.WriteLine("------------------------------------------------------");
-			Console.WriteLine("Welcome to Outpost Horizon,");
-            Console.WriteLine("Bringing you a Better Future, Tomorrow");
-			Console.WriteLine("------------------------------------------------------");
+            ClearConsole();
 
 		}
+
+        static void ClearConsole()
+        {
+            Console.Clear();
+            Console.WriteLine($"Server started on port {Server.Port}.");
+            Console.WriteLine($"Server IP: {Server.ip}.");
+            Console.WriteLine("Thad says hi");
+            Console.WriteLine("------------------------------------------------------");
+            Console.WriteLine("Welcome to Outpost Horizon,");
+            Console.WriteLine("Bringing you a Better Future, Tomorrow");
+            Console.WriteLine("------------------------------------------------------");
+        }
 
 		private static void MainThread()
         {
