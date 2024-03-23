@@ -44,6 +44,11 @@ public class ClientHandle : MonoBehaviour
         Vector3 craneEuler = new Vector3(_packet.ReadInt(), _packet.ReadInt(), _packet.ReadInt());
         craneEuler = new Vector3(craneEuler.x, craneEuler.z, craneEuler.y);
         CraneHandler.instance.SetCraneOrientation(vector, craneEuler);
+        tempvec = new Vector3(_packet.ReadInt(), _packet.ReadInt(), _packet.ReadInt());
+        vector = new Vector3(-tempvec.x, tempvec.z, tempvec.y);
+        vector = vector / 100;
+        CraneHandler.instance.SetPlayerPosition(vector);
+
         int itr = _packet.ReadInt();
             //TheClaw.instance.MoveClawToLocation(vector);
             for (int i = 0; i < itr; i++)

@@ -124,6 +124,10 @@ namespace TestServer
             list.Add(_packet.ReadInt());
             list.Add(_packet.ReadInt());
 
+            list.Add(_packet.ReadInt());
+            list.Add(_packet.ReadInt());
+            list.Add(_packet.ReadInt());
+
             int i = _packet.ReadInt();
             list.Add(i);
 

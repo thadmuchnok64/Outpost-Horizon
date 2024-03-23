@@ -9,6 +9,7 @@ public class CraneHandler : MonoBehaviour
     public Transform crane;
     public GameObject craneArea;
     public GameObject crate;
+    public GameObject player;
 
     public static CraneHandler instance;
 
@@ -34,6 +35,11 @@ public class CraneHandler : MonoBehaviour
     {
         crane.transform.localPosition = pos;
         crane.eulerAngles = euler;
+    }
+
+    public void SetPlayerPosition(Vector3 pos)
+    {
+        player.transform.localPosition= pos;
     }
 
     public void SetOrientationOfShippingContainer(int index, Vector3 position, Vector3 rotation)
