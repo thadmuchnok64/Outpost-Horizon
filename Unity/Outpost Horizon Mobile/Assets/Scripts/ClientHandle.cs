@@ -76,10 +76,6 @@ public class ClientHandle : MonoBehaviour
             case "RodOnFloor!":
                 RodBehaviour.instance.ShowError();
                 break;
-            case string anotif when anotif.StartsWith("aware"):
-                GameManagerScript.instance.notif = anotif;
-                GameManagerScript.instance.NotifAnnounce();
-                break;
         }
     }
 
@@ -87,20 +83,12 @@ public class ClientHandle : MonoBehaviour
     {
         string msg = _packet.ReadString();
 
-        switch( msg )
+        switch (msg)
         {
-            case "awareGenerator":
-                // do stuff here
+            case string anotif when anotif.StartsWith("aware"):
+                GameManagerScript.instance.notif = anotif;
+                GameManagerScript.instance.NotifAnnounce();
                 break;
-            case "awareLockpick":
-                // do stuff here
-                break;
-            case "awareCrane":
-                // do stuff here
-                break;
-            default:
-                break;
-
         }
     }
 }
