@@ -100,11 +100,11 @@ public class GameManagerScript : MonoBehaviour
     }
     public void NotifAnnounce()
     {
-        notif.Remove(0, 4);
+        notif =  notif.Remove(0, 5);
         foreach (GameObject g in menubuttons)
         {
             string gname = g.name;
-            gname.Remove(0, 1);
+            gname = gname.Remove(0, 2);
             if (gname == notif)
             {
                 g.GetComponent<Image>().color = Color.yellow;
