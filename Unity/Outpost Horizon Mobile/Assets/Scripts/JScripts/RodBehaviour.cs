@@ -14,6 +14,7 @@ public class RodBehaviour : MonoBehaviour
     public GameObject roddiag;
     public static string rodstoinsert;
     public List<GameObject> rodstin;
+    bool samerodfloor = false;
     // Start is called before the first frame update
     void Awake()
     {
@@ -51,12 +52,17 @@ public class RodBehaviour : MonoBehaviour
     }
     public void ShowError()
     {
-        img.SetActive(true);
-        StartCoroutine(waitshow());
+        if (samerodfloor == false)
+        {
+            samerodfloor = true;
+            img.SetActive(true);
+            StartCoroutine(waitshow());
+        }
     }
     IEnumerator waitshow()
     {
         yield return new WaitForSeconds(5);
         img.SetActive(false);
+        samerodfloor = false;
     }
 }
