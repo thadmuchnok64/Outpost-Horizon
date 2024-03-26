@@ -1,7 +1,7 @@
-6. Zirconium - SN-451500675
-3. Zirconium - SN-451500675
-5. Water - SN-450600783
-4. Water - SN-450600783
-1. Ethylene Glycol - SN-450600675
+6. Technetium - SN-451500675
+3. Technetium - SN-451500675
+5. Neptunium - SN-450600783
+4. Neptunium - SN-450600783
+1. Curium - SN-450600675
 2. Uranium - SN-451600783
 7. Uranium - SN-451600783
