@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\johndelgado\\Documents\\GitHub\\Outpost-Horizon\\Server\\TestServer\\TestServer.csproj": {}
+    "C:\\Users\\tmuchnok\\Desktop\\School Junk\\Spring\\OutpostHorizon\\Outpost-Horizon\\Server\\TestServer\\TestServer.csproj": {}
   },
   "projects": {
-    "C:\\Users\\johndelgado\\Documents\\GitHub\\Outpost-Horizon\\Server\\TestServer\\TestServer.csproj": {
+    "C:\\Users\\tmuchnok\\Desktop\\School Junk\\Spring\\OutpostHorizon\\Outpost-Horizon\\Server\\TestServer\\TestServer.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\johndelgado\\Documents\\GitHub\\Outpost-Horizon\\Server\\TestServer\\TestServer.csproj",
+        "projectUniqueName": "C:\\Users\\tmuchnok\\Desktop\\School Junk\\Spring\\OutpostHorizon\\Outpost-Horizon\\Server\\TestServer\\TestServer.csproj",
         "projectName": "TestServer",
-        "projectPath": "C:\\Users\\johndelgado\\Documents\\GitHub\\Outpost-Horizon\\Server\\TestServer\\TestServer.csproj",
-        "packagesPath": "C:\\Users\\johndelgado\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\johndelgado\\Documents\\GitHub\\Outpost-Horizon\\Server\\TestServer\\obj\\",
+        "projectPath": "C:\\Users\\tmuchnok\\Desktop\\School Junk\\Spring\\OutpostHorizon\\Outpost-Horizon\\Server\\TestServer\\TestServer.csproj",
+        "packagesPath": "C:\\Users\\tmuchnok\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\tmuchnok\\Desktop\\School Junk\\Spring\\OutpostHorizon\\Outpost-Horizon\\Server\\TestServer\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\johndelgado\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\tmuchnok\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
