@@ -76,6 +76,9 @@ public class ClientHandle : MonoBehaviour
             case "RodOnFloor!":
                 RodBehaviour.instance.ShowError();
                 break;
+            case "CraneError!":
+                TheClaw.instance.CraneError();
+                break;
         }
     }
 
