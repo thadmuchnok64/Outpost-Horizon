@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class EndRush : MonoBehaviour
 {
+    public GameObject PickSuccess;
     // Start is called before the first frame update
     void Start()
     {
@@ -16,6 +17,7 @@ public class EndRush : MonoBehaviour
         if (col.gameObject.CompareTag("StartR"))
         {
             UIManager.instance.SendToServer("PickTrue");
+            PickSuccess.SetActive(true);
             Debug.Log("Picked!");
         }
     }
