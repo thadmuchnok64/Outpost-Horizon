@@ -10,6 +10,8 @@ public class TheClaw : MonoBehaviour
     public GameObject claw;
     public StickMove joystick;
     public float maxDistance = 2;
+    public GameObject craneError;
+    bool samecraneerror = false;
     Vector3 prevclaw;
     Vector3 speed;
     // Start is called before the first frame update - singleton
@@ -44,5 +46,20 @@ public class TheClaw : MonoBehaviour
     public void MoveClawToLocation(Vector2 vec)
     {
         claw.transform.localPosition = vec * maxDistance;
+    }
+    public void CraneError()
+    {
+        if (samecraneerror == false)
+        {
+            samecraneerror = true;
+            craneError.SetActive(true);
+            StartCoroutine(waiteshow());
+        }
+    }
+    IEnumerator waiteshow()
+    {
+        yield return new WaitForSeconds(5);
+        craneError.SetActive(false);
+        samecraneerror = false;
     }
 }
