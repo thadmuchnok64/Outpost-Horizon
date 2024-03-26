@@ -10941,12 +10941,12 @@ MonoBehaviour:
   - {fileID: 1082457754}
   - {fileID: 1908828414}
   menubuttons:
-  - {fileID: 698527747}
-  - {fileID: 1988000324}
-  - {fileID: 406157002}
-  - {fileID: 97911551}
   - {fileID: 1562743303}
   - {fileID: 1819524665}
+  - {fileID: 97911551}
+  - {fileID: 406157002}
+  - {fileID: 1988000324}
+  - {fileID: 698527747}
   - {fileID: 140776992}
   clawUI: {fileID: 779325560}
   skipIntro: 1
@@ -16050,7 +16050,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Enter text...
+  m_text: Please leave blank.
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
