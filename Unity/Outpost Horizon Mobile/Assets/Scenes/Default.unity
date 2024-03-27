@@ -8754,7 +8754,7 @@ MonoBehaviour:
   m_HandleRect: {fileID: 191360758}
   m_Direction: 2
   m_Value: 1
-  m_Size: 0.18246813
+  m_Size: 0.18246815
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -11294,7 +11294,7 @@ MonoBehaviour:
   - {fileID: 698527747}
   - {fileID: 140776992}
   clawUI: {fileID: 779325560}
-  skipIntro: 1
+  skipIntro: 0
 --- !u!1 &1302735891
 GameObject:
   m_ObjectHideFlags: 0
