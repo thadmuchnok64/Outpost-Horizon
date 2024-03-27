@@ -9,13 +9,16 @@ public class SlideCar : MonoBehaviour
     Camera cam;
     bool movable = true;
     Rigidbody2D rb;
+    Animator anim;
     private void Start()
     {
         rb = GetComponent<Rigidbody2D>();
+        anim = gameObject.GetComponent<Animator>();
     }
     private void OnMouseDown()
     {
         thisPos = transform.position;
+        anim.Play("Pulse", -1, 0.0f);
     }
     private void OnMouseDrag()
     {
