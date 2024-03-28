@@ -37,66 +37,24 @@ public class GameManagerScript : MonoBehaviour
     {
         GameObject.Find("Canvas").GetComponent<Animator>().Play("Idle") ;
     }
-    public void Show()
+    public void ShowMenuItem(int menuint)
     {
         foreach (GameObject g in menuitems)
         {
             g.SetActive(false);
         }
+        show = menuitems[menuint];
+        button = menubuttons[menuint];
+        clawUI.SetActive(false);
+        if (menuint == 4)
+            clawUI.SetActive(true);
         show.gameObject.SetActive(true);
+        foreach (GameObject e in GameObject.FindGameObjectsWithTag("ErrorMessage"))
+        {
+            e.SetActive(false);
+        };
         if (button != null)
             button.GetComponent<Image>().color = Color.white;
-    }
-    public void DebugS()
-    {
-        show = menuitems[0];
-        button = menubuttons[0];
-        clawUI.SetActive(false);
-
-    }
-    public void LocksS()
-    {
-        show = menuitems[1];
-        button = menubuttons[1];
-        clawUI.SetActive(false);
-
-    }
-    public void RodS()
-    {
-        show = menuitems[2];
-        button = menubuttons[2];
-        clawUI.SetActive(false);
-
-    }
-    public void InfoS()
-    {
-        show = menuitems[3];
-        button = menubuttons[3];
-        clawUI.SetActive(false);
-
-    }
-    public void ClawS()
-    {
-        show = menuitems[4];
-        button = menubuttons[4];
-        clawUI.SetActive(true);
-
-    }
-    public void ChatS()
-    {
-        show = menuitems[5];
-        button = menubuttons[5];
-        clawUI.SetActive(false);
-
-    }
-    public void RodActivation()
-    {
-        foreach (GameObject g in menuitems)
-        {
-            g.SetActive(false);
-        }
-        menuitems[2].SetActive(true);
-        clawUI.SetActive(false);
     }
     public void NotifAnnounce()
     {

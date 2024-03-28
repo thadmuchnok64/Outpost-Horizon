@@ -17,7 +17,8 @@ namespace OpenAI
         private OpenAIApi openai = new OpenAIApi();
 
         private List<ChatMessage> messages = new List<ChatMessage>();
-        private string prompt = "Act as a random stranger in a chat room and reply to the questions. Don't break character. Don't ever mention that you are an AI model.";
+        //OLD PROMPT: "Act as a random stranger in a chat room and reply to the questions. Don't break character. Don't ever mention that you are an AI model."
+        private string prompt = "Act as an unhelpful corporate AI bot for a shady company called the Icarus Corporation, aboard the Outpost Horizon IV. Don't break character. Don't ever mention that you are an AI model.";
 
         private void Start()
         {

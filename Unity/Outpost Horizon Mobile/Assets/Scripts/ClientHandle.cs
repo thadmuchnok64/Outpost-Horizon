@@ -21,7 +21,6 @@ public class ClientHandle : MonoBehaviour
 
     public static void GetInfoOnBrokenRods(Packet _packet)
     {
-        GameManagerScript.instance.RodActivation();
         int count = _packet.ReadInt();
         List<int> ints = new List<int>();
         for (int i = 0; i < count; i++)
