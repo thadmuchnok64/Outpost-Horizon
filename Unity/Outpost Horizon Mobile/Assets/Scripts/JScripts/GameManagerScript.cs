@@ -18,6 +18,7 @@ public class GameManagerScript : MonoBehaviour
 
     [Header("Debug Settings")]
     public bool skipIntro = false;
+    public bool debugMode = false;
     void Start()
     {
         if (instance != null)
@@ -31,11 +32,19 @@ public class GameManagerScript : MonoBehaviour
         {
             Invoke("SkipIntro", .2f);
         }
+        if (debugMode)
+        {
+            Invoke("debugStart", .2f);
+        }
     }
     
     public void SkipIntro()
     {
-        GameObject.Find("Canvas").GetComponent<Animator>().Play("Idle") ;
+        GameObject.Find("Canvas").GetComponent<Animator>().Play("Idle");
+    }
+    public void debugStart()
+    {
+        GameObject.Find("Canvas").transform.Find("B_Debug_Page").gameObject.SetActive(true);
     }
     public void ShowMenuItem(int menuint)
     {

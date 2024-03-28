@@ -58,6 +58,7 @@ public class UIManager : MonoBehaviour
     public void TermsAccept()
     {
         mMenu.gameObject.SetActive(true);
+        GameObject.Find("ReferencePage").SetActive(false);
     }
     // Should take in a float from -1 to 1
     public void ClawGame(float input)
