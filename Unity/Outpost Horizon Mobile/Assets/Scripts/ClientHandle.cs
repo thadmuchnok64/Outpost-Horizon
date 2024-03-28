@@ -94,4 +94,26 @@ public class ClientHandle : MonoBehaviour
                 break;
         }
     }
+
+    public static void WorldGeometryPosition(Packet _packet)
+    {
+   
+         int itr = _packet.ReadInt();
+        //TheClaw.instance.MoveClawToLocation(vector);
+        for (int i = 0; i < itr; i++)
+        {
+            int index = _packet.ReadInt();
+            var posx = _packet.ReadInt();
+            var posy = _packet.ReadInt();
+            var posz = _packet.ReadInt();
+
+            Vector3 pos = new Vector3(-posx, posz, posy) / 100000;
+            Vector3 euler = new Vector3(_packet.ReadInt(), _packet.ReadInt(), _packet.ReadInt());
+            euler = new Vector3(euler.x, euler.z, euler.y);
+            WorldBuilder.Instance.SpawnWorldTile(index, pos, euler);
+
+
+        }
+
+    }
 }

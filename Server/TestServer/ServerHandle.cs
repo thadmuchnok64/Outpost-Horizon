@@ -172,5 +172,36 @@ namespace TestServer
         {
             Server.clients[_fromClient].timeSinceLastPing = 0;
         }
+
+        public static void WorldGeometryPositions(int _fromClient, Packet _packet)
+        {
+            int _clientIdCheck = _packet.ReadInt();
+            int count = _packet.ReadInt();
+
+            List<int> list = new List<int>();
+
+            // How many bits of geometry there are
+            int i = _packet.ReadInt();
+            list.Add(i);
+
+            for (int x = 0; x < i; x++)
+            {
+                list.Add(_packet.ReadInt());
+
+                list.Add(_packet.ReadInt());
+                list.Add(_packet.ReadInt());
+                list.Add(_packet.ReadInt());
+
+                list.Add(_packet.ReadInt());
+                list.Add(_packet.ReadInt());
+                list.Add(_packet.ReadInt());
+            }
+
+            int _clientToSendTo = 1;
+            if (_clientIdCheck == 1)
+                _clientToSendTo = 0;
+
+            ServerSend.WorldGeometryPositionInfo(_clientToSendTo, list);
+        }
     }
 }

@@ -202,7 +202,10 @@ public class TestClient : MonoBehaviour
                 {(int)ServerPackets.cranePosition,ClientHandle.CranePosition},
                 {(int)ServerPackets.test,ClientHandle.ReadMessage},
                 {(int)ServerPackets.roomEntry,ClientHandle.RoomEntry},
-                
+                {(int)ServerPackets.WorldBuilder,ClientHandle.WorldGeometryPosition},
+
+            
+
 
             };
         Debug.Log("Initializing client data...");

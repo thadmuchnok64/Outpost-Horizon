@@ -20,7 +20,8 @@ using System.Threading.Tasks;
         cranePosition = 5,
         disconnect = 7,
         roomEntry = 8,
-        maintainConnection = 9
+        maintainConnection = 9,
+        WorldBuilder = 10
 
 }
 
@@ -34,7 +35,9 @@ public enum ClientPackets
         cranePosition = 5,
         disconnect = 7,
         roomEntry = 8,
-        maintainConnection = 9
+        maintainConnection = 9,
+        WorldBuilder = 10
+
 
 }
 

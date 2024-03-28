@@ -22,7 +22,9 @@ namespace TestServer
         UnityToUnrealLogin = 6,
         disconnect = 7,
         roomEntry = 8,
-        maintainConnection = 9
+        maintainConnection = 9,
+        WorldGeometryPositionInfo = 10
+
     }
 
     /// <summary>Sent from client to server.</summary>
@@ -36,7 +38,8 @@ namespace TestServer
         UnityToUnrealLogin = 6,
         disconnect = 7,
         roomEntry = 8,
-        maintainConnection = 9
+        maintainConnection = 9,
+        WorldGeometryPositionInfo = 10
 
 
     }

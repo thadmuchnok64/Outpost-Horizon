@@ -107,5 +107,21 @@ namespace TestServer
                 SendTCPData(_toClient, _packet);
             }
         }
+
+
+
+        public static void WorldGeometryPositionInfo(int _toClient, List<int> list)
+        {
+            using (Packet _packet = new Packet((int)ServerPackets.WorldGeometryPositionInfo))
+            {
+                foreach (int i in list)
+                {
+                    _packet.Write(i);
+                }
+
+                SendTCPData(_toClient, _packet);
+            }
+
+        }
     }
 }

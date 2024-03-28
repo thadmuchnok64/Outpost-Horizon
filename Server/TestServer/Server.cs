@@ -82,6 +82,7 @@ namespace TestServer
                 {(int)ClientPackets.disconnect, ServerHandle.DisconnectFromTCP },
                 {(int)ClientPackets.roomEntry, ServerHandle.RoomEntry },
                 {(int)ClientPackets.maintainConnection,ServerHandle.MaintainConnection},
+                {(int)ClientPackets.WorldGeometryPositionInfo,ServerHandle.WorldGeometryPositions }
 
 
             };
