@@ -41,7 +41,7 @@ public class RodBehaviour : MonoBehaviour
         rodstoinsert += "and " + rods[rods.Count - 1];
         rodstin[rods[rods.Count - 1]].SetActive(true);
 
-        text.text = "Fuel Rods are malfunctioning. Please reinsert Rod(s): " + rodstoinsert + "\n\nFor types of rods - please go to \"INFO\" tab";
+        text.text = "FUEL RODS 1. Curium - SN-450600675\n2 & 7. Uranium - SN-451600783\n6 & 3. Technetium - SN-451500675\n5 & 4. Neptunium - SN-450600783\nFuel Rods are malfunctioning. Please replace Rod(s): " + rodstoinsert;
         roddiag.SetActive(true);
     }
     public void RodsComplete()

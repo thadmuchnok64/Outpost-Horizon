@@ -10,6 +10,7 @@ public class UIManager : MonoBehaviour
     public static UIManager instance;
 
     public GameObject startMenu;
+    public GameObject mMenu;
     public TMP_InputField IPcode;
     public static bool connected = false;
 
@@ -54,8 +55,12 @@ public class UIManager : MonoBehaviour
     {
         ClientSend.SendTestMessage(message);
     }
-	
-	// Should take in a float from -1 to 1
+    public void TermsAccept()
+    {
+        mMenu.gameObject.SetActive(true);
+        GameObject.Find("ReferencePage").SetActive(false);
+    }
+    // Should take in a float from -1 to 1
     public void ClawGame(float input)
     {
 		int sensitivity = Mathf.RoundToInt(input * 1000f);
