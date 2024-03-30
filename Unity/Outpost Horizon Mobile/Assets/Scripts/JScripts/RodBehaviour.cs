@@ -16,7 +16,7 @@ public class RodBehaviour : MonoBehaviour
     public List<GameObject> rodstin;
     bool samerodfloor = false;
     // Start is called before the first frame update
-    void Awake()
+    void Start()
     {
         if (instance != null)
         {

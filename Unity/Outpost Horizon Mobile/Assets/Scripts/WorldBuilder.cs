@@ -6,6 +6,8 @@ public class WorldBuilder : MonoBehaviour
 {
     public static WorldBuilder Instance;
     public GameObject floor;
+    public GameObject wall;
+
 
     private void Start()
     {
@@ -18,9 +20,13 @@ public class WorldBuilder : MonoBehaviour
         }
     }
 
-    public void SpawnWorldTile(int index, Vector3 position, Vector3 rotation)
+    public void SpawnWorldFloorTile(int index, Vector3 position, Vector3 rotation)
     {
         Instantiate(floor, position, Quaternion.Euler(rotation));
+    }
 
+    public void SpawnWall(int index, Vector3 position, Vector3 rotation)
+    {
+        Instantiate(wall, position, Quaternion.Euler(rotation));
     }
 }

@@ -179,7 +179,8 @@ namespace TestServer
             int count = _packet.ReadInt();
 
             List<int> list = new List<int>();
-
+            int code = _packet.ReadInt();
+            list.Add(code);
             // How many bits of geometry there are
             int i = _packet.ReadInt();
             list.Add(i);
