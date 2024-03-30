@@ -55,7 +55,7 @@ public class GameManagerScript : MonoBehaviour
         show = menuitems[menuint];
         button = menubuttons[menuint];
         clawUI.SetActive(false);
-        if (menuint == 4)
+        if (show.name == "Claw")
             clawUI.SetActive(true);
         show.gameObject.SetActive(true);
         foreach (GameObject e in GameObject.FindGameObjectsWithTag("ErrorMessage"))
@@ -77,5 +77,9 @@ public class GameManagerScript : MonoBehaviour
                 g.GetComponent<Image>().color = Color.yellow;
             }
         }
+    }
+    public void DebugRunLocalFunction()
+    {
+        Invoke("SkipIntro", .2f);
     }
 }
