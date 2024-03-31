@@ -12,6 +12,8 @@ public class StickMove : MonoBehaviour
     public AudioClip clup;
     public AudioClip cldwn;
     AudioClip lastcl;
+
+    Coroutine snapBackCoroutine;
     private void Start()
     {
         audios = GetComponent<AudioSource>();
@@ -20,15 +22,35 @@ public class StickMove : MonoBehaviour
     {
         thisPos = transform.localPosition;
         audios.Play();
-    }
+		if (snapBackCoroutine != null)
+			StopCoroutine(snapBackCoroutine);
+	}
     private void OnMouseDrag()
     {
         Camera cam = Camera.main;
         MousePos = cam.ScreenToWorldPoint(Input.mousePosition);
         MousePos = new Vector3(MousePos.x, thisPos.y, 0);
         transform.localPosition = MousePos;
-    }
-    private void Update()
+	}
+	private void OnMouseUp()
+	{
+        if (snapBackCoroutine != null)
+            StopCoroutine(snapBackCoroutine);
+        snapBackCoroutine = StartCoroutine("SnapBackToOrigin");
+	}
+
+    private IEnumerator SnapBackToOrigin()
+    {
+        yield return new WaitForSeconds(.5f);
+        for(int i = 0; i < 30; i++)
+        {
+			transform.localPosition = Vector3.Lerp(new Vector3(transform.localPosition.x, transform.localPosition.y, 0),new Vector3(0, transform.localPosition.y, 0),(i/30.0f));
+			yield return new WaitForEndOfFrame();
+		}
+		transform.localPosition = new Vector3(0, transform.localPosition.y, 0);
+
+	}
+	private void Update()
     {
         lastcl = audios.clip;
         if (transform.localPosition.x > joystickMaximum)
@@ -55,6 +77,8 @@ public class StickMove : MonoBehaviour
 
     public float GetControlValue()
     {
+        if (Mathf.Abs(transform.localPosition.x / joystickMaximum) <= 0.125f)
+            return 0;
         return Mathf.Clamp(transform.localPosition.x / joystickMaximum,-1,1);
     }
 }
