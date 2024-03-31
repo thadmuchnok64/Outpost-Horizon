@@ -97,12 +97,11 @@ public class ClientHandle : MonoBehaviour
     public static void WorldGeometryPosition(Packet _packet)
     {
         int code = _packet.ReadInt();
-   
-         int itr = _packet.ReadInt();
+
+		int itr = _packet.ReadInt();
         //TheClaw.instance.MoveClawToLocation(vector);
         for (int i = 0; i < itr; i++)
         {
-            int index = _packet.ReadInt();
             var posx = _packet.ReadInt();
             var posy = _packet.ReadInt();
             var posz = _packet.ReadInt();
@@ -112,10 +111,10 @@ public class ClientHandle : MonoBehaviour
             euler = new Vector3(euler.x, euler.z, euler.y);
             switch (code)
             {
-                case 1: WorldBuilder.Instance.SpawnWorldFloorTile(index, pos, euler);
-                    return;
-                case 2: WorldBuilder.Instance.SpawnWall(index, pos, euler);
-                    return;
+                case 1: WorldBuilder.Instance.SpawnWorldFloorTile(1, pos, euler);
+                    break;
+                case 2: WorldBuilder.Instance.SpawnWall(2, pos, euler);
+                    break;
 
             }
 

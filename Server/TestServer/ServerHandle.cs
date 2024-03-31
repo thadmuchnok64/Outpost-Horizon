@@ -176,23 +176,23 @@ namespace TestServer
         public static void WorldGeometryPositions(int _fromClient, Packet _packet)
         {
             int _clientIdCheck = _packet.ReadInt();
-            int count = _packet.ReadInt();
-
-            List<int> list = new List<int>();
+            int length = _packet.ReadInt();
             int code = _packet.ReadInt();
-            list.Add(code);
+			List<int> list = new List<int>();
+
+			list.Add(code);
+
             // How many bits of geometry there are
             int i = _packet.ReadInt();
             list.Add(i);
 
             for (int x = 0; x < i; x++)
             {
-                list.Add(_packet.ReadInt());
-
-                list.Add(_packet.ReadInt());
+                //position
                 list.Add(_packet.ReadInt());
                 list.Add(_packet.ReadInt());
-
+                list.Add(_packet.ReadInt());
+                //rotation
                 list.Add(_packet.ReadInt());
                 list.Add(_packet.ReadInt());
                 list.Add(_packet.ReadInt());
