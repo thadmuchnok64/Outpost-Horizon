@@ -8,19 +8,19 @@
     "net6.0": []
   },
   "packageFolders": {
-    "C:\\Users\\Thad\\.nuget\\packages\\": {}
+    "C:\\Users\\juan.marin\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Thad\\Documents\\Projects\\Outpost-Horizon\\Server\\TestServer\\TestServer.csproj",
+      "projectUniqueName": "C:\\Users\\juan.marin\\Documents\\GitHub\\Outpost-Horizon\\Server\\TestServer\\TestServer.csproj",
       "projectName": "TestServer",
-      "projectPath": "C:\\Users\\Thad\\Documents\\Projects\\Outpost-Horizon\\Server\\TestServer\\TestServer.csproj",
-      "packagesPath": "C:\\Users\\Thad\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Thad\\Documents\\Projects\\Outpost-Horizon\\Server\\TestServer\\obj\\",
+      "projectPath": "C:\\Users\\juan.marin\\Documents\\GitHub\\Outpost-Horizon\\Server\\TestServer\\TestServer.csproj",
+      "packagesPath": "C:\\Users\\juan.marin\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\juan.marin\\Documents\\GitHub\\Outpost-Horizon\\Server\\TestServer\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\Thad\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\juan.marin\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -61,7 +61,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.100\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.304\\RuntimeIdentifierGraph.json"
       }
     }
   }
