@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -84,12 +85,16 @@ public class ClientHandle : MonoBehaviour
     public static void RoomEntry( Packet _packet)
     {
         string msg = _packet.ReadString();
-
+        //a lockpick completion would be awareLockPick, a complete challenge would be ch1:1
         switch (msg)
         {
             case string anotif when anotif.StartsWith("aware"):
                 GameManagerScript.instance.notif = anotif;
                 GameManagerScript.instance.NotifAnnounce();
+                break;
+            case string achlge when achlge.StartsWith("ch"):
+                string[] chnum = achlge.Split(':', 2);
+                ChallengeParser.instance.OnChallengeComplete(Int32.Parse(chnum[1]));
                 break;
         }
     }

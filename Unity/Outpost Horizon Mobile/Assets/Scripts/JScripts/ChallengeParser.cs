@@ -11,6 +11,8 @@ public class ChallengeParser : MonoBehaviour
     public TextMeshProUGUI challenges;
     public GameObject successGraphic;
     int seq;
+    int compChallenge;
+    int[] numOfChallenge;
     string[] currentText;
     void Awake()
     {
@@ -28,6 +30,7 @@ public class ChallengeParser : MonoBehaviour
         foreach (string gs in currentText)
         {
             int i = 0;
+            numOfChallenge[i] = currentText[i].Count(t => t == '~');
             currentText[i] = currentText[i].Replace('~', '\n');
             i++;
         }
@@ -38,6 +41,15 @@ public class ChallengeParser : MonoBehaviour
     void Update()
     {
         challenges.text = currentText[seq];
+    }
+    public void OnChallengeComplete(int chnum)
+    {
+        successGraphic.SetActive(true);
+        compChallenge++;
+        if (compChallenge == numOfChallenge[seq])
+        {
+            OnChallengeSetComplete();
+        }
     }
     public void OnChallengeSetComplete()
     {
