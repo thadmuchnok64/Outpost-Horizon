@@ -23,7 +23,9 @@ namespace TestServer
         disconnect = 7,
         roomEntry = 8,
         maintainConnection = 9,
-        WorldGeometryPositionInfo = 10
+        WorldGeometryPositionInfo = 10,
+        DoorUnlock = 11,
+
 
     }
 
@@ -39,7 +41,9 @@ namespace TestServer
         disconnect = 7,
         roomEntry = 8,
         maintainConnection = 9,
-        WorldGeometryPositionInfo = 10
+        WorldGeometryPositionInfo = 10,
+        DoorUnlock = 11,
+
 
 
     }

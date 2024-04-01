@@ -21,7 +21,8 @@ using System.Threading.Tasks;
         disconnect = 7,
         roomEntry = 8,
         maintainConnection = 9,
-        WorldBuilder = 10
+        WorldBuilder = 10,
+        DoorUnlock = 11,
 
 }
 
@@ -36,7 +37,8 @@ public enum ClientPackets
         disconnect = 7,
         roomEntry = 8,
         maintainConnection = 9,
-        WorldBuilder = 10
+        WorldBuilder = 10,
+        DoorUnlock = 11,
 
 
 }

@@ -204,5 +204,20 @@ namespace TestServer
 
             ServerSend.WorldGeometryPositionInfo(_clientToSendTo, list);
         }
+
+        
+
+        public static void DoorUnlock(int _fromClient, Packet _packet)
+        {
+            int _clientIdCheck = _packet.ReadInt();
+            int code = _packet.ReadInt();
+            
+
+            int _clientToSendTo = 1;
+            if (_clientIdCheck == 1)
+                _clientToSendTo = 0;
+
+            ServerSend.DoorUnlock(_clientToSendTo, code);
+        }
     }
 }

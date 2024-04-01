@@ -111,9 +111,17 @@ public class ClientHandle : MonoBehaviour
             euler = new Vector3(euler.x, euler.z, euler.y);
             switch (code)
             {
-                case 1: WorldBuilder.Instance.SpawnWorldFloorTile(1, pos, euler);
+                case 1: WorldBuilder.Instance.SpawnWorldFloorTile(i, pos, euler);
                     break;
-                case 2: WorldBuilder.Instance.SpawnWall(2, pos, euler);
+                case 2: WorldBuilder.Instance.SpawnWall(i, pos, euler);
+                    break;
+                case 3: WorldBuilder.Instance.SpawnDoor(i, pos, euler);
+                    break;
+                case 4: WorldBuilder.Instance.SpawnElevator(i, pos, euler);
+                    break;
+                case 5: WorldBuilder.Instance.SpawnElevatorPort(i, pos, euler);
+                    break;
+                case 6: WorldBuilder.Instance.SpawnControlRoom(i, pos, euler);
                     break;
 
             }
