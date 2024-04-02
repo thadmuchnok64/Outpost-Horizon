@@ -128,6 +128,8 @@ public class ClientHandle : MonoBehaviour
                     break;
                 case 6: WorldBuilder.Instance.SpawnControlRoom(i, pos, euler);
                     break;
+                case 7: WorldBuilder.Instance.SpawnCrate(i, pos, euler);
+                    break;
 
             }
 
