@@ -134,6 +134,21 @@ namespace TestServer
             }
 
         }
-        
+
+        public static void PlayerTransformTracking(int _toClient, List<int> transform)
+        {
+            using (Packet _packet = new Packet((int)ServerPackets.PlayerTransformTrack))
+            {
+                foreach (int i in transform)
+                {
+                    _packet.Write(i);
+                }
+
+                SendTCPData(_toClient, _packet);
+            }
+
+        }
+
+
     }
 }

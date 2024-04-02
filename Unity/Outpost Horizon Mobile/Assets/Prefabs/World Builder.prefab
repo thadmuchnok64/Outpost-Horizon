@@ -29,7 +29,8 @@ Transform:
   m_LocalPosition: {x: 159.08154, y: 466.46255, z: 90.0838}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 3096033005067242492}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &2550071432781217413
@@ -44,4 +45,44 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 075c17ecbcbcc6f469db39bdafb59cf0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  world: {fileID: 3096033005067242492}
   floor: {fileID: 3514568943965236958, guid: 35d6088736db87644bcacdbf7719fabd, type: 3}
+  wall: {fileID: 3514568943965236958, guid: fc72f0544832c77468bcedf98da35266, type: 3}
+  door: {fileID: 3514568943965236958, guid: 4b636043073100f458798f6b77af25d1, type: 3}
+  elevator: {fileID: 3514568943965236958, guid: 57e6bb84593b58b4d87cb621a04a53a6, type: 3}
+  elevatorPort: {fileID: 3514568943965236958, guid: 5df1a9942790c1f45923110ce5c78e01, type: 3}
+  controlRoom: {fileID: 1970136516287868137, guid: 0f8223463c79f7744b6880746e020189, type: 3}
+  crate: {fileID: 3514568943965236958, guid: 54f70c1ec7c4ad44e9a4aac8528e1767, type: 3}
+  engine: {fileID: 2689388317063226012, guid: 75933939bd3b05144827f748385816b1, type: 3}
+  craneControl: {fileID: 3366176856441195098, guid: 64c447ff0befad74785ccaa444e051da, type: 3}
+--- !u!1 &5848118271763440955
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3096033005067242492}
+  m_Layer: 0
+  m_Name: World
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3096033005067242492
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5848118271763440955}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 760754986350786681}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}

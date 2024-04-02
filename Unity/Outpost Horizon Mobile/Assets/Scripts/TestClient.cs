@@ -203,8 +203,10 @@ public class TestClient : MonoBehaviour
                 {(int)ServerPackets.test,ClientHandle.ReadMessage},
                 {(int)ServerPackets.roomEntry,ClientHandle.RoomEntry},
                 {(int)ServerPackets.WorldBuilder,ClientHandle.WorldGeometryPosition},
+                {(int)ServerPackets.PlayerTransformTracking,ClientHandle.PlayerTransformTracking},
 
-            
+
+
 
 
             };
