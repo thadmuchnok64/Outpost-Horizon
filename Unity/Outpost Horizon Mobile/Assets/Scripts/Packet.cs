@@ -24,6 +24,7 @@ using System.Threading.Tasks;
         WorldBuilder = 10,
         DoorUnlock = 11,
         PlayerTransformTracking = 12,
+        ElevatorSend = 13,
 
 }
 
@@ -41,6 +42,7 @@ public enum ClientPackets
         WorldBuilder = 10,
         DoorUnlock = 11,
         PlayerTransformTracking = 12,
+        ElevatorSend = 13,
 
 
 }

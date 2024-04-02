@@ -26,6 +26,7 @@ namespace TestServer
         WorldGeometryPositionInfo = 10,
         DoorUnlock = 11,
         PlayerTransformTrack= 12,
+        ElevatorSend = 13,
 
 
     }
@@ -45,6 +46,7 @@ namespace TestServer
         WorldGeometryPositionInfo = 10,
         DoorUnlock = 11,
         PlayerTransformTrack = 12,
+        ElevatorSend = 13,
 
 
     }

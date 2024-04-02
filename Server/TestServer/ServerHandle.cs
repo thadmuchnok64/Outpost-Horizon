@@ -216,6 +216,19 @@ namespace TestServer
             ServerSend.DoorUnlock(_clientToSendTo, code);
         }
 
+        public static void ElevatorSend(int _fromClient, Packet _packet)
+        {
+            int _clientIdCheck = _packet.ReadInt();
+            int code = _packet.ReadInt();
+
+
+            int _clientToSendTo = 1;
+            if (_clientIdCheck == 1)
+                _clientToSendTo = 0;
+
+            ServerSend.ElevatorSend(_clientToSendTo, code);
+        }
+        
         public static void PlayerTransformTracking(int _fromClient, Packet _packet)
         {
             int _clientIdCheck = _packet.ReadInt();

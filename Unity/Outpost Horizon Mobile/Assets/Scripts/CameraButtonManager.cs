@@ -7,6 +7,7 @@ public class CameraButtonManager : MonoBehaviour
 {
     [SerializeField] RawImage image;
     [SerializeField] Camera cam;
+    [SerializeField] RenderTexture texture;
 
     [SerializeField] GameObject uiButtonPrefab;
 
@@ -45,7 +46,7 @@ public class CameraButtonManager : MonoBehaviour
         for(int i = 0; i < buttons.Count; i++)
         {
             var spagheti = cam.WorldToScreenPoint(buttons[i].transform.position);
-            (uiButtons[i].transform as RectTransform).anchoredPosition = new Vector3(image.rectTransform.rect.width * (spagheti.x / 128), (image.rectTransform.rect.height * spagheti.y / 192) - 120, 0);
+            (uiButtons[i].transform as RectTransform).anchoredPosition = new Vector3(image.rectTransform.rect.width * (spagheti.x / texture.width), (image.rectTransform.rect.height * spagheti.y / texture.height) - 80, 0);
         }
     }
 }

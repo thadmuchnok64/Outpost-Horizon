@@ -11,6 +11,7 @@ public class UIManager : MonoBehaviour
 
     public GameObject startMenu;
     public GameObject mMenu;
+    public GameObject vrCamera;
     public TMP_InputField IPcode;
     public static bool connected = false;
 
@@ -37,6 +38,7 @@ public class UIManager : MonoBehaviour
 		startMenu.SetActive(false);
 		//usernameField.interactable= false;
 		TestClient.instance.ConnectToServer();
+        vrCamera.SetActive(true);
         connected = true;
 	}
     public void DisconnectFromServer()

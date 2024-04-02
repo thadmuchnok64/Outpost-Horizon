@@ -84,7 +84,9 @@ namespace TestServer
                 {(int)ClientPackets.maintainConnection,ServerHandle.MaintainConnection},
                 {(int)ClientPackets.WorldGeometryPositionInfo,ServerHandle.WorldGeometryPositions },
                 {(int)ClientPackets.DoorUnlock,ServerHandle.DoorUnlock },
-                {(int)ClientPackets.PlayerTransformTrack,ServerHandle.PlayerTransformTracking }
+                {(int)ClientPackets.PlayerTransformTrack,ServerHandle.PlayerTransformTracking },
+                {(int)ClientPackets.ElevatorSend,ServerHandle.ElevatorSend }
+
 
 
 

@@ -134,6 +134,17 @@ namespace TestServer
             }
 
         }
+        
+        public static void ElevatorSend(int _toClient, int doorId)
+        {
+            using (Packet _packet = new Packet((int)ServerPackets.ElevatorSend))
+            {
+                _packet.Write(doorId);
+
+                SendTCPData(_toClient, _packet);
+            }
+
+        }
 
         public static void PlayerTransformTracking(int _toClient, List<int> transform)
         {
