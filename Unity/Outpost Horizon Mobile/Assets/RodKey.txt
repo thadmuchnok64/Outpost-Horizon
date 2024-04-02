@@ -1,7 +1,8 @@
+IN LEFT TO RIGHT:
+1. Curium - SN-450600675 - Internal name: Ethylene Glycol
+7. Uranium - SN-451600783 - Internal name: Uranium
+2. Uranium - SN-451600783 - Internal name: Uranium
 6. Technetium - SN-451500675 - Internal name: Zirconium
+4. Neptunium - SN-450600783 - Internal name: Water
 3. Technetium - SN-451500675 - Internal name: Zirconium
 5. Neptunium - SN-450600783 - Internal name: Water
-4. Neptunium - SN-450600783 - Internal name: Water
-1. Curium - SN-450600675 - Internal name: Ethylene Glycol
-2. Uranium - SN-451600783 - Internal name: Uranium
-7. Uranium - SN-451600783 - Internal name: Uranium
