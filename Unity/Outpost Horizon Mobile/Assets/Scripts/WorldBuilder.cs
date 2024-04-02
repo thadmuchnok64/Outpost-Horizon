@@ -11,6 +11,7 @@ public class WorldBuilder : MonoBehaviour
     public GameObject elevator;
     public GameObject elevatorPort;
     public GameObject controlRoom;
+    public GameObject crate;
 
 
 
@@ -55,5 +56,10 @@ public class WorldBuilder : MonoBehaviour
     public void SpawnControlRoom(int index, Vector3 position, Vector3 rotation)
     {
         Instantiate(controlRoom, position, Quaternion.Euler(rotation));
+    }
+
+    public void SpawnCrate(int index, Vector3 position, Vector3 rotation)
+    {
+        Instantiate(crate, position, Quaternion.Euler(rotation));
     }
 }

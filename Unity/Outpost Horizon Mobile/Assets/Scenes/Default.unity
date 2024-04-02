@@ -2742,6 +2742,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 3514568943965236958, guid: fc72f0544832c77468bcedf98da35266, type: 3}
     - target: {fileID: 2550071432781217413, guid: 1f9443458c206544fba993eb7e9202dc, type: 3}
+      propertyPath: crate
+      value: 
+      objectReference: {fileID: 3514568943965236958, guid: 54f70c1ec7c4ad44e9a4aac8528e1767, type: 3}
+    - target: {fileID: 2550071432781217413, guid: 1f9443458c206544fba993eb7e9202dc, type: 3}
       propertyPath: elevator
       value: 
       objectReference: {fileID: 3514568943965236958, guid: 57e6bb84593b58b4d87cb621a04a53a6, type: 3}
