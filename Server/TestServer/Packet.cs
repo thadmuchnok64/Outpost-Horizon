@@ -25,6 +25,7 @@ namespace TestServer
         maintainConnection = 9,
         WorldGeometryPositionInfo = 10,
         DoorUnlock = 11,
+        PlayerTransformTrack= 12,
 
 
     }
@@ -43,7 +44,7 @@ namespace TestServer
         maintainConnection = 9,
         WorldGeometryPositionInfo = 10,
         DoorUnlock = 11,
-
+        PlayerTransformTrack = 12,
 
 
     }

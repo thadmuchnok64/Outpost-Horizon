@@ -23,6 +23,7 @@ using System.Threading.Tasks;
         maintainConnection = 9,
         WorldBuilder = 10,
         DoorUnlock = 11,
+        PlayerTransformTracking = 12,
 
 }
 
@@ -39,6 +40,7 @@ public enum ClientPackets
         maintainConnection = 9,
         WorldBuilder = 10,
         DoorUnlock = 11,
+        PlayerTransformTracking = 12,
 
 
 }

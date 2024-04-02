@@ -124,10 +124,6 @@ namespace TestServer
             list.Add(_packet.ReadInt());
             list.Add(_packet.ReadInt());
 
-            list.Add(_packet.ReadInt());
-            list.Add(_packet.ReadInt());
-            list.Add(_packet.ReadInt());
-
             int i = _packet.ReadInt();
             list.Add(i);
 
@@ -218,6 +214,30 @@ namespace TestServer
                 _clientToSendTo = 0;
 
             ServerSend.DoorUnlock(_clientToSendTo, code);
+        }
+
+        public static void PlayerTransformTracking(int _fromClient, Packet _packet)
+        {
+            int _clientIdCheck = _packet.ReadInt();
+
+            List<int> list = new List<int>();
+            //length
+            list.Add((int)_packet.ReadInt());
+            //player pos
+            list.Add((int) _packet.ReadInt());
+            list.Add((int)_packet.ReadInt());
+            list.Add((int)_packet.ReadInt());
+            //player rot
+            list.Add((int)_packet.ReadInt());
+            list.Add((int)_packet.ReadInt());
+            list.Add((int)_packet.ReadInt());
+
+
+            int _clientToSendTo = 1;
+            if (_clientIdCheck == 1)
+                _clientToSendTo = 0;
+
+            ServerSend.PlayerTransformTracking(_clientToSendTo, list);
         }
     }
 }

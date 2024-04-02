@@ -44,10 +44,12 @@ public class ClientHandle : MonoBehaviour
         Vector3 craneEuler = new Vector3(_packet.ReadInt(), _packet.ReadInt(), _packet.ReadInt());
         craneEuler = new Vector3(craneEuler.x, craneEuler.z, craneEuler.y);
         CraneHandler.instance.SetCraneOrientation(vector, craneEuler);
+        /*
         tempvec = new Vector3(_packet.ReadInt(), _packet.ReadInt(), _packet.ReadInt());
         vector = new Vector3(-tempvec.x, tempvec.z, tempvec.y);
         vector = vector / 100;
         CraneHandler.instance.SetPlayerPosition(vector);
+        */
 
         int itr = _packet.ReadInt();
             //TheClaw.instance.MoveClawToLocation(vector);
@@ -130,11 +132,31 @@ public class ClientHandle : MonoBehaviour
                     break;
                 case 7: WorldBuilder.Instance.SpawnCrate(i, pos, euler);
                     break;
+                case 8: WorldBuilder.Instance.SpawnEngine(i, pos, euler);
+                    break;
+                case 9: WorldBuilder.Instance.SetCraneOrientation(i, pos, euler);
+                    break;
+                case 10: WorldBuilder.Instance.SpawnCraneControl(i, pos, euler);
+                    break;
 
             }
 
 
         }
 
+    }
+
+    public static void PlayerTransformTracking(Packet _packet)
+    {
+        int length = _packet.ReadInt();
+
+        Vector3 tempvec = new Vector3(_packet.ReadInt(), _packet.ReadInt(), _packet.ReadInt());
+        Vector3 vector = new Vector3(-tempvec.x, tempvec.z, tempvec.y);
+        vector = vector / 100000;
+
+        Vector3 tempvec2 = new Vector3(_packet.ReadInt(), _packet.ReadInt(), _packet.ReadInt());
+        Vector3 vector2 = new Vector3(-tempvec.x, tempvec.z, tempvec.y);
+        vector2 = vector2;
+        PlayerTracker.Instance.SetOrientation(vector, vector2);
     }
 }

@@ -31,9 +31,14 @@ public class CraneHandler : MonoBehaviour
         }
     }
 
+    public void SetCraneOrigin(Vector3 pos, Vector3 rot)
+    {
+        transform.position = transform.position+(pos - crane.position);
+    }
+
     public void SetCraneOrientation(Vector3 pos,Vector3 euler)
     {
-        crane.transform.localPosition = pos;
+        crane.transform.position = pos;
         crane.eulerAngles = euler;
     }
 
@@ -44,7 +49,7 @@ public class CraneHandler : MonoBehaviour
 
     public void SetOrientationOfShippingContainer(int index, Vector3 position, Vector3 rotation)
     {
-        shippingContainers[index].localPosition = position;
+        shippingContainers[index].position = position;
         shippingContainers[index].eulerAngles = rotation;
     }
 }

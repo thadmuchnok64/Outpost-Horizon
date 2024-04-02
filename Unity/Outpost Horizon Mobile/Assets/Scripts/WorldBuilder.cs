@@ -5,6 +5,7 @@ using UnityEngine;
 public class WorldBuilder : MonoBehaviour
 {
     public static WorldBuilder Instance;
+    [SerializeField] Transform world;
     public GameObject floor;
     public GameObject wall;
     public GameObject door;
@@ -12,9 +13,8 @@ public class WorldBuilder : MonoBehaviour
     public GameObject elevatorPort;
     public GameObject controlRoom;
     public GameObject crate;
-
-
-
+    public GameObject engine;
+    public GameObject craneControl;
 
     private void Start()
     {
@@ -29,37 +29,50 @@ public class WorldBuilder : MonoBehaviour
 
     public void SpawnWorldFloorTile(int index, Vector3 position, Vector3 rotation)
     {
-        Instantiate(floor, position, Quaternion.Euler(rotation));
+        Instantiate(floor, position, Quaternion.Euler(rotation),world);
     }
 
     public void SpawnWall(int index, Vector3 position, Vector3 rotation)
     {
-        Instantiate(wall, position, Quaternion.Euler(rotation));
+        Instantiate(wall, position, Quaternion.Euler(rotation),world);
     }
 
     public void SpawnDoor(int index, Vector3 position, Vector3 rotation)
     {
-        var d = Instantiate(door, position, Quaternion.Euler(rotation));
+        var d = Instantiate(door, position, Quaternion.Euler(rotation), world);
         d.GetComponent<DoorButton>().ID = index;
     }
 
     public void SpawnElevator(int index, Vector3 position, Vector3 rotation)
     {
-        Instantiate(elevator, position, Quaternion.Euler(rotation));
+        Instantiate(elevator, position, Quaternion.Euler(rotation), world);
     }
 
     public void SpawnElevatorPort(int index, Vector3 position, Vector3 rotation)
     {
-        Instantiate(elevatorPort, position, Quaternion.Euler(rotation));
+        Instantiate(elevatorPort, position, Quaternion.Euler(rotation), world);
     }
 
     public void SpawnControlRoom(int index, Vector3 position, Vector3 rotation)
     {
-        Instantiate(controlRoom, position, Quaternion.Euler(rotation));
+        Instantiate(controlRoom, position, Quaternion.Euler(rotation), world);
     }
 
     public void SpawnCrate(int index, Vector3 position, Vector3 rotation)
     {
-        Instantiate(crate, position, Quaternion.Euler(rotation));
+        Instantiate(crate, position, Quaternion.Euler(rotation), world);
+    }
+    public void SpawnEngine(int index, Vector3 position, Vector3 rotation)
+    {
+        Instantiate(engine, position, Quaternion.Euler(rotation), world);
+    }
+    public void SetCraneOrientation(int index, Vector3 position, Vector3 rotation)
+    {
+        CraneHandler.instance.SetCraneOrigin(position, rotation);
+    }
+
+    public void SpawnCraneControl(int index, Vector3 position, Vector3 rotation)
+    {
+        Instantiate(craneControl, position, Quaternion.Euler(rotation), world);
     }
 }
