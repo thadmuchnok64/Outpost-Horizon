@@ -32,10 +32,11 @@ public class CameraButtonManager : MonoBehaviour
         buttons = new List<CameraButton>();
     }
 
-    public void AddButton(CameraButton button)
+    public void AddButton(CameraButton button,Sprite icon)
     {
         buttons.Add(button);
         GameObject g = Instantiate(uiButtonPrefab, transform);
+        g.GetComponent<Image>().sprite = icon;
         g.GetComponent<ButtonRelay>().button = button;
         uiButtons.Add(g);
     }

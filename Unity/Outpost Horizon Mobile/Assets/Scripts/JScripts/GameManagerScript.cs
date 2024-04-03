@@ -14,6 +14,7 @@ public class GameManagerScript : MonoBehaviour
     public string notif;
     public List<GameObject> menuitems = new List<GameObject>();
     public List<GameObject> menubuttons = new List<GameObject>();
+    public GameObject backButton;
     public GameObject clawUI;
 
     [Header("Debug Settings")]
@@ -53,7 +54,15 @@ public class GameManagerScript : MonoBehaviour
             g.SetActive(false);
         }
         show = menuitems[menuint];
-        button = menubuttons[menuint];
+        if(menuint != 6 && menuint != 2)
+        {
+            backButton.SetActive(true);
+        }
+        else
+        {
+            backButton.SetActive(false);
+
+        }
         clawUI.SetActive(false);
         if (show.name == "Claw")
             clawUI.SetActive(true);
