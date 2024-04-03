@@ -6,9 +6,11 @@ using UnityEngine;
 public class CameraButton : MonoBehaviour
 {
 
+    public Sprite buttonSprite;
+
     private void Start()
     {
-        CameraButtonManager.instance.AddButton(this);
+        CameraButtonManager.instance.AddButton(this,buttonSprite);
     }
 
     public virtual void DoAction()

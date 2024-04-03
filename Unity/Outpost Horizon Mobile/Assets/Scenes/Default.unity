@@ -10153,6 +10153,7 @@ MonoBehaviour:
   - {fileID: 1082457754}
   - {fileID: 1908828414}
   - {fileID: 1470951912}
+  - {fileID: 524767417}
   menubuttons:
   - {fileID: 97911551}
   - {fileID: 1819524665}
@@ -15430,7 +15431,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2238148086933025959, guid: 752b631a117725843aed1eca7398e615, type: 3}
       propertyPath: orthographic
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2238148086933025959, guid: 752b631a117725843aed1eca7398e615, type: 3}
       propertyPath: field of view
