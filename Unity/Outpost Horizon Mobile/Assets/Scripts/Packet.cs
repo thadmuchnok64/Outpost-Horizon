@@ -25,6 +25,8 @@ using System.Threading.Tasks;
         DoorUnlock = 11,
         PlayerTransformTracking = 12,
         ElevatorSend = 13,
+        AdminUnlock = 14,
+        GrantAdmin = 15,
 
 }
 
@@ -43,6 +45,8 @@ public enum ClientPackets
         DoorUnlock = 11,
         PlayerTransformTracking = 12,
         ElevatorSend = 13,
+        AdminUnlock = 14,
+        GrantAdmin = 15,
 
 
 }

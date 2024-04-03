@@ -9,6 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2632507652317365850}
+  - component: {fileID: 4980094018495818513}
   m_Layer: 0
   m_Name: CraneControl
   m_TagString: Untagged
@@ -32,6 +33,21 @@ Transform:
   - {fileID: 3037048654126457198}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &4980094018495818513
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3366176856441195098}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2651113c3b4e50940b5a7544e701f793, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  buttonSprite: {fileID: 1494297677, guid: 9964720d4ab88f44f96895b30d8cf5a6, type: 3}
+  relay: {fileID: 0}
+  menuIndex: 3
 --- !u!1001 &3291984910234175109
 PrefabInstance:
   m_ObjectHideFlags: 0

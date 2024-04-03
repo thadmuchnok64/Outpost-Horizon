@@ -108,6 +108,7 @@ namespace TestServer
 						{
 							int _packetId = _packet.ReadInt();
 							Server.packetHandlers[_packetId](id,_packet);
+                            //Console.WriteLine(_packetId);
 						}
 					});
 					_packetLength = 0;

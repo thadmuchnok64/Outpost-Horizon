@@ -85,7 +85,11 @@ namespace TestServer
                 {(int)ClientPackets.WorldGeometryPositionInfo,ServerHandle.WorldGeometryPositions },
                 {(int)ClientPackets.DoorUnlock,ServerHandle.DoorUnlock },
                 {(int)ClientPackets.PlayerTransformTrack,ServerHandle.PlayerTransformTracking },
-                {(int)ClientPackets.ElevatorSend,ServerHandle.ElevatorSend }
+                {(int)ClientPackets.ElevatorSend,ServerHandle.ElevatorSend },
+                {(int)ClientPackets.RequestAdmin,ServerHandle.DoorAdminRequest },
+                {(int)ClientPackets.GrantAdmin,ServerHandle.GrantAdmin },
+
+
 
 
 

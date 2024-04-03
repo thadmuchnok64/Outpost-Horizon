@@ -7,6 +7,7 @@ public class CameraButton : MonoBehaviour
 {
 
     public Sprite buttonSprite;
+    [HideInInspector] public ButtonRelay relay;
 
     private void Start()
     {

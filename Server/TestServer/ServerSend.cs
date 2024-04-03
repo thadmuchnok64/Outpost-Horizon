@@ -134,7 +134,7 @@ namespace TestServer
             }
 
         }
-        
+
         public static void ElevatorSend(int _toClient, int doorId)
         {
             using (Packet _packet = new Packet((int)ServerPackets.ElevatorSend))
@@ -160,6 +160,28 @@ namespace TestServer
 
         }
 
+        public static void DoorAdminUnlock(int _toClient, int doorId)
+        {
+            using (Packet _packet = new Packet((int)ServerPackets.RequestAdmin))
+            {
+                _packet.Write(doorId);
 
+                SendTCPData(_toClient, _packet);
+            }
+
+        }
+
+        public static void GrantAdmin(int _toClient, int doorId)
+        {
+            using (Packet _packet = new Packet((int)ServerPackets.GrantAdmin))
+            {
+                _packet.Write(doorId);
+
+                SendTCPData(_toClient, _packet);
+            }
+
+
+
+        }
     }
 }

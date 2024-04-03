@@ -159,4 +159,13 @@ public class ClientHandle : MonoBehaviour
         vector2 = vector2;
         PlayerTracker.Instance.SetOrientation(vector, vector2);
     }
+
+    public static void DoorAdminUnlock(Packet _packet)
+    {
+        int code = _packet.ReadInt();
+
+        GameManagerScript.instance.CallAdminOnDoor(code);
+    }
+
+
 }

@@ -5,6 +5,7 @@ using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.XR;
 using UnityEngine.UI;
+using System.Linq;
 
 public class GameManagerScript : MonoBehaviour
 {
@@ -16,6 +17,8 @@ public class GameManagerScript : MonoBehaviour
     public List<GameObject> menubuttons = new List<GameObject>();
     public GameObject backButton;
     public GameObject clawUI;
+    public Camera clawcam, regcam;
+    public int doorAdminCode = 0;
 
     [Header("Debug Settings")]
     public bool skipIntro = false;
@@ -65,7 +68,16 @@ public class GameManagerScript : MonoBehaviour
         }
         clawUI.SetActive(false);
         if (show.name == "Claw")
+        {
             clawUI.SetActive(true);
+            clawcam.gameObject.SetActive(true);
+            regcam.gameObject.SetActive(false);
+
+        } else
+        {
+            clawcam.gameObject.SetActive(false);
+            regcam.gameObject.SetActive(true);
+        }
         show.gameObject.SetActive(true);
         foreach (GameObject e in GameObject.FindGameObjectsWithTag("ErrorMessage"))
         {
@@ -90,5 +102,11 @@ public class GameManagerScript : MonoBehaviour
     public void DebugRunLocalFunction()
     {
         Invoke("SkipIntro", .2f);
+    }
+
+    public void CallAdminOnDoor(int code)
+    {
+        DoorButton[] doors = FindObjectsOfType<DoorButton>();
+        doors.Where(x => x.ID == code).First().AdminNeeded();
     }
 }

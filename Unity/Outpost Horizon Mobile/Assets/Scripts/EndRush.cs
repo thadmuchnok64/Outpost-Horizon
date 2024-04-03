@@ -16,7 +16,8 @@ public class EndRush : MonoBehaviour
     {
         if (col.gameObject.CompareTag("StartR"))
         {
-            UIManager.instance.SendToServer("PickTrue");
+            ClientSend.GrantAdmin(GameManagerScript.instance.doorAdminCode);
+            //UIManager.instance.SendToServer("PickTrue");
             PickSuccess.SetActive(true);
             Debug.Log("Picked!");
         }

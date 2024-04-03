@@ -38,6 +38,7 @@ public class CameraButtonManager : MonoBehaviour
         GameObject g = Instantiate(uiButtonPrefab, transform);
         g.GetComponent<Image>().sprite = icon;
         g.GetComponent<ButtonRelay>().button = button;
+        button.relay = g.GetComponent<ButtonRelay>();
         uiButtons.Add(g);
     }
 

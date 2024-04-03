@@ -27,6 +27,9 @@ namespace TestServer
         DoorUnlock = 11,
         PlayerTransformTrack= 12,
         ElevatorSend = 13,
+        RequestAdmin = 14,
+        GrantAdmin = 15,
+
 
 
     }
@@ -47,6 +50,8 @@ namespace TestServer
         DoorUnlock = 11,
         PlayerTransformTrack = 12,
         ElevatorSend = 13,
+        RequestAdmin = 14,
+        GrantAdmin = 15,
 
 
     }

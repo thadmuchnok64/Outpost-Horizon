@@ -120,7 +120,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9667176aa14af9f4196ece9cef99c73a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  buttonSprite: {fileID: 1878610843, guid: 8c92dacc37d052b4392c7109818b4f05, type: 3}
+  relay: {fileID: 0}
   ID: 0
+  adminRequested: 0
+  adminsprite: {fileID: -46209462, guid: 9964720d4ab88f44f96895b30d8cf5a6, type: 3}
 --- !u!1 &5640639152346139202
 GameObject:
   m_ObjectHideFlags: 0

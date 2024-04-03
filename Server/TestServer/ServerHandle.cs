@@ -6,22 +6,22 @@ using System.Threading.Tasks;
 
 namespace TestServer
 {
-	class ServerHandle
-	{
-		public static void WelcomeReceived(int _fromClient, Packet _packet)
-		{
-			int _clientIdCheck = _packet.ReadInt();
-			string _username = _packet.ReadString();
+    class ServerHandle
+    {
+        public static void WelcomeReceived(int _fromClient, Packet _packet)
+        {
+            int _clientIdCheck = _packet.ReadInt();
+            string _username = _packet.ReadString();
             if (_username == Server.usedClientName)
             {
                 Server.clients.Remove(_fromClient);
             }
             Console.WriteLine($"{Server.clients[_fromClient].tcp.socket.Client.RemoteEndPoint} connected successfully and is now player {_fromClient}!\n" +
-				$"this user is using {_username}");
-			if (_fromClient != _clientIdCheck)
-			{
-				Console.WriteLine($"Player \"{_username}\" (ID: {_fromClient}) has assumed the wrong client ID ({_clientIdCheck})!");
-			}
+                $"this user is using {_username}");
+            if (_fromClient != _clientIdCheck)
+            {
+                Console.WriteLine($"Player \"{_username}\" (ID: {_fromClient}) has assumed the wrong client ID ({_clientIdCheck})!");
+            }
 
             Server.clients[_fromClient].username = _username;
 
@@ -29,19 +29,19 @@ namespace TestServer
             if (_clientIdCheck == 1)
                 _clientToSendTo = 0;
 
-			if(_username == "Unreal")
-			{
-				try
-				{
-					if (Server.clients[_clientToSendTo].username == "Unity")
-					{
-						ServerSend.VerifyUnityUserHasLoggedIn(_fromClient);
-					}
-				}
-				catch { }
+            if (_username == "Unreal")
+            {
+                try
+                {
+                    if (Server.clients[_clientToSendTo].username == "Unity")
+                    {
+                        ServerSend.VerifyUnityUserHasLoggedIn(_fromClient);
+                    }
+                }
+                catch { }
             }
             else if (_username == "Unity")
-			{
+            {
                 try
                 {
                     if (Server.clients[_clientToSendTo].username == "Unreal")
@@ -54,43 +54,43 @@ namespace TestServer
 
         }
 
-		public static void TestRecieved(int _fromClient, Packet _packet)
-		{
-			int _clientIdCheck = _packet.ReadInt();
-			string _message = _packet.ReadString();
-			Console.WriteLine($" Player {Server.clients[_fromClient].tcp.socket.Client.RemoteEndPoint} says {_message}");
-			int _clientToSendTo = 1;
-			if (_clientIdCheck == 1)
-				_clientToSendTo = 0;
-			ServerSend.TestMessage( _clientToSendTo, _message );
-		}
+        public static void TestRecieved(int _fromClient, Packet _packet)
+        {
+            int _clientIdCheck = _packet.ReadInt();
+            string _message = _packet.ReadString();
+            Console.WriteLine($" Player {Server.clients[_fromClient].tcp.socket.Client.RemoteEndPoint} says {_message}");
+            int _clientToSendTo = 1;
+            if (_clientIdCheck == 1)
+                _clientToSendTo = 0;
+            ServerSend.TestMessage(_clientToSendTo, _message);
+        }
 
-		public static void BreakRod(int _fromClient, Packet _packet)
-		{
+        public static void BreakRod(int _fromClient, Packet _packet)
+        {
             int _clientIdCheck = _packet.ReadInt();
             int intsToRead = _packet.ReadInt();
-			List<int> list = new List<int>();
-			for(int i = 0; i < intsToRead; i++)
-			{
-				list.Add(_packet.ReadInt());
-			}
+            List<int> list = new List<int>();
+            for (int i = 0; i < intsToRead; i++)
+            {
+                list.Add(_packet.ReadInt());
+            }
             //Console.WriteLine($" Player {Server.clients[_fromClient].tcp.socket.Client.RemoteEndPoint} says {_message}");
             int _clientToSendTo = 1;
             if (_clientIdCheck == 1)
                 _clientToSendTo = 0;
 
-			if(list.Count == 0)
-			{
-				Console.WriteLine($"Unreal (ID: {_fromClient}) reports to Unity (ID: {_clientToSendTo}) that no rods are broken!");
-			}
-			else
-			{
-				string message = $"Unreal (ID: {_fromClient}) reports to Unity (ID: {_clientToSendTo}) that rods ";
-				foreach(int i in list)
-				{
-					message = message + i + ", ";
-				}
-				message = message + "are broken!";
+            if (list.Count == 0)
+            {
+                Console.WriteLine($"Unreal (ID: {_fromClient}) reports to Unity (ID: {_clientToSendTo}) that no rods are broken!");
+            }
+            else
+            {
+                string message = $"Unreal (ID: {_fromClient}) reports to Unity (ID: {_clientToSendTo}) that rods ";
+                foreach (int i in list)
+                {
+                    message = message + i + ", ";
+                }
+                message = message + "are broken!";
                 Console.WriteLine(message);
 
             }
@@ -109,10 +109,10 @@ namespace TestServer
             ServerSend.ClawControl(_clientToSendTo, control);
         }
 
-		public static void ClawPostionInfo(int _fromClient, Packet _packet)
-		{
+        public static void ClawPostionInfo(int _fromClient, Packet _packet)
+        {
             int _clientIdCheck = _packet.ReadInt();
-			int count = _packet.ReadInt();
+            int count = _packet.ReadInt();
 
             List<int> list = new List<int>();
 
@@ -127,7 +127,7 @@ namespace TestServer
             int i = _packet.ReadInt();
             list.Add(i);
 
-            for(int x = 0; x < i; x++)
+            for (int x = 0; x < i; x++)
             {
                 list.Add(_packet.ReadInt());
 
@@ -174,9 +174,9 @@ namespace TestServer
             int _clientIdCheck = _packet.ReadInt();
             int length = _packet.ReadInt();
             int code = _packet.ReadInt();
-			List<int> list = new List<int>();
+            List<int> list = new List<int>();
 
-			list.Add(code);
+            list.Add(code);
 
             // How many bits of geometry there are
             int i = _packet.ReadInt();
@@ -201,13 +201,13 @@ namespace TestServer
             ServerSend.WorldGeometryPositionInfo(_clientToSendTo, list);
         }
 
-        
+
 
         public static void DoorUnlock(int _fromClient, Packet _packet)
         {
             int _clientIdCheck = _packet.ReadInt();
             int code = _packet.ReadInt();
-            
+
 
             int _clientToSendTo = 1;
             if (_clientIdCheck == 1)
@@ -228,7 +228,7 @@ namespace TestServer
 
             ServerSend.ElevatorSend(_clientToSendTo, code);
         }
-        
+
         public static void PlayerTransformTracking(int _fromClient, Packet _packet)
         {
             int _clientIdCheck = _packet.ReadInt();
@@ -237,7 +237,7 @@ namespace TestServer
             //length
             list.Add((int)_packet.ReadInt());
             //player pos
-            list.Add((int) _packet.ReadInt());
+            list.Add((int)_packet.ReadInt());
             list.Add((int)_packet.ReadInt());
             list.Add((int)_packet.ReadInt());
             //player rot
@@ -251,6 +251,31 @@ namespace TestServer
                 _clientToSendTo = 0;
 
             ServerSend.PlayerTransformTracking(_clientToSendTo, list);
+        }
+
+
+        public static void DoorAdminRequest(int _fromClient, Packet _packet)
+        {
+            int _clientIdCheck = _packet.ReadInt();
+            int size = _packet.ReadInt();
+            int code = _packet.ReadInt();
+
+            int _clientToSendTo = 1;
+            if (_clientIdCheck == 1)
+                _clientToSendTo = 0;
+
+            ServerSend.DoorAdminUnlock(_clientToSendTo, code);
+        }
+        public static void GrantAdmin(int _fromClient, Packet _packet)
+        {
+            int _clientIdCheck = _packet.ReadInt();
+            int code = _packet.ReadInt();
+
+            int _clientToSendTo = 1;
+            if (_clientIdCheck == 1)
+                _clientToSendTo = 0;
+
+            ServerSend.GrantAdmin(_clientToSendTo, code);
         }
     }
 }
