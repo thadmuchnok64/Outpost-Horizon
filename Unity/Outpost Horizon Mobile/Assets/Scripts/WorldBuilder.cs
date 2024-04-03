@@ -45,7 +45,8 @@ public class WorldBuilder : MonoBehaviour
 
     public void SpawnElevator(int index, Vector3 position, Vector3 rotation)
     {
-        Instantiate(elevator, position, Quaternion.Euler(rotation), world);
+        var e = Instantiate(elevator, position, Quaternion.Euler(rotation), world);
+        e.GetComponent<ElevatorButton>().ID = index;
     }
 
     public void SpawnElevatorPort(int index, Vector3 position, Vector3 rotation)

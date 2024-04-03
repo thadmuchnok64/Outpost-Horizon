@@ -38,7 +38,6 @@ public class UIManager : MonoBehaviour
 		startMenu.SetActive(false);
 		//usernameField.interactable= false;
 		TestClient.instance.ConnectToServer();
-        vrCamera.SetActive(true);
         connected = true;
 	}
     public void DisconnectFromServer()
@@ -61,6 +60,8 @@ public class UIManager : MonoBehaviour
     {
         mMenu.gameObject.SetActive(true);
         GameObject.Find("ReferencePage").SetActive(false);
+        vrCamera.SetActive(true);
+
     }
     // Should take in a float from -1 to 1
     public void ClawGame(float input)
