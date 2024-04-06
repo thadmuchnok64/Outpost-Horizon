@@ -150,6 +150,7 @@ namespace TestServer
         {
             int _clientIdCheck = _packet.ReadInt();
             Console.WriteLine($" Player {Server.clients[_fromClient].tcp.socket.Client.RemoteEndPoint} has been disconnected.");
+            Server.clients[_clientIdCheck].username = "Pizza"; // Server would still recognize unity user if this isn't set to something else
             Server.clients[_clientIdCheck].tcp.socket = null;
         }
 

@@ -26,6 +26,13 @@ public class WorldBuilder : MonoBehaviour
             Debug.Log("Mutliple world builders!!! What have you done?!");
         }
     }
+    public void DestroyTheEntireGoddamnWorld()
+    {
+        foreach (Transform child in world.transform)
+        {
+            Destroy(child.gameObject);
+        }
+    }
 
     public void SpawnWorldFloorTile(int index, Vector3 position, Vector3 rotation)
     {

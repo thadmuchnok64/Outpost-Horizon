@@ -81,6 +81,9 @@ public class ClientHandle : MonoBehaviour
             case "CraneError!":
                 TheClaw.instance.CraneError();
                 break;
+            case "ResetWorldMap":
+                WorldBuilder.Instance.DestroyTheEntireGoddamnWorld();
+                break;
         }
     }
 

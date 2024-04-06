@@ -13,7 +13,9 @@ namespace TestServer
             isRunning= true;
             Thread mainThread = new Thread(new ThreadStart(MainThread));
             mainThread.Start();
-            Server.Start(2, 9005);
+            //Server.Start(2, 9005);
+            Server.Start(2, 80);
+
             ClearConsole();
 
 		}
