@@ -42,11 +42,6 @@ public class CraneHandler : MonoBehaviour
         crane.eulerAngles = euler;
     }
 
-    public void SetPlayerPosition(Vector3 pos)
-    {
-        player.transform.localPosition= pos;
-    }
-
     public void SetOrientationOfShippingContainer(int index, Vector3 position, Vector3 rotation)
     {
         shippingContainers[index].position = position;

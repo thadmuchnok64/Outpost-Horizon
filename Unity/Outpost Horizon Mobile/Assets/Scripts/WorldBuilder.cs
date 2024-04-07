@@ -48,7 +48,7 @@ public class WorldBuilder : MonoBehaviour
     public void SpawnDoor(int index, Vector3 position, Vector3 rotation)
     {
         var d = Instantiate(door, position, Quaternion.Euler(rotation), world);
-        d.GetComponent<DoorButton>().ID = index;
+        d.GetComponentInChildren<DoorButton>().ID = index;
     }
 
     public void SpawnElevator(int index, Vector3 position, Vector3 rotation)
