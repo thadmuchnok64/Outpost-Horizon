@@ -2620,6 +2620,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2550071432781217413, guid: 1f9443458c206544fba993eb7e9202dc, type: 3}
+      propertyPath: halfWallLeft
+      value: 
+      objectReference: {fileID: 3514568943965236958, guid: 53f8ea7b8f3836d428a4b0ac4c380abe, type: 3}
+    - target: {fileID: 2550071432781217413, guid: 1f9443458c206544fba993eb7e9202dc, type: 3}
+      propertyPath: halfWallRight
+      value: 
+      objectReference: {fileID: 3514568943965236958, guid: 1676067edc742564fa4be694cff1c835, type: 3}
     - target: {fileID: 2820618568307960591, guid: 1f9443458c206544fba993eb7e9202dc, type: 3}
       propertyPath: m_Name
       value: World Builder

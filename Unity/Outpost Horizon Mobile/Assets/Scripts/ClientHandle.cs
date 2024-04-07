@@ -141,6 +141,10 @@ public class ClientHandle : MonoBehaviour
                     break;
                 case 10: WorldBuilder.Instance.SpawnCraneControl(i, pos, euler);
                     break;
+                case 11: WorldBuilder.Instance.SpawnHalfWallLeft(i, pos, euler);
+                    break;
+                case 12: WorldBuilder.Instance.SpawnHalfWallRight(i, pos, euler);
+                    break;
 
             }
 

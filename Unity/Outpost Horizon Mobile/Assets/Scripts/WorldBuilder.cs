@@ -15,6 +15,7 @@ public class WorldBuilder : MonoBehaviour
     public GameObject crate;
     public GameObject engine;
     public GameObject craneControl;
+    public GameObject halfWallLeft, halfWallRight;
 
     private void Start()
     {
@@ -82,5 +83,15 @@ public class WorldBuilder : MonoBehaviour
     public void SpawnCraneControl(int index, Vector3 position, Vector3 rotation)
     {
         Instantiate(craneControl, position, Quaternion.Euler(rotation), world);
+    }
+
+    public void SpawnHalfWallLeft(int index, Vector3 position, Vector3 rotation)
+    {
+        Instantiate(halfWallLeft, position, Quaternion.Euler(rotation), world);
+    }
+
+    public void SpawnHalfWallRight(int index, Vector3 position, Vector3 rotation)
+    {
+        Instantiate(halfWallRight, position, Quaternion.Euler(rotation), world);
     }
 }
