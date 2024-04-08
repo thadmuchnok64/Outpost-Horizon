@@ -205,6 +205,7 @@ public class TestClient : MonoBehaviour
                 {(int)ServerPackets.WorldBuilder,ClientHandle.WorldGeometryPosition},
                 {(int)ServerPackets.PlayerTransformTracking,ClientHandle.PlayerTransformTracking},
                 {(int)ServerPackets.AdminUnlock,ClientHandle.DoorAdminUnlock},
+                {(int)ServerPackets.ElevatorTrack,ClientHandle.SetElevatorPosition}
 
 
 

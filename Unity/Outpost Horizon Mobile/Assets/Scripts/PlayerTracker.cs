@@ -8,6 +8,7 @@ public class PlayerTracker : MonoBehaviour
     [SerializeField] GameObject player;
     Coroutine lerper;
 
+
     private void Start()
     {
         if (Instance == null)

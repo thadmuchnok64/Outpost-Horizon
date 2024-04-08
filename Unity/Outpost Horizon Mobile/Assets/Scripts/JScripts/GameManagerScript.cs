@@ -109,4 +109,11 @@ public class GameManagerScript : MonoBehaviour
         DoorButton[] doors = FindObjectsOfType<DoorButton>();
         doors.Where(x => x.ID == code).First().AdminNeeded();
     }
+    public void TrackElevator(int id, int z)
+    {
+        ElevatorButton[] elevators = FindObjectsOfType<ElevatorButton>();
+        var elev = elevators.Where(x => x.ID == id).First();
+        elev.transform.position = new Vector3(elev.transform.position.x, z / 100, elev.transform.position.z);
+        CraneCameraControl.instance.ReassignCamera(elev.cameraPoint);
+    }
 }

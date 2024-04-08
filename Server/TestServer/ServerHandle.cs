@@ -278,5 +278,22 @@ namespace TestServer
 
             ServerSend.GrantAdmin(_clientToSendTo, code);
         }
+
+        public static void ElevatorMove(int _fromClient, Packet _packet)
+        {
+            int _clientIdCheck = _packet.ReadInt();
+            int length = _packet.ReadInt();
+            List<int> list = new List<int>();
+            //length
+            list.Add((int)_packet.ReadInt());
+            //Elevator y axis
+            list.Add((int)_packet.ReadInt());
+
+            int _clientToSendTo = 1;
+            if (_clientIdCheck == 1)
+                _clientToSendTo = 0;
+
+            ServerSend.TrackElevator(_clientToSendTo, list);
+        }
     }
 }

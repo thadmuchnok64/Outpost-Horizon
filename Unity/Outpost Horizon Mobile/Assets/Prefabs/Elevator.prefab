@@ -122,6 +122,7 @@ MonoBehaviour:
   buttonSprite: {fileID: 0}
   relay: {fileID: 0}
   ID: 0
+  cameraPoint: {fileID: 3853287742601980068}
 --- !u!1 &7429882417905448245
 GameObject:
   m_ObjectHideFlags: 0

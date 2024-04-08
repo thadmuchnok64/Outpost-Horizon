@@ -29,6 +29,7 @@ namespace TestServer
         ElevatorSend = 13,
         RequestAdmin = 14,
         GrantAdmin = 15,
+        TrackElevator = 16,
 
 
 
@@ -52,6 +53,7 @@ namespace TestServer
         ElevatorSend = 13,
         RequestAdmin = 14,
         GrantAdmin = 15,
+        TrackElevator = 16,
 
 
     }

@@ -174,5 +174,13 @@ public class ClientHandle : MonoBehaviour
         GameManagerScript.instance.CallAdminOnDoor(code);
     }
 
+    public static void SetElevatorPosition(Packet _packet)
+    {
+        int code = _packet.ReadInt();
+        int z = _packet.ReadInt();
+        GameManagerScript.instance.TrackElevator(code, z);
+
+    }
+
 
 }

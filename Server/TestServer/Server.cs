@@ -88,13 +88,7 @@ namespace TestServer
                 {(int)ClientPackets.ElevatorSend,ServerHandle.ElevatorSend },
                 {(int)ClientPackets.RequestAdmin,ServerHandle.DoorAdminRequest },
                 {(int)ClientPackets.GrantAdmin,ServerHandle.GrantAdmin },
-
-
-
-
-
-
-
+                {(int)ClientPackets.TrackElevator,ServerHandle.ElevatorMove },
             };
             Console.WriteLine("Initialized packets");
         }
