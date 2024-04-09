@@ -366,4 +366,7 @@ MonoBehaviour:
   relay: {fileID: 0}
   ID: 0
   adminRequested: 0
+  doormesh: {fileID: 2544411215219657428}
+  doorOpenMat: {fileID: 2100000, guid: 7bdcdd8dfdcb9c545b69fcc1ad29e54c, type: 2}
+  altSprite: {fileID: 859681889, guid: 4329d33ae7c2f2c4d9fbe9b6538ac8aa, type: 3}
   adminsprite: {fileID: -46209462, guid: 9964720d4ab88f44f96895b30d8cf5a6, type: 3}

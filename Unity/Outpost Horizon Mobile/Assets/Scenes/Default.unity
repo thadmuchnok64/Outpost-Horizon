@@ -17,7 +17,7 @@ RenderSettings:
   m_Fog: 1
   m_FogColor: {r: 0, g: 0, b: 0, a: 1}
   m_FogMode: 3
-  m_FogDensity: 0.01
+  m_FogDensity: 0.04
   m_LinearFogStart: 0
   m_LinearFogEnd: 300
   m_AmbientSkyColor: {r: 0.212, g: 0.227, b: 0.259, a: 1}
@@ -6146,7 +6146,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: -1814649989, guid: 8c92dacc37d052b4392c7109818b4f05, type: 3}
+  m_Sprite: {fileID: 150156796, guid: 8c92dacc37d052b4392c7109818b4f05, type: 3}
   m_Type: 1
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -12360,7 +12360,7 @@ Transform:
   m_GameObject: {fileID: 1654204057}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: -0.67, z: 0}
   m_LocalScale: {x: 0.40671885, y: 0.40671885, z: 0.40671885}
   m_ConstrainProportionsScale: 1
   m_Children:
@@ -14871,8 +14871,8 @@ Transform:
   m_GameObject: {fileID: 1926165261}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.37, y: 8.79, z: 0}
-  m_LocalScale: {x: 7.744, y: 7.744, z: 7.744}
+  m_LocalPosition: {x: 0, y: 9.94, z: 0}
+  m_LocalScale: {x: 2, y: 2, z: 2}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1654204058}
@@ -14918,7 +14918,7 @@ SpriteRenderer:
   m_SortingLayerID: -482993327
   m_SortingLayer: 2
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 54e8a3ccc8549454bb2c0734242adbe4, type: 3}
+  m_Sprite: {fileID: -1146726059, guid: 4329d33ae7c2f2c4d9fbe9b6538ac8aa, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -15846,6 +15846,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: PlayerTracking
       objectReference: {fileID: 0}
+    - target: {fileID: 6448247358094337989, guid: 752b631a117725843aed1eca7398e615, type: 3}
+      propertyPath: directionalLight
+      value: 
+      objectReference: {fileID: 134414172}
     - target: {fileID: 8010827658538618578, guid: 752b631a117725843aed1eca7398e615, type: 3}
       propertyPath: m_LocalPosition.x
       value: -82.238846

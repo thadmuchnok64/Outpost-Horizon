@@ -49,6 +49,8 @@ public class RodBehaviour : MonoBehaviour
         rodstoinsert = "";
         text.text = "All Fuel Rods are operational! Well done.";
         roddiag.SetActive(false);
+        GeneratorButton[] genbuttons = FindObjectsOfType<GeneratorButton>();
+        genbuttons.First().ClearUrgent();
     }
     public void ShowError()
     {

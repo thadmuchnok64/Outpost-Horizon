@@ -6,6 +6,7 @@ using UnityEngine;
 using UnityEngine.XR;
 using UnityEngine.UI;
 using System.Linq;
+using UnityEditor;
 
 public class GameManagerScript : MonoBehaviour
 {
@@ -89,15 +90,28 @@ public class GameManagerScript : MonoBehaviour
     public void NotifAnnounce()
     {
         notif =  notif.Remove(0, 5);
+        switch (notif)
+        {
+            case "Rods":
+                GeneratorButton[] genbuttons = FindObjectsOfType<GeneratorButton>();
+                genbuttons.First().MakeUrgent();
+
+                break;
+            default: break;
+        }
+
+        /*
         foreach (GameObject g in menubuttons)
         {
             string gname = g.name;
             gname = gname.Remove(0, 2);
+
             if (gname == notif)
             {
                 g.GetComponent<Image>().color = Color.yellow;
             }
         }
+        */
     }
     public void DebugRunLocalFunction()
     {
@@ -115,5 +129,11 @@ public class GameManagerScript : MonoBehaviour
         var elev = elevators.Where(x => x.ID == id).First();
         elev.transform.position = new Vector3(elev.transform.position.x, z / 100, elev.transform.position.z);
         CraneCameraControl.instance.ReassignCamera(elev.cameraPoint);
+    }
+
+    public void UnlockDoorButton(int id)
+    {
+        DoorButton[] doors = FindObjectsOfType<DoorButton>();
+        doors.Where(x => x.ID == id).First().UnlockedButton();
     }
 }

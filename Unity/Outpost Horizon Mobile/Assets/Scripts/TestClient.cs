@@ -195,7 +195,7 @@ public class TestClient : MonoBehaviour
 
     private void InitializeClientData()
         {
-            packetHandlers = new Dictionary<int, PacketHandler>()
+        packetHandlers = new Dictionary<int, PacketHandler>()
             {
                 {(int)ServerPackets.welcome, ClientHandle.Welcome},
                 {(int)ServerPackets.breakrod, ClientHandle.GetInfoOnBrokenRods},
@@ -205,7 +205,8 @@ public class TestClient : MonoBehaviour
                 {(int)ServerPackets.WorldBuilder,ClientHandle.WorldGeometryPosition},
                 {(int)ServerPackets.PlayerTransformTracking,ClientHandle.PlayerTransformTracking},
                 {(int)ServerPackets.AdminUnlock,ClientHandle.DoorAdminUnlock},
-                {(int)ServerPackets.ElevatorTrack,ClientHandle.SetElevatorPosition}
+                {(int)ServerPackets.ElevatorTrack,ClientHandle.SetElevatorPosition},
+                {(int)ServerPackets.DoorUnlock,ClientHandle.ConfirmDoorUnlock }
 
 
 

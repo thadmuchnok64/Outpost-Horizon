@@ -182,5 +182,11 @@ public class ClientHandle : MonoBehaviour
 
     }
 
+    public static void ConfirmDoorUnlock(Packet _packet)
+    {
+        int doorUnlocked = _packet.ReadInt();
+        GameManagerScript.instance.UnlockDoorButton(doorUnlocked);
+    }
+
 
 }
