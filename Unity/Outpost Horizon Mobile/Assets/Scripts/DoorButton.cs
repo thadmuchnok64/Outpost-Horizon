@@ -7,7 +7,7 @@ using UnityEngine.UI;
 public class DoorButton : CameraButton
 {
     public int ID = 0;
-    [SerializeField] int taskCompletion = -1;
+    [SerializeField] int taskCompletion = 5;
     [HideInInspector] public bool adminRequested;
     [SerializeField] MeshRenderer doormesh;
     [SerializeField] Material doorOpenMat;

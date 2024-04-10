@@ -365,6 +365,7 @@ MonoBehaviour:
   buttonSprite: {fileID: 1878610843, guid: 8c92dacc37d052b4392c7109818b4f05, type: 3}
   relay: {fileID: 0}
   ID: 0
+  taskCompletion: 4
   adminRequested: 0
   doormesh: {fileID: 2544411215219657428}
   doorOpenMat: {fileID: 2100000, guid: 7bdcdd8dfdcb9c545b69fcc1ad29e54c, type: 2}

@@ -99,7 +99,7 @@ public class ClientHandle : MonoBehaviour
                 break;
             case string achlge when achlge.StartsWith("ch"):
                 string[] chnum = achlge.Split(':', 2);
-                ChallengeParser.instance.OnChallengeComplete(Int32.Parse(chnum[1]));
+                ChallengeParser.instance.TryCompleteChallenge(Int32.Parse(chnum[1]));
                 break;
         }
     }

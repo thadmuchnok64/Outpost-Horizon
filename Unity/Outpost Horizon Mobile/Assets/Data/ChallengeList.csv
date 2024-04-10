@@ -2,9 +2,8 @@ Welcome to IcarOS B_1.5.21! Your job is to assist the onsite employee. Please te
 The power was knocked out! Please navigate the on-site employee to the elevator
 Press the elevator button to send the elevator down
 Please wait for the elevator to reach its destination
-Unlock the door for the on-site employee using the DOOR app
-Use the RODS app to tell the on-site employee which fuel rods are broken
-Tell employee to place spent fuel rods in orange water bin
+Unlock the door for the on-site employee using on-screen lock app
+Use the RODS app to tell the on-site employee which fuel rods are broken, and need to be removed, placing into the orange water bin.
 Tell the employee to locate the Fuel Rods room
 Use the admin app to unlock the fuel rods door
 Use the rods app to inform the employee which rods to obtain

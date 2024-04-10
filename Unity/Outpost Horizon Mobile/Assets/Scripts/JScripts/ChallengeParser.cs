@@ -54,11 +54,12 @@ public class ChallengeParser : MonoBehaviour
 
     public void TryCompleteChallenge(int challengeId)
     {
-        if (challengeId <= seq)
+        if (challengeId < seq)
             return;
-        seq = challengeId;
-		challenges.text = currentText[seq];
-	}
+        seq = challengeId +1;
+        OnChallengeSetComplete();
+
+    }
 	public void OnChallengeSetComplete()
     {
         successGraphic.SetActive(true);
