@@ -71,13 +71,13 @@ public class GameManagerScript : MonoBehaviour
         if (show.name == "Claw")
         {
             clawUI.SetActive(true);
-            clawcam.gameObject.SetActive(true);
-            regcam.gameObject.SetActive(false);
+            //clawcam.gameObject.SetActive(true);
+          //  regcam.gameObject.SetActive(false);
 
         } else
         {
-            clawcam.gameObject.SetActive(false);
-            regcam.gameObject.SetActive(true);
+          //  clawcam.gameObject.SetActive(false);
+           // regcam.gameObject.SetActive(true);
         }
         show.gameObject.SetActive(true);
         foreach (GameObject e in GameObject.FindGameObjectsWithTag("ErrorMessage"))

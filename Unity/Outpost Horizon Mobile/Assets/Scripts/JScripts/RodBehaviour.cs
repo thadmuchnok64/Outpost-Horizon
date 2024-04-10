@@ -13,7 +13,9 @@ public class RodBehaviour : MonoBehaviour
     public static List<int> rods = new List<int>();
     public GameObject roddiag;
     public static string rodstoinsert;
-    public List<GameObject> rodstin;
+    public List<Animator> rodstin;
+    
+
     bool samerodfloor = false;
     // Start is called before the first frame update
     void Start()
@@ -29,19 +31,22 @@ public class RodBehaviour : MonoBehaviour
     // Update is called once per frame
     public void RodsTUpdate()
     {
-        foreach (GameObject rodtin in rodstin)
+        for(int i = 0; i< rodstin.Count; i++)
         {
-            rodtin.SetActive(false);
+            rodstin[i].SetBool("Working", true);
         }
         for (int i = 0; i < rods.Count-1; i++)
         {
             rodstoinsert = rodstoinsert + rods[i].ToString() +", ";
-            rodstin[rods[i]].SetActive(true);
+            rodstin[rods[i]-1].SetBool("Working",false);
         }
         rodstoinsert += "and " + rods[rods.Count - 1];
-        rodstin[rods[rods.Count - 1]].SetActive(true);
+        rodstin[rods[rods.Count -1]-1].SetBool("Working", false);
 
-        text.text = "FUEL RODS 1. Curium - SN-450600675\n2 & 7. Uranium - SN-451600783\n6 & 3. Technetium - SN-451500675\n5 & 4. Neptunium - SN-450600783\nFuel Rods are malfunctioning. Please replace Rod(s): " + rodstoinsert;
+        //        rodstin[rods.Count -1 ].Play("Bad");
+
+
+        text.text = "ROD LOCATION AND TYPE:\n1. Curium - SN-54054\n2 & 7. Uranium - SN-45021\n6 & 3. Technetium - SN-45054\n5 & 4. Neptunium - SN-54021\nFuel Rods are malfunctioning. Please replace Rod(s): " + rodstoinsert+"\n\nPlease direct the onsite-employee to the fuel rod room.";
         roddiag.SetActive(true);
     }
     public void RodsComplete()

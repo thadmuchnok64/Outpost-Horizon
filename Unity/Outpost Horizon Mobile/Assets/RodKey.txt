@@ -1,5 +1,5 @@
 IN LEFT TO RIGHT:
-1. Curium - SN-54054 - Internal name: Curium
+1. Curium -  - Internal name: Curium
 7. Uranium - SN-45021 - Internal name: Uranium
 2. Uranium - SN-45021 - Internal name: Uranium
 6. Technetium - SN-45054 - Internal name: Technetium

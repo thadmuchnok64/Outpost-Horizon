@@ -12,6 +12,7 @@ public class TheClaw : MonoBehaviour
     public float maxDistance = 2;
     public GameObject craneError;
     bool samecraneerror = false;
+    [SerializeField] Transform craneCameraPivot;
     Vector3 prevclaw;
     Vector3 speed;
     // Start is called before the first frame update - singleton
@@ -31,7 +32,7 @@ public class TheClaw : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
+        CraneCameraControl.instance.ReassignCamera(craneCameraPivot);
         //Done: Update this so that unreal sends the position of the object back through unity
        prevclaw = claw.transform.position;
        if (claw.transform.localPosition.y <= .38f && claw.transform.localPosition.y >= -.38f)

@@ -8,8 +8,10 @@ public class CraneCameraControl : MonoBehaviour
     Coroutine pivotLerper;
     public Transform focusPoint;
     public Light directionalLight;
+    public Light playerlight;
     private bool orthoOverride = false;
     private float intensity;
+    private float playerintensity;
 
     public static CraneCameraControl instance;
 
@@ -28,6 +30,7 @@ public class CraneCameraControl : MonoBehaviour
 
         focusPoint = player;
         intensity = directionalLight.intensity;
+        playerintensity = playerlight.intensity;
 
     }
 
@@ -36,10 +39,17 @@ public class CraneCameraControl : MonoBehaviour
     {
         transform.position = Vector3.Lerp(transform.position, focusPoint.position, Time.deltaTime);
         transform.rotation = Quaternion.Lerp(transform.rotation, focusPoint.rotation, Time.deltaTime);
-        if(orthoOverride)
-            directionalLight.intensity = Mathf.Lerp(directionalLight.intensity,intensity, Time.deltaTime);
+        if (orthoOverride)
+        {
+            directionalLight.intensity = Mathf.Lerp(directionalLight.intensity, intensity, Time.deltaTime);
+            playerlight.intensity = Mathf.Lerp(playerlight.intensity, 0, Time.deltaTime);
+        }
         else
+        {
             directionalLight.intensity = Mathf.Lerp(directionalLight.intensity, 0, Time.deltaTime);
+            playerlight.intensity = Mathf.Lerp(playerlight.intensity, playerintensity, Time.deltaTime);
+
+        }
 
     }
 
