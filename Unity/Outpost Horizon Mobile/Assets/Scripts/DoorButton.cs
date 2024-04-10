@@ -7,6 +7,7 @@ using UnityEngine.UI;
 public class DoorButton : CameraButton
 {
     public int ID = 0;
+    [SerializeField] int taskCompletion = -1;
     [HideInInspector] public bool adminRequested;
     [SerializeField] MeshRenderer doormesh;
     [SerializeField] Material doorOpenMat;
@@ -17,6 +18,7 @@ public class DoorButton : CameraButton
         if (!adminRequested)
         {
             ClientSend.AttemptUnlockDoor(ID);
+            ChallengeParser.instance.TryCompleteChallenge(taskCompletion);
         }
         else
         {
