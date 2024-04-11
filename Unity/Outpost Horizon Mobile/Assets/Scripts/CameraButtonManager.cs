@@ -49,6 +49,15 @@ public class CameraButtonManager : MonoBehaviour
         {
             var spagheti = cam.WorldToScreenPoint(buttons[i].transform.position);
             (uiButtons[i].transform as RectTransform).anchoredPosition = new Vector3(image.rectTransform.rect.width * (spagheti.x / texture.width), (image.rectTransform.rect.height * spagheti.y / texture.height) - 120, 0);
+            
+            if (cam.transform.position.y - buttons[i].transform.position.y > cam.farClipPlane){
+                uiButtons[i].gameObject.SetActive(false);
+            }
+            else
+            {
+                uiButtons[i].gameObject.SetActive(true);
+
+            }
         }
     }
 }
