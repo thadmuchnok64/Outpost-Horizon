@@ -6,7 +6,11 @@ public class GeneratorButton : MenuTrigger
 {
     public Sprite urgentImage;
 
-
+    public override void DoAction()
+    {
+        base.DoAction();
+        ChallengeParser.instance.TryCompleteChallenge(5);
+    }
     public void MakeUrgent()
     {
         relay.UrgentTime(true);
