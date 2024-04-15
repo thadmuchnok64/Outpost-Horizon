@@ -295,5 +295,17 @@ namespace TestServer
 
             ServerSend.TrackElevator(_clientToSendTo, list);
         }
+
+        public static void WaypointMessage(int _fromClient, Packet _packet)
+        {
+            int _clientIdCheck = _packet.ReadInt();
+            int id = _packet.ReadInt();
+            string message = _packet.ReadString();
+            int _clientToSendTo = 1;
+            if (_clientIdCheck == 1)
+                _clientToSendTo = 0;
+
+            ServerSend.WaypointMessage(_clientToSendTo, id,message);
+        }
     }
 }

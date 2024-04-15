@@ -206,7 +206,9 @@ public class TestClient : MonoBehaviour
                 {(int)ServerPackets.PlayerTransformTracking,ClientHandle.PlayerTransformTracking},
                 {(int)ServerPackets.AdminUnlock,ClientHandle.DoorAdminUnlock},
                 {(int)ServerPackets.ElevatorTrack,ClientHandle.SetElevatorPosition},
-                {(int)ServerPackets.DoorUnlock,ClientHandle.ConfirmDoorUnlock }
+                {(int)ServerPackets.DoorUnlock,ClientHandle.ConfirmDoorUnlock },
+                {(int)ServerPackets.WaypointMessage,ClientHandle.WaypointMessage }
+
 
 
 

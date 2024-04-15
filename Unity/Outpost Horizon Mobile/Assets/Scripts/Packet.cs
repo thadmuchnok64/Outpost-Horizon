@@ -28,7 +28,7 @@ using System.Threading.Tasks;
         AdminUnlock = 14,
         GrantAdmin = 15,
         ElevatorTrack = 16,
-
+        WaypointMessage = 17,
 }
 
 /// <summary>Sent from client to server.</summary>
@@ -49,9 +49,7 @@ public enum ClientPackets
         AdminUnlock = 14,
         GrantAdmin = 15,
         ElevatorTrack = 16,
-
-
-
+        WaypointMessage = 17,
 }
 
 public class Packet : IDisposable

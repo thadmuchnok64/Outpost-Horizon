@@ -9,7 +9,7 @@ public class CraneCameraControl : MonoBehaviour
     public Transform focusPoint;
     public Light directionalLight;
     public Light playerlight;
-    private bool orthoOverride = false;
+    [HideInInspector] public bool orthoOverride = false;
     private float intensity;
     private float playerintensity;
 

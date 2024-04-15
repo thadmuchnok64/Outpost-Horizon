@@ -193,5 +193,16 @@ namespace TestServer
                 SendTCPData(_toClient, _packet);
             }
         }
+
+        public static void WaypointMessage(int _toClient, int id,string mes)
+        {
+            using (Packet _packet = new Packet((int)ServerPackets.WaypointMessage))
+            {
+                _packet.Write(id);
+                _packet.Write(mes);
+
+                SendTCPData(_toClient, _packet);
+            }
+        }
     }
 }

@@ -399,6 +399,7 @@ MonoBehaviour:
   image: {fileID: 33523424}
   cam: {fileID: 1654229238}
   texture: {fileID: 8400000, guid: 7d7938bd7067888488f7a5edb426bb21, type: 2}
+  uiWaypointPrefab: {fileID: 7430979550364899836, guid: ed640b1b9c0bc054fb550100aaa15260, type: 3}
   uiButtonPrefab: {fileID: 7430979550364899836, guid: 7dd880ea9e16edd49bb8c79794628d49, type: 3}
 --- !u!1 &39679932
 GameObject:
@@ -2678,6 +2679,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2550071432781217413, guid: 1f9443458c206544fba993eb7e9202dc, type: 3}
+      propertyPath: waypoint
+      value: 
+      objectReference: {fileID: 4839284359705376337, guid: 19742a4baeefc2443bfe0c13e1f1e80d, type: 3}
     - target: {fileID: 2550071432781217413, guid: 1f9443458c206544fba993eb7e9202dc, type: 3}
       propertyPath: halfWallLeft
       value: 
@@ -10977,6 +10982,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1354857612}
   - component: {fileID: 1354857613}
+  - component: {fileID: 1354857614}
   m_Layer: 0
   m_Name: ChallengeManager
   m_TagString: Untagged
@@ -11014,6 +11020,104 @@ MonoBehaviour:
   challengeList: {fileID: 4900000, guid: 7dfd18b7da820e349bf74180c5f26fca, type: 3}
   challenges: {fileID: 1687840058}
   successGraphic: {fileID: 1268014891}
+  complete: {fileID: 8300000, guid: 1690a52dbf71af24e8835ed0b63057f2, type: 3}
+  newChallenge: {fileID: 8300000, guid: 05a284fc3c087184eae4edcd9c7f5666, type: 3}
+--- !u!82 &1354857614
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1354857611}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 0}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1 &1369115069
 GameObject:
   m_ObjectHideFlags: 0

@@ -30,6 +30,7 @@ namespace TestServer
         RequestAdmin = 14,
         GrantAdmin = 15,
         TrackElevator = 16,
+        WaypointMessage = 17,
 
 
 
@@ -54,6 +55,8 @@ namespace TestServer
         RequestAdmin = 14,
         GrantAdmin = 15,
         TrackElevator = 16,
+        WaypointMessage = 17,
+
 
 
     }

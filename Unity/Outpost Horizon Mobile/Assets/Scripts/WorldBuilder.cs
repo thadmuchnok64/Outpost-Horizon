@@ -16,6 +16,7 @@ public class WorldBuilder : MonoBehaviour
     public GameObject engine;
     public GameObject craneControl;
     public GameObject halfWallLeft, halfWallRight;
+    public GameObject waypoint;
 
     private void Start()
     {
@@ -93,5 +94,11 @@ public class WorldBuilder : MonoBehaviour
     public void SpawnHalfWallRight(int index, Vector3 position, Vector3 rotation)
     {
         Instantiate(halfWallRight, position, Quaternion.Euler(rotation), world);
+    }
+
+    public void SpawnWaypoint(int index, Vector3 position, Vector3 rotation)
+    {
+        var w = Instantiate(waypoint, position, Quaternion.Euler(rotation), world).GetComponent<WaypointUI>();
+        w.ID = index;
     }
 }

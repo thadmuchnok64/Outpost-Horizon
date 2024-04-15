@@ -10,6 +10,8 @@ public class ChallengeParser : MonoBehaviour
     public TextAsset challengeList;
     public TextMeshProUGUI challenges;
     public GameObject successGraphic;
+    [SerializeField] AudioClip complete;
+    [SerializeField] AudioClip newChallenge;
     int seq = 0;
     int compChallenge;
     int[] numOfChallenge;
@@ -57,6 +59,7 @@ public class ChallengeParser : MonoBehaviour
         if (challengeId < seq)
             return;
         seq = challengeId +1;
+        GetComponent<AudioSource>().PlayOneShot(complete);
         OnChallengeSetComplete();
 
     }
@@ -69,6 +72,7 @@ public class ChallengeParser : MonoBehaviour
     {
         yield return new WaitForSeconds(1);
         successGraphic.SetActive(false);
-		challenges.text = currentText[seq];
+        GetComponent<AudioSource>().PlayOneShot(newChallenge);
+        challenges.text = currentText[seq];
 	}
 }

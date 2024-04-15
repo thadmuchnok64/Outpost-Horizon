@@ -145,6 +145,8 @@ public class ClientHandle : MonoBehaviour
                     break;
                 case 12: WorldBuilder.Instance.SpawnHalfWallRight(i, pos, euler);
                     break;
+                case 13: WorldBuilder.Instance.SpawnWaypoint(i, pos, euler);
+                    break;
 
             }
 
@@ -186,6 +188,13 @@ public class ClientHandle : MonoBehaviour
     {
         int doorUnlocked = _packet.ReadInt();
         GameManagerScript.instance.UnlockDoorButton(doorUnlocked);
+    }
+
+    public static void WaypointMessage(Packet _packet)
+    {
+        int id = _packet.ReadInt();
+        string mes = _packet.ReadString();
+        GameManagerScript.instance.SetWaypoint(id,mes);
     }
 
 

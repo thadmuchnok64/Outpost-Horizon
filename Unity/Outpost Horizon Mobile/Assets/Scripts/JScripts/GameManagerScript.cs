@@ -127,7 +127,7 @@ public class GameManagerScript : MonoBehaviour
     {
         ElevatorButton[] elevators = FindObjectsOfType<ElevatorButton>();
         var elev = elevators.Where(x => x.ID == id).First();
-        elev.transform.position = new Vector3(elev.transform.position.x, z / 100, elev.transform.position.z);
+        elev.transform.position = new Vector3(elev.transform.position.x, z / 100.0f, elev.transform.position.z);
         CraneCameraControl.instance.ReassignCamera(elev.cameraPoint);
     }
 
@@ -135,5 +135,11 @@ public class GameManagerScript : MonoBehaviour
     {
         DoorButton[] doors = FindObjectsOfType<DoorButton>();
         doors.Where(x => x.ID == id).First().UnlockedButton();
+    }
+
+    public void SetWaypoint(int id , string message)
+    {
+        WaypointUI[] waypoints = FindObjectsOfType<WaypointUI>();
+        waypoints.Where(x => x.ID == id).First().SetMessage(message);
     }
 }

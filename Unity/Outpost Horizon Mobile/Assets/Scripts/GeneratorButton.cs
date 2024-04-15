@@ -10,6 +10,7 @@ public class GeneratorButton : MenuTrigger
     {
         base.DoAction();
         ChallengeParser.instance.TryCompleteChallenge(5);
+        RodBehaviour.instance.RodsTUpdate();
     }
     public void MakeUrgent()
     {

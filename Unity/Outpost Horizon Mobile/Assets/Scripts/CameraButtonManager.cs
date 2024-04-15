@@ -8,12 +8,16 @@ public class CameraButtonManager : MonoBehaviour
     [SerializeField] RawImage image;
     [SerializeField] Camera cam;
     [SerializeField] RenderTexture texture;
+    [SerializeField] GameObject uiWaypointPrefab;
 
     [SerializeField] GameObject uiButtonPrefab;
 
     public static CameraButtonManager instance;
     List<GameObject> uiButtons;
     List<CameraButton> buttons;
+    List<WaypointUI> waypoints;
+    List<GameObject> uiWaypoints;
+
 
     bool initialized = false;
 
@@ -30,6 +34,8 @@ public class CameraButtonManager : MonoBehaviour
         }
         uiButtons = new List<GameObject>();
         buttons = new List<CameraButton>();
+        waypoints = new List<WaypointUI>();
+        uiWaypoints = new List<GameObject>();
     }
 
     public void AddButton(CameraButton button,Sprite icon)
@@ -42,6 +48,13 @@ public class CameraButtonManager : MonoBehaviour
         uiButtons.Add(g);
     }
 
+    public void AddWaypoint(WaypointUI point, string message)
+    {
+        waypoints.Add(point);
+        GameObject g = Instantiate(uiWaypointPrefab, transform);
+        g.GetComponent<TMPro.TextMeshProUGUI>().text = message;
+        uiWaypoints.Add(g);
+    }
 
     private void Update()
     {
@@ -50,12 +63,28 @@ public class CameraButtonManager : MonoBehaviour
             var spagheti = cam.WorldToScreenPoint(buttons[i].transform.position);
             (uiButtons[i].transform as RectTransform).anchoredPosition = new Vector3(image.rectTransform.rect.width * (spagheti.x / texture.width), (image.rectTransform.rect.height * spagheti.y / texture.height) - 120, 0);
             
-            if (cam.transform.position.y - buttons[i].transform.position.y > cam.farClipPlane){
+            if (CraneCameraControl.instance.orthoOverride||cam.transform.position.y - buttons[i].transform.position.y > cam.farClipPlane || cam.transform.position.y < buttons[i].transform.position.y-3){
                 uiButtons[i].gameObject.SetActive(false);
             }
             else
             {
                 uiButtons[i].gameObject.SetActive(true);
+
+            }
+        }
+
+        for (int i = 0; i < waypoints.Count; i++)
+        {
+            var spagheti = cam.WorldToScreenPoint(waypoints[i].transform.position);
+            (uiWaypoints[i].transform as RectTransform).anchoredPosition = new Vector3(image.rectTransform.rect.width * (spagheti.x / texture.width), (image.rectTransform.rect.height * spagheti.y / texture.height), 0);
+
+            if (CraneCameraControl.instance.orthoOverride || cam.transform.position.y - waypoints[i].transform.position.y > cam.farClipPlane || cam.transform.position.y < waypoints[i].transform.position.y - 3)
+            {
+                uiWaypoints[i].gameObject.SetActive(false);
+            }
+            else
+            {
+                uiWaypoints[i].gameObject.SetActive(true);
 
             }
         }
