@@ -78,7 +78,7 @@ public class CameraButtonManager : MonoBehaviour
             var spagheti = cam.WorldToScreenPoint(waypoints[i].transform.position);
             (uiWaypoints[i].transform as RectTransform).anchoredPosition = new Vector3(image.rectTransform.rect.width * (spagheti.x / texture.width), (image.rectTransform.rect.height * spagheti.y / texture.height), 0);
 
-            if (CraneCameraControl.instance.orthoOverride || cam.transform.position.y - waypoints[i].transform.position.y > cam.farClipPlane || cam.transform.position.y < waypoints[i].transform.position.y - 3)
+            if (cam.transform.position.y - waypoints[i].transform.position.y > cam.farClipPlane/2 || cam.transform.position.y < waypoints[i].transform.position.y - 3)
             {
                 uiWaypoints[i].gameObject.SetActive(false);
             }
