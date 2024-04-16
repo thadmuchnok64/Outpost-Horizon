@@ -45,6 +45,10 @@ public class DebugManager : MonoBehaviour
             //UPDATE this with ClientHandle.ReadMessage
             switch(ClientSendMessage._csmsg)
             {
+                case string s when s.StartsWith("ip"):
+                    s = s.Replace("ip ", "");
+                    UIManager.instance.IPcode = s;
+                    break;
                 case "RodOnFloor!":
                     RodBehaviour.instance.ShowError();
                     break;

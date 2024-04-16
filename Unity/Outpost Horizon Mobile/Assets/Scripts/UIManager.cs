@@ -12,7 +12,7 @@ public class UIManager : MonoBehaviour
     public GameObject startMenu;
     public GameObject mMenu;
     public GameObject vrCamera;
-    public TMP_InputField IPcode;
+    public string IPcode;
     public static bool connected = false;
 
 	private void Awake()
@@ -28,13 +28,12 @@ public class UIManager : MonoBehaviour
 
 	public void ConnectToServer()
 	{
-        if (IPcode.text != "")
+        if (IPcode != "")
         {
-            string[] separ = IPcode.text.Split(':', 2);
+            string[] separ = IPcode.Split(':', 2);
             TestClient.instance.ip = separ[0];
             TestClient.instance.port = Int32.Parse(separ[1]);
         }
-        IPcode.gameObject.SetActive(false);
 		startMenu.SetActive(false);
 		//usernameField.interactable= false;
 		TestClient.instance.ConnectToServer();
