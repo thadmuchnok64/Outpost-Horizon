@@ -106,8 +106,22 @@ namespace TestServer
 					{
 						using (Packet _packet = new Packet(_packetBytes))
 						{
-							int _packetId = _packet.ReadInt();
-							Server.packetHandlers[_packetId](id,_packet);
+                            try
+                            {
+                                int _packetId = _packet.ReadInt();
+                                Server.packetHandlers[_packetId](id, _packet);
+                            }
+                            catch (Exception e)
+                            {
+                                if(e is KeyNotFoundException)
+                                {
+                                    Console.WriteLine("Packet loss???");
+                                } else
+                                {
+                                    Console.WriteLine($"{e.GetType()}");
+
+                                }
+                            }
                             //Console.WriteLine(_packetId);
 						}
 					});
