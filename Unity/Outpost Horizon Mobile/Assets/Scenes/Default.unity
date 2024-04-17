@@ -10565,7 +10565,7 @@ MonoBehaviour:
   regcam: {fileID: 1654229238}
   doorAdminCode: 0
   skipIntro: 0
-  debugMode: 0
+  debugMode: 1
 --- !u!1 &1268014891
 GameObject:
   m_ObjectHideFlags: 0
