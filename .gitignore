@@ -75,3 +75,6 @@ Plugins/*/Intermediate/*
 
 # Cache files for the editor to use
 DerivedDataCache/*
+
+# Prevents my local testing from messing with the server
+Server/TestServer/Program.cs
