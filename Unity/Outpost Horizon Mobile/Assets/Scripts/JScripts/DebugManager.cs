@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using TMPro;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class DebugManager : MonoBehaviour
     /* IMPORTANT: The debug manager must be updated regularly with other scripts.
@@ -49,11 +50,27 @@ public class DebugManager : MonoBehaviour
                     s = s.Replace("ip ", "");
                     UIManager.instance.IPcode = s;
                     break;
+                case "reset":
+                    SceneManager.LoadScene(0);
+                    break;
+                case "disable":
+                    debugPage.SetActive(false);
+                    gameObject.SetActive(false);
+                    break;
+                case "ResetWorldMap":
+                    WorldBuilder.Instance.DestroyTheEntireGoddamnWorld();
+                    break;
                 case "RodOnFloor!":
                     RodBehaviour.instance.ShowError();
                     break;
                 case "CraneError!":
                     TheClaw.instance.CraneError();
+                    break;
+                case "Fired":
+                    GameManagerScript.instance.EndIncinerator();
+                    break;
+                case "StartIncinerator":
+                    GameManagerScript.instance.StartIncinerator();
                     break;
             }
         }
