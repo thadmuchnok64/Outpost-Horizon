@@ -142,4 +142,12 @@ public class GameManagerScript : MonoBehaviour
         WaypointUI[] waypoints = FindObjectsOfType<WaypointUI>();
         waypoints.Where(x => x.ID == id).First().SetMessage(message);
     }
+    public void StartIncinerator()
+    {
+        menuitems[6].SetActive(true);
+    }
+    public void EndIncinerator()
+    {
+        menuitems[6].GetComponent<IncineratorError>().FinalDiag();
+    }
 }

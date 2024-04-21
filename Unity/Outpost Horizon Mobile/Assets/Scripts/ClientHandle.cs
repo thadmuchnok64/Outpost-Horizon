@@ -81,6 +81,12 @@ public class ClientHandle : MonoBehaviour
             case "CraneError!":
                 TheClaw.instance.CraneError();
                 break;
+            case "StartIncinerator":
+                GameManagerScript.instance.StartIncinerator();
+                break;
+            case "Fired":
+                GameManagerScript.instance.EndIncinerator();
+                break;
             case "ResetWorldMap":
                 WorldBuilder.Instance.DestroyTheEntireGoddamnWorld();
                 break;
