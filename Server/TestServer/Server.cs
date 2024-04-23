@@ -16,14 +16,14 @@ namespace TestServer
         public delegate void PacketHandler(int _fromClient, Packet _packet);
         public static Dictionary<int, PacketHandler> packetHandlers;
         public static string usedClientName;
-        public static IPAddress ip = IPAddress.Any;
+        //CHANGE 1 TO 0 ON RASPI!
+        public static IPAddress ip = Dns.GetHostEntry(Dns.GetHostName()).AddressList[1];
 
         private static TcpListener tcpListener;
         public static void Start(int _maxPlayer, int _port)
         {
             MaxPlayers = _maxPlayer;
             Port = _port;
-
             Console.WriteLine("Starting server....");
             InitializeServerData();
            

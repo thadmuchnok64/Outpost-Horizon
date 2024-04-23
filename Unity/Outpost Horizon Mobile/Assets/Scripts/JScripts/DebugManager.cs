@@ -12,6 +12,7 @@ public class DebugManager : MonoBehaviour
 {
     public static DebugManager instance;
     public GameObject debugPage;
+    public TMP_InputField inputField;
     void Awake()
     {
         if (instance != null)
@@ -31,6 +32,10 @@ public class DebugManager : MonoBehaviour
     {
         
     }
+    public void ClearField()
+    {
+        inputField.text = "";
+    }
     public void OnDebugClick()
     {
         if (debugPage.activeSelf == false)
@@ -40,18 +45,15 @@ public class DebugManager : MonoBehaviour
     }
     public void OnDebugSend()
     {
-        if (ClientSendMessage._csmsg[0] == '/')
+        if (inputField.text[0] == '/')
         {
-            ClientSendMessage._csmsg = ClientSendMessage._csmsg.Replace("/","");
+            inputField.text = inputField.text.Replace("/","");
             //UPDATE this with ClientHandle.ReadMessage
-            switch(ClientSendMessage._csmsg)
+            switch(inputField.text)
             {
                 case string s when s.StartsWith("ip"):
                     s = s.Replace("ip ", "");
                     UIManager.instance.IPcode = s;
-                    break;
-                case "reset":
-                    SceneManager.LoadScene(0);
                     break;
                 case "disable":
                     debugPage.SetActive(false);
@@ -69,12 +71,18 @@ public class DebugManager : MonoBehaviour
                 case "Fired":
                     GameManagerScript.instance.EndIncinerator();
                     break;
+                case "Connect":
+                    UIManager.instance.ConnectToServer();
+                    break;
+                case "Disconnect":
+                    TestClient.instance.Disconnect();
+                    break;
                 case "StartIncinerator":
                     GameManagerScript.instance.StartIncinerator();
                     break;
             }
         }
         else
-            UIManager.instance.SendToServer(ClientSendMessage._csmsg);
+            UIManager.instance.SendToServer(inputField.text);
     }
 }

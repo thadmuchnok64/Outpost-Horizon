@@ -51,10 +51,6 @@ public class TestClient : MonoBehaviour
         isConnected = true;
         tcp.Connect();
     }
-    public void DisconnectFromServer()
-    {
-        ClientSend.DisconnectTCP();
-    }
 
     public class TCP
     {
@@ -182,7 +178,7 @@ public class TestClient : MonoBehaviour
 		}
 	}
 
-    private void Disconnect()
+    public void Disconnect()
     {
         if (isConnected)
         {

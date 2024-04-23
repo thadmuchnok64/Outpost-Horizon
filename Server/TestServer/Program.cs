@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Net;
 using System.Threading;
 
 namespace TestServer
@@ -13,9 +14,8 @@ namespace TestServer
             isRunning= true;
             Thread mainThread = new Thread(new ThreadStart(MainThread));
             mainThread.Start();
-            //Server.Start(2, 9005);
-            Server.Start(2, 80);
-
+            Server.Start(2, 9005);
+            //Server.Start(2, 80);
             ClearConsole();
 
 		}
@@ -24,8 +24,8 @@ namespace TestServer
         {
             Console.Clear();
             Console.WriteLine($"Server started on port {Server.Port}.");
-            Console.WriteLine($"Server IP: {Server.ip}.");
-            Console.WriteLine("Thad says hi");
+            Console.WriteLine($"Server IP: {Server.ip}");
+            Console.WriteLine("Thad and jj say hi");
             Console.WriteLine("------------------------------------------------------");
             Console.WriteLine("Welcome to Outpost Horizon,");
             Console.WriteLine("Bringing you a Better Future, Tomorrow");
