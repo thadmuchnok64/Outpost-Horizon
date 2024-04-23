@@ -443,7 +443,28 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: newui_25
+      name: newui_0
+      rect:
+        serializedVersion: 2
+        x: 3
+        y: 69
+        width: 24
+        height: 23
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aca42773d6509b34c9d9b3cbea64fc91
+      internalID: 1965909776
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: newui_1
       rect:
         serializedVersion: 2
         x: 41
@@ -457,8 +478,29 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2847cd2fe579bf24bbd300481cbc7ae9
-      internalID: -1950732990
+      spriteID: d32ec5c1fdc34024f9dafed7ab90a00c
+      internalID: -784055333
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: newui_2
+      rect:
+        serializedVersion: 2
+        x: 5
+        y: 39
+        width: 54
+        height: 18
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7e34cc8de85a7c4448b5b6a260ead9b1
+      internalID: -1423594618
       vertices: []
       indices: 
       edges: []

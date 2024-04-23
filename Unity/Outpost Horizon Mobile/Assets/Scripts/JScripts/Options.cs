@@ -43,11 +43,16 @@ public class Options : MonoBehaviour
     IEnumerator enableDebug()
     {
         c++;
-        yield return new WaitForSeconds(3);
-        if (c >= 10)
+        yield return new WaitForSeconds(1);
+        if (c >= 5)
         {
             GameManagerScript.instance.debugStart();
             StopAllCoroutines();
+        }
+        else
+        {
+            c = 0;
+            Debug.Log("reset");
         }
     }
 }
