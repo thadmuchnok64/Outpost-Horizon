@@ -3023,6 +3023,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2550071432781217413, guid: 1f9443458c206544fba993eb7e9202dc, type: 3}
+      propertyPath: bigCrate
+      value: 
+      objectReference: {fileID: 3514568943965236958, guid: 2facc4fe7ba49cc418a57bbf5a742ad1, type: 3}
+    - target: {fileID: 2550071432781217413, guid: 1f9443458c206544fba993eb7e9202dc, type: 3}
       propertyPath: waypoint
       value: 
       objectReference: {fileID: 4839284359705376337, guid: 19742a4baeefc2443bfe0c13e1f1e80d, type: 3}

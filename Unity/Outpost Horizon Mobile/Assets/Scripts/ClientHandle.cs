@@ -153,6 +153,9 @@ public class ClientHandle : MonoBehaviour
                     break;
                 case 13: WorldBuilder.Instance.SpawnWaypoint(i, pos, euler);
                     break;
+                case 14:
+                    WorldBuilder.Instance.SpawnBigCrate(i, pos, euler);
+                    break;
 
             }
 

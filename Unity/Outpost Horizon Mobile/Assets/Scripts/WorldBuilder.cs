@@ -17,6 +17,7 @@ public class WorldBuilder : MonoBehaviour
     public GameObject craneControl;
     public GameObject halfWallLeft, halfWallRight;
     public GameObject waypoint;
+    public GameObject bigCrate;
 
     private void Start()
     {
@@ -100,5 +101,10 @@ public class WorldBuilder : MonoBehaviour
     {
         var w = Instantiate(waypoint, position, Quaternion.Euler(rotation), world).GetComponent<WaypointUI>();
         w.ID = index;
+    }
+
+    public void SpawnBigCrate(int index, Vector3 position, Vector3 rotation)
+    {
+        Instantiate(bigCrate, position, Quaternion.Euler(rotation), world);
     }
 }
