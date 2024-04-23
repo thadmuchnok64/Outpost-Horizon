@@ -46,7 +46,7 @@ public class UIManager : MonoBehaviour
     public void TermsAccept()
     {
         mMenu.gameObject.SetActive(true);
-        GameObject.Find("ReferencePage").SetActive(false);
+        GameObject.Find("Terms").SetActive(false);
         vrCamera.SetActive(true);
 
     }
