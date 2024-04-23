@@ -12,7 +12,8 @@ namespace TestServer
 		public static void Update()
 		{
 			ThreadManager.UpdateMain();
-			//Server.IncrementClients(timeoutTime);
-		}
+
+            //Server.IncrementClients(timeoutTime);
+        }
 	}
 }

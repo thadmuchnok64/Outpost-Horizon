@@ -13,7 +13,6 @@ public class UIManager : MonoBehaviour
     public GameObject mMenu;
     public GameObject vrCamera;
     public string IPcode;
-    public static bool connected = false;
 
 	private void Awake()
 	{
@@ -37,20 +36,9 @@ public class UIManager : MonoBehaviour
 		startMenu.SetActive(false);
 		//usernameField.interactable= false;
 		TestClient.instance.ConnectToServer();
-        connected = true;
 	}
-    public void DisconnectFromServer()
-    {
-        TestClient.instance.DisconnectFromServer();
-        connected = false;
-    }
 
     // Sends a test message to the server, which gets sent to unreal
-    public void SendMessageToServer()
-    {
-        if (connected == true)
-            ClientSend.SendTestMessage(ClientSendMessage._csmsg);
-    }
     public void SendToServer(string message)
     {
         ClientSend.SendTestMessage(message);

@@ -21,17 +21,6 @@ public class ClientSend : MonoBehaviour
             SendTCPData(_packet);
         }
     }
-    public static void DisconnectTCP()
-    {
-        using (Packet _packet = new Packet((int)ClientPackets.disconnect))
-        {
-            _packet.Write(TestClient.instance.myId);
-            _packet.Write(TestClient.instance.username);
-
-
-            SendTCPData(_packet);
-        }
-    }
 
     // Creates a packet, with the message in the text box;
     public static void SendTestMessage(string message)

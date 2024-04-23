@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -28,7 +29,12 @@ public class Options : MonoBehaviour
     }
     public void ResetOpt()
     {
+        string localip = TestClient.instance.ip;
+        int localport = TestClient.instance.port;
+        TestClient.instance.Disconnect();
         SceneManager.LoadScene(0);
+        TestClient.instance.ip = localip;
+        TestClient.instance.port = localport;
     }
     public void DevSet()
     {
