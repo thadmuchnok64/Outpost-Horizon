@@ -12,7 +12,7 @@ public class UIManager : MonoBehaviour
     public GameObject startMenu;
     public GameObject mMenu;
     public GameObject vrCamera;
-    public string IPcode;
+    [HideInInspector] public string IPcode ="";
 
 	private void Awake()
 	{
@@ -23,6 +23,8 @@ public class UIManager : MonoBehaviour
 			Debug.Log("UI Manager already exists!");
 			Destroy(this);
 		}
+
+            IPcode = PlayerPrefs.GetString("loadedip");
 	}
 
 	public void ConnectToServer()

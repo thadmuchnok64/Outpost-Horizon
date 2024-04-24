@@ -66,7 +66,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 1059200418, guid: 4329d33ae7c2f2c4d9fbe9b6538ac8aa, type: 3}
+  m_Sprite: {fileID: -466790305, guid: 4329d33ae7c2f2c4d9fbe9b6538ac8aa, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -244,5 +244,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   button: {fileID: 0}
-  urgentSprite: {fileID: 1059200418, guid: 4329d33ae7c2f2c4d9fbe9b6538ac8aa, type: 3}
+  urgentSprite: {fileID: -466790305, guid: 4329d33ae7c2f2c4d9fbe9b6538ac8aa, type: 3}
   secondarySprite: {fileID: 2129500172711941070}

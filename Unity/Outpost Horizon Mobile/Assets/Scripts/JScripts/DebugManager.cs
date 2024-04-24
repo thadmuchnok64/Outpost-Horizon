@@ -54,6 +54,7 @@ public class DebugManager : MonoBehaviour
                 case string s when s.StartsWith("ip"):
                     s = s.Replace("ip ", "");
                     UIManager.instance.IPcode = s;
+                    PlayerPrefs.SetString("loadedip", s);
                     break;
                 case "disable":
                     debugPage.SetActive(false);
