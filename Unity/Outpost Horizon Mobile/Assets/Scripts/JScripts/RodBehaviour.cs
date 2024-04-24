@@ -52,7 +52,7 @@ public class RodBehaviour : MonoBehaviour
     public void RodsComplete()
     {
         rodstoinsert = "";
-        text.text = "All Fuel Rods are operational! Well done.";
+        text.text = "All Fuel Rods are operational. Tell the On-Site worker to flip the switch.";
         ChallengeParser.instance.TryCompleteChallenge(9);
         roddiag.SetActive(false);
         GeneratorButton[] genbuttons = FindObjectsOfType<GeneratorButton>();

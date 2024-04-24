@@ -82,5 +82,7 @@ public class IncineratorError : MonoBehaviour
         bluescreen.gameObject.SetActive(true);
         yield return new WaitForSeconds(5f);
         errormode = false;
+        yield return new WaitForSeconds(2f);
+        errormsg.text = "REBOOTING...";
     }
 }
