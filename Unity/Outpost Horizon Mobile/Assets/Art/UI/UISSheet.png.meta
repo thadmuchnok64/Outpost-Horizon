@@ -275,7 +275,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Pause
+      name: OldPause
       rect:
         serializedVersion: 2
         x: 226
@@ -552,9 +552,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 34
-        y: 167
+        y: 170
         width: 27
-        height: 10
+        height: 7
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -611,7 +611,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Locked
+      name: LockedBG
       rect:
         serializedVersion: 2
         x: 98
@@ -632,7 +632,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Unlocked
+      name: UnlockedBG
       rect:
         serializedVersion: 2
         x: 98
@@ -698,10 +698,10 @@ TextureImporter:
       name: Empty_Message
       rect:
         serializedVersion: 2
-        x: 95
-        y: 0
-        width: 97
-        height: 96
+        x: 72
+        y: 39
+        width: 7
+        height: 18
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -884,13 +884,13 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Bar1
+      name: Paus
       rect:
         serializedVersion: 2
         x: 72
-        y: 40
-        width: 5
-        height: 16
+        y: 39
+        width: 16
+        height: 18
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -900,27 +900,6 @@ TextureImporter:
       bones: []
       spriteID: 7c22bab92d21fd74a816c6f94f9ebaeb
       internalID: 249183687
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Bar2
-      rect:
-        serializedVersion: 2
-        x: 83
-        y: 40
-        width: 5
-        height: 16
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 76fc5f13af658c9459590a5fd37c870e
-      internalID: 1322518085
       vertices: []
       indices: 
       edges: []
@@ -971,9 +950,9 @@ TextureImporter:
       name: Warning
       rect:
         serializedVersion: 2
-        x: 67
+        x: 65
         y: 12
-        width: 27
+        width: 30
         height: 5
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -984,6 +963,153 @@ TextureImporter:
       bones: []
       spriteID: 07cd176709efb644bba582c5bba61e9a
       internalID: -481047196
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SBumper
+      rect:
+        serializedVersion: 2
+        x: 230
+        y: 167
+        width: 20
+        height: 18
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 027ade22d7cc04b4e804ebbebb28dbfa
+      internalID: 2021020144
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Crane
+      rect:
+        serializedVersion: 2
+        x: 226
+        y: 130
+        width: 28
+        height: 28
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fedd6707bba94f44a8e220cc7f29c99f
+      internalID: 609002237
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Key
+      rect:
+        serializedVersion: 2
+        x: 198
+        y: 46
+        width: 18
+        height: 38
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ab1e1d0da614f524588162f5adccf7f0
+      internalID: -1126422845
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Locked
+      rect:
+        serializedVersion: 2
+        x: 231
+        y: 71
+        width: 17
+        height: 19
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6299b1652ea1e9f49b1457d5110b6baa
+      internalID: -1732758672
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Unlocked
+      rect:
+        serializedVersion: 2
+        x: 231
+        y: 38
+        width: 17
+        height: 20
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 27a93862ab6e89e4d83a9ffce4a2653b
+      internalID: -1292471593
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hamburger
+      rect:
+        serializedVersion: 2
+        x: 196
+        y: 5
+        width: 24
+        height: 23
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 31416de25890b824d85776683b5b527f
+      internalID: -1803091160
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Window_Borderless
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 0
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4beb386248cad6341bd18ebbdadf1c41
+      internalID: 582186352
       vertices: []
       indices: 
       edges: []
@@ -1006,38 +1132,46 @@ TextureImporter:
       5: 1353558567
       6: -496084917
       7: 1066144177
-      Bar1: 249183687
       Bar2: 1322518085
       Button_Empty_S: -621434948
       CheckBG: 1455764098
       Checkmark: 566405375
       Claw_Joystick: -1423594618
       Claw_StickBG: 1059200418
+      Crane: 609002237
       Elevator: 2085787652
       Empty_ButtonL: 384718603
       Empty_Message: -160652538
       Exclaimation: 1298876121
       ExclaimationBG: -466790305
+      Hamburger: -1803091160
       Handle: 859681889
       Info: -302553358
       Join_Button: 825434990
+      Key: -1126422845
       LPSliderLR: -784055333
       LP_SliderUD: 1965909776
       LeftArrow: -1139985597
-      Locked: -1718658041
+      Locked: -1732758672
+      LockedBG: -1718658041
       OH_Logo: 852984704
-      Pause: 276918160
+      OldPause: 276918160
+      Paus: 249183687
       Power: -1146726059
       Reset_Button: 491065577
       Restart_Button: 1595131503
       RightArrow: -2068616516
       Rods: -565892031
+      SBumper: 2021020144
       Scrollbar: 686328287
       Success: -1562933263
       Success_Check: -2144272170
       UD: -305757653
-      Unlocked: 645571914
+      UISSheet_7: -313697997
+      Unlocked: -1292471593
+      UnlockedBG: 645571914
       Warning: -481047196
+      Window_Borderless: 582186352
       Window_GUI: -1950732990
       newui_12: 1538421587
       newui_14: -1228502350

@@ -7,6 +7,7 @@ using UnityEngine.SceneManagement;
 public class Options : MonoBehaviour
 {
     public GameObject optmenu;
+    public GameObject optBG;
     int c = 0;
     // Start is called before the first frame update
     void Start()
@@ -20,10 +21,12 @@ public class Options : MonoBehaviour
         if (optmenu.activeInHierarchy == true)
         {
             optmenu.SetActive(false);
+            optBG.SetActive(false);
         }
         else if (optmenu.activeInHierarchy == false)
         {
             optmenu.SetActive(true);
+            optBG.SetActive(true);
         }
         StartCoroutine(enableDebug());
     }
