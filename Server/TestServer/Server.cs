@@ -18,6 +18,8 @@ namespace TestServer
         public static string usedClientName;
         //CHANGE 1 TO 0 ON RASPI!
         public static IPAddress ip = Dns.GetHostEntry(Dns.GetHostName()).AddressList[1];
+        //public static IPAddress ip = IPAddress.Any;
+
 
         private static TcpListener tcpListener;
         public static void Start(int _maxPlayer, int _port)
