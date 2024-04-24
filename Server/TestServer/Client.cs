@@ -66,6 +66,8 @@ namespace TestServer
 
             private void RecieveCallback(IAsyncResult _result)
             {
+                if (stream == null)
+                    return;
                 try
                 {
                     int _byteLength = stream.EndRead(_result);
