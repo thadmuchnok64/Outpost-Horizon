@@ -1,3 +1,0 @@
-ONSITE: Navigate to Reactor room~ONSITE: Exchange broken rods with new ones~OFFSITE: Tell ONSITE associate which rods are broken
-ONSITE: Navigate to Crane Room~ON/OFFSITE: Clear a path to the exit
-ERROR!
