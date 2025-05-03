@@ -1,0 +1,15 @@
+H:\GitHub\Outpost-Horizon\Server\OutpostServer\bin\Release\net6.0\OutpostServer.exe
+H:\GitHub\Outpost-Horizon\Server\OutpostServer\bin\Release\net6.0\OutpostServer.deps.json
+H:\GitHub\Outpost-Horizon\Server\OutpostServer\bin\Release\net6.0\OutpostServer.runtimeconfig.json
+H:\GitHub\Outpost-Horizon\Server\OutpostServer\bin\Release\net6.0\OutpostServer.dll
+H:\GitHub\Outpost-Horizon\Server\OutpostServer\bin\Release\net6.0\OutpostServer.pdb
+H:\GitHub\Outpost-Horizon\Server\OutpostServer\obj\Release\net6.0\OutpostServer.GeneratedMSBuildEditorConfig.editorconfig
+H:\GitHub\Outpost-Horizon\Server\OutpostServer\obj\Release\net6.0\OutpostServer.AssemblyInfoInputs.cache
+H:\GitHub\Outpost-Horizon\Server\OutpostServer\obj\Release\net6.0\OutpostServer.AssemblyInfo.cs
+H:\GitHub\Outpost-Horizon\Server\OutpostServer\obj\Release\net6.0\OutpostServer.csproj.CoreCompileInputs.cache
+H:\GitHub\Outpost-Horizon\Server\OutpostServer\obj\Release\net6.0\OutpostServer.sourcelink.json
+H:\GitHub\Outpost-Horizon\Server\OutpostServer\obj\Release\net6.0\OutpostServer.dll
+H:\GitHub\Outpost-Horizon\Server\OutpostServer\obj\Release\net6.0\refint\OutpostServer.dll
+H:\GitHub\Outpost-Horizon\Server\OutpostServer\obj\Release\net6.0\OutpostServer.pdb
+H:\GitHub\Outpost-Horizon\Server\OutpostServer\obj\Release\net6.0\OutpostServer.genruntimeconfig.cache
+H:\GitHub\Outpost-Horizon\Server\OutpostServer\obj\Release\net6.0\ref\OutpostServer.dll

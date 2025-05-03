@@ -1,0 +1,5 @@
+C:\Users\vijhgtry\Desktop\app\OutpostServer.exe
+C:\Users\vijhgtry\Desktop\app\OutpostServer.dll
+C:\Users\vijhgtry\Desktop\app\OutpostServer.deps.json
+C:\Users\vijhgtry\Desktop\app\OutpostServer.runtimeconfig.json
+C:\Users\vijhgtry\Desktop\app\OutpostServer.pdb
